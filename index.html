@@ -10,6 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-blue: #0079c2;
+            --secondary-blue: #337ab7;
+            --white: #FFFFFF;
+        }
+
         * {
             font-family: 'Inter', sans-serif;
         }
@@ -44,9 +50,9 @@
             width: 100%;
             height: 100%;
             background: linear-gradient(135deg,
-                rgba(37, 99, 235, 0.92) 0%,
-                rgba(59, 130, 246, 0.85) 40%,
-                rgba(96, 165, 250, 0.75) 100%);
+                rgba(0, 121, 194, 0.92) 0%,
+                rgba(51, 122, 183, 0.85) 40%,
+                rgba(0, 121, 194, 0.75) 100%);
             z-index: 1;
         }
 
@@ -69,7 +75,7 @@
 
         .bento-card:hover {
             transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 30px 80px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 30px 80px rgba(0, 121, 194, 0.3);
         }
 
         /* Magnetic Button Effect */
@@ -134,7 +140,7 @@
             inset: -2px;
             border-radius: 24px;
             padding: 2px;
-            background: linear-gradient(90deg, #2563eb, #0ea5e9, #2563eb);
+            background: linear-gradient(90deg, #0079c2, #337ab7, #0079c2);
             background-size: 200% 100%;
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
@@ -144,7 +150,7 @@
 
         /* Text Gradient */
         .text-gradient {
-            background: linear-gradient(135deg, #1e40af 0%, #0ea5e9 100%);
+            background: linear-gradient(135deg, #0079c2 0%, #337ab7 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -175,10 +181,10 @@
         /* Smooth Gradient Background */
         .gradient-mesh {
             background:
-                radial-gradient(at 0% 0%, rgba(96, 165, 250, 0.1) 0px, transparent 50%),
-                radial-gradient(at 100% 0%, rgba(59, 130, 246, 0.1) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(37, 99, 235, 0.1) 0px, transparent 50%),
-                radial-gradient(at 0% 100%, rgba(14, 165, 233, 0.1) 0px, transparent 50%);
+                radial-gradient(at 0% 0%, rgba(0, 121, 194, 0.1) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(51, 122, 183, 0.1) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(0, 121, 194, 0.1) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(51, 122, 183, 0.1) 0px, transparent 50%);
         }
 
         /* Stagger Animation */
@@ -233,7 +239,7 @@
             position: absolute;
             inset: 0;
             border-radius: 24px;
-            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(14, 165, 233, 0.1));
+            background: linear-gradient(135deg, rgba(0, 121, 194, 0.1), rgba(51, 122, 183, 0.1));
             opacity: 0;
             transition: opacity 0.4s ease;
         }
@@ -259,6 +265,178 @@
         .marquee {
             animation: marquee 30s linear infinite;
         }
+
+        /* Animated Clouds */
+        .clouds {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .cloud {
+            position: absolute;
+            opacity: 0.4;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .cloud-1 {
+            width: 2000px;
+            height: 1200px;
+            top: 15%;
+            background-image: url('img/cloud.png');
+            animation: float-cloud-1 240s infinite linear;
+            filter: blur(5px);
+        }
+
+        .cloud-2 {
+            width: 2500px;
+            height: 1500px;
+            top: 35%;
+            background-image: url('img/cloud2.png');
+            animation: float-cloud-2 300s infinite linear;
+            animation-delay: -60s;
+            opacity: 0.5;
+            filter: blur(4px);
+        }
+
+        .cloud-3 {
+            width: 1800px;
+            height: 1100px;
+            top: 55%;
+            background-image: url('img/cloud.png');
+            animation: float-cloud-3 270s infinite linear;
+            animation-delay: -120s;
+            filter: blur(8px);
+            opacity: 0.3;
+        }
+
+        .cloud-4 {
+            width: 2200px;
+            height: 1300px;
+            top: 75%;
+            background-image: url('img/cloud2.png');
+            animation: float-cloud-4 330s infinite linear;
+            animation-delay: -180s;
+            filter: blur(6px);
+        }
+
+        .cloud-5 {
+            width: 1900px;
+            height: 1150px;
+            top: 25%;
+            background-image: url('img/cloud.png');
+            animation: float-cloud-5 285s infinite linear;
+            animation-delay: -90s;
+            opacity: 0.35;
+            filter: blur(5px);
+        }
+
+        .cloud-6 {
+            width: 2400px;
+            height: 1450px;
+            top: 65%;
+            background-image: url('img/cloud2.png');
+            animation: float-cloud-6 315s infinite linear;
+            animation-delay: -150s;
+            filter: blur(10px);
+            opacity: 0.25;
+        }
+
+        @keyframes float-cloud-1 {
+            0% { left: -2500px; }
+            100% { left: 110%; }
+        }
+
+        @keyframes float-cloud-2 {
+            0% { left: -3000px; }
+            100% { left: 110%; }
+        }
+
+        @keyframes float-cloud-3 {
+            0% { left: -2300px; }
+            100% { left: 110%; }
+        }
+
+        @keyframes float-cloud-4 {
+            0% { left: -2700px; }
+            100% { left: 110%; }
+        }
+
+        @keyframes float-cloud-5 {
+            0% { left: -2400px; }
+            100% { left: 110%; }
+        }
+
+        @keyframes float-cloud-6 {
+            0% { left: -2900px; }
+            100% { left: 110%; }
+        }
+
+        /* Boarding Pass Styles */
+        .boarding-pass {
+            background: linear-gradient(to right, #FFFFFF 0%, #FFFFFF 70%, #f8f9fa 70%, #f8f9fa 100%);
+            border-left: 4px solid var(--primary-blue);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .boarding-pass::before {
+            content: '';
+            position: absolute;
+            right: 70%;
+            top: -10px;
+            bottom: -10px;
+            width: 2px;
+            background-image: repeating-linear-gradient(
+                to bottom,
+                #e9ecef 0px,
+                #e9ecef 8px,
+                transparent 8px,
+                transparent 16px
+            );
+        }
+
+        .boarding-pass-stub {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .barcode {
+            width: 100%;
+            height: 60px;
+            background-image: repeating-linear-gradient(
+                to right,
+                #000 0px,
+                #000 2px,
+                #fff 2px,
+                #fff 4px,
+                #000 4px,
+                #000 5px,
+                #fff 5px,
+                #fff 7px,
+                #000 7px,
+                #000 10px,
+                #fff 10px,
+                #fff 12px
+            );
+            border-radius: 4px;
+            opacity: 0.4;
+        }
     </style>
 </head>
 <body class="bg-white text-gray-900">
@@ -267,23 +445,17 @@
     <nav class="fixed w-full z-50 transition-all duration-500" id="navbar">
         <div class="max-w-7xl mx-auto px-6 py-6">
             <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-500 rounded-2xl flex items-center justify-center font-bold text-white shadow-lg shadow-blue-500/50 relative overflow-hidden group">
-                        <div class="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                        <span class="relative z-10 text-lg">IA</span>
-                    </div>
-                    <div>
-                        <div class="font-bold text-lg text-gray-900">IATP</div>
-                        <div class="text-xs text-gray-500">Since 1949</div>
-                    </div>
-                </div>
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <img src="img/IATP-logo.png" alt="IATP Logo" class="h-14 w-auto transition-transform group-hover:scale-105">
+                </a>
 
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#services" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">Services</a>
-                    <a href="#events" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">Events</a>
-                    <a href="#platform" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">Platform</a>
-                    <a href="#network" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">Network</a>
-                    <button class="magnetic-btn px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-full font-semibold shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transition-all relative z-10">
+                    <a href="#services" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">Services</a>
+                    <a href="#events" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">Events</a>
+                    <a href="about.html" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">About</a>
+                    <a href="#platform" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">Platform</a>
+                    <a href="#network" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">Network</a>
+                    <button class="magnetic-btn px-8 py-3 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white rounded-full font-semibold shadow-lg shadow-[#0079c2]/30 hover:shadow-xl hover:shadow-[#0079c2]/40 transition-all relative z-10">
                         Member Portal
                     </button>
                 </div>
@@ -291,6 +463,30 @@
                 <button class="md:hidden text-gray-900" id="mobile-menu-btn">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden fixed inset-0 bg-gray-900/95 backdrop-blur-lg transform translate-x-full transition-transform duration-300 ease-in-out" id="mobile-menu">
+            <div class="flex flex-col h-full">
+                <div class="flex items-center justify-between px-6 py-6 border-b border-white/10">
+                    <img src="img/IATP-logo.png" alt="IATP Logo" class="h-12 w-auto brightness-0 invert">
+                    <button class="text-white" id="mobile-menu-close">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                <nav class="flex-1 px-6 py-8 space-y-6">
+                    <a href="#services" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Services</a>
+                    <a href="#events" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Events</a>
+                    <a href="about.html" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">About</a>
+                    <a href="#platform" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Platform</a>
+                    <a href="#network" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Network</a>
+                </nav>
+                <div class="px-6 py-8 border-t border-white/10">
+                    <button class="w-full px-8 py-4 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white rounded-full font-semibold shadow-lg text-lg">
+                        Member Portal
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
@@ -302,6 +498,16 @@
             <video autoplay muted loop playsinline class="scale-110">
                 <source src="https://assets.mixkit.co/videos/preview/mixkit-people-working-in-a-modern-office-4489-large.mp4" type="video/mp4">
             </video>
+        </div>
+
+        <!-- Animated Clouds -->
+        <div class="clouds">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+            <div class="cloud cloud-4"></div>
+            <div class="cloud cloud-5"></div>
+            <div class="cloud cloud-6"></div>
         </div>
 
         <!-- Hero Content -->
@@ -339,109 +545,144 @@
                 <!-- Bento Grid - Event Cards -->
                 <div class="grid md:grid-cols-3 lg:grid-cols-12 gap-6 max-w-7xl mx-auto">
                     <!-- Featured Upcoming Event - Takes 2/3 width -->
-                    <div class="lg:col-span-7 bento-card group">
-                        <div class="flex items-start justify-between mb-6">
-                            <div class="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500 to-orange-500 px-4 py-2 rounded-full badge-pulse">
-                                <i class="fas fa-calendar-star text-white text-sm"></i>
-                                <span class="text-white font-bold text-xs uppercase tracking-wider">Upcoming</span>
+                    <div class="lg:col-span-7 boarding-pass shadow-2xl rounded-2xl group hover:shadow-[#0079c2]/30 transition-all duration-500 hover:-translate-y-2">
+                        <div class="relative pr-[30%] p-8">
+                            <!-- Status Badge -->
+                            <div class="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500 to-orange-500 px-3 py-1.5 rounded-full badge-pulse mb-6">
+                                <i class="fas fa-plane-departure text-white text-xs"></i>
+                                <span class="text-white font-bold text-xs uppercase tracking-wider">Boarding Soon</span>
                             </div>
-                            <div class="text-right">
-                                <div class="text-sm text-gray-500 mb-1">Next Conference</div>
-                                <div class="text-2xl font-bold text-gradient">#133</div>
+
+                            <!-- Flight Number Style -->
+                            <div class="flex items-center justify-between mb-6">
+                                <div>
+                                    <div class="text-xs text-gray-500 uppercase tracking-wider mb-1">Flight Number</div>
+                                    <div class="text-2xl font-black text-[#0079c2]">IATP-133</div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-xs text-gray-500 uppercase tracking-wider mb-1">Destination</div>
+                                    <div class="text-3xl font-black text-gray-900">MALTA</div>
+                                </div>
                             </div>
-                        </div>
 
-                        <h3 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6 leading-tight">
-                            Malta<br/>2026
-                        </h3>
+                            <div class="mb-4">
+                                <div class="text-sm text-gray-500 mb-1">Location</div>
+                                <div class="text-lg font-semibold text-gray-900">St. Julian's, Malta</div>
+                            </div>
 
-                        <div class="grid grid-cols-2 gap-4 mb-6">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center">
-                                    <i class="fas fa-calendar text-blue-600"></i>
+                            <!-- Departure Info -->
+                            <div class="grid grid-cols-3 gap-4 mb-4 pb-4 border-b-2 border-dashed border-gray-200">
+                                <div>
+                                    <div class="text-xs text-gray-500 uppercase tracking-wider mb-1">Departure</div>
+                                    <div class="font-bold text-gray-900">Mar 7</div>
+                                    <div class="text-xs text-gray-600">2026</div>
                                 </div>
                                 <div>
-                                    <div class="text-xs text-gray-500">Dates</div>
-                                    <div class="font-semibold text-gray-900">Mar 7-11</div>
-                                </div>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center">
-                                    <i class="fas fa-users text-blue-600"></i>
+                                    <div class="text-xs text-gray-500 uppercase tracking-wider mb-1">Return</div>
+                                    <div class="font-bold text-gray-900">Mar 11</div>
+                                    <div class="text-xs text-gray-600">2026</div>
                                 </div>
                                 <div>
-                                    <div class="text-xs text-gray-500">Expected</div>
-                                    <div class="font-semibold text-gray-900">500+ delegates</div>
+                                    <div class="text-xs text-gray-500 uppercase tracking-wider mb-1">Passengers</div>
+                                    <div class="font-bold text-gray-900">500+</div>
+                                    <div class="text-xs text-gray-600">delegates</div>
                                 </div>
                             </div>
+
+                            <!-- Countdown -->
+                            <div class="bg-gradient-to-r from-[#0079c2]/10 to-[#337ab7]/10 rounded-xl p-3 mb-4">
+                                <div class="text-xs text-gray-600 uppercase tracking-wider mb-2 text-center">Time Until Departure</div>
+                                <div class="flex items-center justify-between">
+                                    <div class="text-center flex-1">
+                                        <div class="text-2xl font-black text-gradient counter" data-target="458" id="days">0</div>
+                                        <div class="text-xs text-gray-500 uppercase tracking-wider mt-1">Days</div>
+                                    </div>
+                                    <div class="text-center flex-1">
+                                        <div class="text-2xl font-black text-gradient" id="hours">0</div>
+                                        <div class="text-xs text-gray-500 uppercase tracking-wider mt-1">Hrs</div>
+                                    </div>
+                                    <div class="text-center flex-1">
+                                        <div class="text-2xl font-black text-gradient" id="minutes">0</div>
+                                        <div class="text-xs text-gray-500 uppercase tracking-wider mt-1">Min</div>
+                                    </div>
+                                    <div class="text-center flex-1">
+                                        <div class="text-2xl font-black text-gradient" id="seconds">0</div>
+                                        <div class="text-xs text-gray-500 uppercase tracking-wider mt-1">Sec</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="w-full py-3 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white rounded-lg font-bold text-sm hover:shadow-lg hover:shadow-[#0079c2]/50 transition-all group/btn flex items-center justify-center space-x-2">
+                                <i class="fas fa-ticket-alt"></i>
+                                <span>Register Now</span>
+                                <i class="fas fa-arrow-right group-hover/btn:translate-x-2 transition-transform"></i>
+                            </button>
                         </div>
 
-                        <!-- Countdown Timer -->
-                        <div class="flex items-center justify-between bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-4 mb-6">
-                            <div class="text-center flex-1">
-                                <div class="text-3xl font-black text-gradient counter" data-target="458" id="days">0</div>
-                                <div class="text-xs text-gray-500 uppercase tracking-wider mt-1">Days</div>
+                        <!-- Boarding Pass Stub -->
+                        <div class="boarding-pass-stub">
+                            <div class="text-center mb-4">
+                                <div class="text-xs text-gray-500 uppercase tracking-widest mb-2">Conference</div>
+                                <div class="text-4xl font-black text-gradient transform -rotate-90 whitespace-nowrap origin-center mb-4">#133</div>
                             </div>
-                            <div class="w-px h-12 bg-gray-200"></div>
-                            <div class="text-center flex-1">
-                                <div class="text-3xl font-black text-gradient" id="hours">0</div>
-                                <div class="text-xs text-gray-500 uppercase tracking-wider mt-1">Hours</div>
-                            </div>
-                            <div class="w-px h-12 bg-gray-200"></div>
-                            <div class="text-center flex-1">
-                                <div class="text-3xl font-black text-gradient" id="minutes">0</div>
-                                <div class="text-xs text-gray-500 uppercase tracking-wider mt-1">Min</div>
-                            </div>
-                            <div class="w-px h-12 bg-gray-200"></div>
-                            <div class="text-center flex-1">
-                                <div class="text-3xl font-black text-gradient" id="seconds">0</div>
-                                <div class="text-xs text-gray-500 uppercase tracking-wider mt-1">Sec</div>
-                            </div>
+                            <div class="barcode mb-3"></div>
+                            <div class="text-xs text-gray-400 text-center uppercase tracking-wider">IATP Global</div>
                         </div>
-
-                        <button class="w-full py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-xl font-bold text-lg hover:shadow-lg hover:shadow-blue-500/50 transition-all group flex items-center justify-center space-x-2">
-                            <span>Register Now</span>
-                            <i class="fas fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
-                        </button>
                     </div>
 
                     <!-- Past Events - Vertical Stack -->
                     <div class="lg:col-span-5 flex flex-col gap-6">
                         <!-- Past Event 1 -->
-                        <div class="bento-card group flex-1">
-                            <div class="flex items-center justify-between mb-4">
-                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-bold">PAST</span>
-                                <span class="text-2xl font-bold text-gray-300">#132</span>
+                        <div class="boarding-pass shadow-xl rounded-xl group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex-1">
+                            <div class="relative pr-[30%] p-6">
+                                <div class="flex items-center justify-between mb-3">
+                                    <div>
+                                        <div class="text-xs text-gray-400 uppercase tracking-wider mb-1">Flight</div>
+                                        <div class="text-lg font-black text-gray-400">IATP-132</div>
+                                    </div>
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-500 rounded-full text-xs font-bold uppercase">Completed</span>
+                                </div>
+                                <div class="text-2xl font-bold text-gray-900 mb-2">Dubai</div>
+                                <div class="flex items-center space-x-4 text-sm text-gray-600">
+                                    <div class="flex items-center space-x-1">
+                                        <i class="fas fa-calendar text-[#0079c2]"></i>
+                                        <span>Sep 2025</span>
+                                    </div>
+                                    <div class="flex items-center space-x-1">
+                                        <i class="fas fa-users text-[#0079c2]"></i>
+                                        <span>480</span>
+                                    </div>
+                                </div>
                             </div>
-                            <h4 class="text-2xl font-bold text-gray-900 mb-3">Dubai</h4>
-                            <div class="flex items-center space-x-4 text-sm text-gray-600">
-                                <div class="flex items-center space-x-1">
-                                    <i class="fas fa-calendar text-blue-600"></i>
-                                    <span>Sep 2025</span>
-                                </div>
-                                <div class="flex items-center space-x-1">
-                                    <i class="fas fa-users text-blue-600"></i>
-                                    <span>480</span>
-                                </div>
+                            <div class="boarding-pass-stub">
+                                <div class="text-3xl font-black text-gray-300 transform -rotate-90">#132</div>
                             </div>
                         </div>
 
                         <!-- Past Event 2 -->
-                        <div class="bento-card group flex-1">
-                            <div class="flex items-center justify-between mb-4">
-                                <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-bold">PAST</span>
-                                <span class="text-2xl font-bold text-gray-300">#131</span>
+                        <div class="boarding-pass shadow-xl rounded-xl group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex-1">
+                            <div class="relative pr-[30%] p-6">
+                                <div class="flex items-center justify-between mb-3">
+                                    <div>
+                                        <div class="text-xs text-gray-400 uppercase tracking-wider mb-1">Flight</div>
+                                        <div class="text-lg font-black text-gray-400">IATP-131</div>
+                                    </div>
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-500 rounded-full text-xs font-bold uppercase">Completed</span>
+                                </div>
+                                <div class="text-2xl font-bold text-gray-900 mb-2">Singapore</div>
+                                <div class="flex items-center space-x-4 text-sm text-gray-600">
+                                    <div class="flex items-center space-x-1">
+                                        <i class="fas fa-calendar text-[#0079c2]"></i>
+                                        <span>Mar 2025</span>
+                                    </div>
+                                    <div class="flex items-center space-x-1">
+                                        <i class="fas fa-users text-[#0079c2]"></i>
+                                        <span>520</span>
+                                    </div>
+                                </div>
                             </div>
-                            <h4 class="text-2xl font-bold text-gray-900 mb-3">Singapore</h4>
-                            <div class="flex items-center space-x-4 text-sm text-gray-600">
-                                <div class="flex items-center space-x-1">
-                                    <i class="fas fa-calendar text-blue-600"></i>
-                                    <span>Mar 2025</span>
-                                </div>
-                                <div class="flex items-center space-x-1">
-                                    <i class="fas fa-users text-blue-600"></i>
-                                    <span>520</span>
-                                </div>
+                            <div class="boarding-pass-stub">
+                                <div class="text-3xl font-black text-gray-300 transform -rotate-90">#131</div>
                             </div>
                         </div>
                     </div>
@@ -774,58 +1015,11 @@
                     <div class="text-lg text-gray-600 font-medium">Support</div>
                 </div>
             </div>
-
-            <!-- Testimonials -->
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bento-card">
-                    <div class="flex items-center space-x-4 mb-6">
-                        <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-500 rounded-2xl flex items-center justify-center text-2xl font-black text-white shadow-lg">
-                            DL
-                        </div>
-                        <div>
-                            <div class="font-bold text-xl text-gray-900">Delta Airlines</div>
-                            <div class="text-sm text-gray-500">Member since 1995</div>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 text-lg leading-relaxed italic mb-6">
-                        "IATP reduced our AOG response times by 60%. The network's reliability has transformed our maintenance operations."
-                    </p>
-                    <div class="flex text-yellow-500">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-
-                <div class="bento-card">
-                    <div class="flex items-center space-x-4 mb-6">
-                        <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center text-2xl font-black text-white shadow-lg">
-                            EK
-                        </div>
-                        <div>
-                            <div class="font-bold text-xl text-gray-900">Emirates</div>
-                            <div class="text-sm text-gray-500">Member since 2001</div>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 text-lg leading-relaxed italic mb-6">
-                        "The cooperative pooling model generated significant cost savings. IATP's global reach ensures support wherever we operate."
-                    </p>
-                    <div class="flex text-yellow-500">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-32 relative bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-500 overflow-hidden">
+    <section class="py-32 relative bg-gradient-to-br from-[#0079c2] via-[#337ab7] to-[#0079c2] overflow-hidden">
         <div class="absolute inset-0 opacity-10">
             <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full -ml-48 -mt-48"></div>
             <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full -mr-48 -mb-48"></div>
@@ -996,8 +1190,25 @@
 
         // Mobile Menu
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
         mobileMenuBtn?.addEventListener('click', () => {
-            alert('Mobile menu - to be implemented');
+            mobileMenu.classList.remove('translate-x-full');
+            document.body.style.overflow = 'hidden';
+        });
+
+        mobileMenuClose?.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+            document.body.style.overflow = '';
+        });
+
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                document.body.style.overflow = '';
+            });
         });
 
         // Initialize

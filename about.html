@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About IATP - International Airlines Technical Pool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #0079c2;
+            --secondary-blue: #337ab7;
+            --white: #FFFFFF;
+        }
+
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #0079c2 0%, #337ab7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tab-button {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .tab-button::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(to right, #0079c2, #337ab7);
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+
+        .tab-button.active::after {
+            width: 100%;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .magnetic-btn {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .magnetic-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .magnetic-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-xl shadow-lg transition-all duration-500" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-6">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <img src="img/IATP-logo.png" alt="IATP Logo" class="h-14 w-auto transition-transform group-hover:scale-105">
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#services" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">Services</a>
+                    <a href="index.html#events" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">Events</a>
+                    <a href="about.html" class="text-[#0079c2] font-semibold">About</a>
+                    <a href="index.html#platform" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">Platform</a>
+                    <a href="index.html#network" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">Network</a>
+                    <button class="magnetic-btn px-8 py-3 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white rounded-full font-semibold shadow-lg shadow-[#0079c2]/30 hover:shadow-xl hover:shadow-[#0079c2]/40 transition-all relative z-10">
+                        Member Portal
+                    </button>
+                </div>
+
+                <button class="md:hidden text-gray-900" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden fixed inset-0 bg-gray-900/95 backdrop-blur-lg transform translate-x-full transition-transform duration-300 ease-in-out" id="mobile-menu">
+            <div class="flex flex-col h-full">
+                <div class="flex items-center justify-between px-6 py-6 border-b border-white/10">
+                    <img src="img/IATP-logo.png" alt="IATP Logo" class="h-12 w-auto brightness-0 invert">
+                    <button class="text-white" id="mobile-menu-close">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                <nav class="flex-1 px-6 py-8 space-y-6">
+                    <a href="index.html#services" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Services</a>
+                    <a href="index.html#events" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Events</a>
+                    <a href="about.html" class="block text-[#0079c2] text-2xl font-semibold">About</a>
+                    <a href="index.html#platform" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Platform</a>
+                    <a href="index.html#network" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Network</a>
+                </nav>
+                <div class="px-6 py-8 border-t border-white/10">
+                    <button class="w-full px-8 py-4 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white rounded-full font-semibold shadow-lg text-lg">
+                        Member Portal
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 bg-gradient-to-br from-[#0079c2] to-[#337ab7] overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full -mr-48 -mt-48"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full -ml-48 -mb-48"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center">
+                <h1 class="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
+                    About IATP
+                </h1>
+                <p class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+                    A convention of Airlines sharing Technical Resources to generate economic savings and support on time dispatch reliability and operational safety.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabs Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Tab Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12 border-b border-gray-200 pb-6">
+                <button class="tab-button active px-6 py-3 text-lg font-semibold text-[#0079c2] hover:text-[#0079c2] transition-colors" data-tab="history">
+                    History
+                </button>
+                <button class="tab-button px-6 py-3 text-lg font-semibold text-gray-600 hover:text-[#0079c2] transition-colors" data-tab="organization">
+                    Organization
+                </button>
+                <button class="tab-button px-6 py-3 text-lg font-semibold text-gray-600 hover:text-[#0079c2] transition-colors" data-tab="membership">
+                    Membership
+                </button>
+                <button class="tab-button px-6 py-3 text-lg font-semibold text-gray-600 hover:text-[#0079c2] transition-colors" data-tab="governance">
+                    Governance
+                </button>
+            </div>
+
+            <!-- Tab Contents -->
+            <div class="max-w-4xl mx-auto">
+                <!-- History Tab -->
+                <div class="tab-content active" id="history">
+                    <div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-10 shadow-lg">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-2xl flex items-center justify-center mr-4">
+                                <i class="fas fa-history text-3xl text-white"></i>
+                            </div>
+                            <h2 class="text-4xl font-black text-gradient">Our History</h2>
+                        </div>
+                        <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-4">
+                            <p>
+                                The International Airlines Technical Pool (IATP) was established in 1948 with two simple purposes: share the cost of component spares and share the cost of technical resources.
+                            </p>
+                            <p>
+                                Originally based in Copenhagen, the airline pool moved to Geneva in 1963, where it remained until 1995. Today, IATP is headquartered at the International Air Transport Association (IATA) offices in Montreal, Canada.
+                            </p>
+                            <p>
+                                Over the decades, IATP has evolved from a small consortium of European airlines to a global network serving 133 member airlines and 43 associate members worldwide. Our commitment to collaboration and resource sharing has remained constant throughout our history.
+                            </p>
+                            <p>
+                                The organization has continuously adapted to the changing needs of the aviation industry, expanding from simple parts pooling to comprehensive technical support across line maintenance, aircraft recovery, and equipment pooling.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Organization Tab -->
+                <div class="tab-content" id="organization">
+                    <div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-10 shadow-lg">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-2xl flex items-center justify-center mr-4">
+                                <i class="fas fa-sitemap text-3xl text-white"></i>
+                            </div>
+                            <h2 class="text-4xl font-black text-gradient">Our Organization</h2>
+                        </div>
+                        <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-4">
+                            <p>
+                                IATP operates as a global aviation consortium where competing airlines cooperate in the technical domain. Our organization facilitates resource sharing across four primary pooling categories:
+                            </p>
+                            <div class="grid md:grid-cols-2 gap-6 my-8">
+                                <div class="bg-white p-6 rounded-xl border-l-4 border-[#0079c2] shadow-md">
+                                    <h4 class="font-bold text-xl text-gray-900 mb-2">Spare Parts Pooling</h4>
+                                    <p class="text-gray-600">Over 4,000 available items with 14-day free loan periods plus 7 days logistics</p>
+                                </div>
+                                <div class="bg-white p-6 rounded-xl border-l-4 border-[#337ab7] shadow-md">
+                                    <h4 class="font-bold text-xl text-gray-900 mb-2">Line Maintenance</h4>
+                                    <p class="text-gray-600">81 participants across 890 stations worldwide</p>
+                                </div>
+                                <div class="bg-white p-6 rounded-xl border-l-4 border-[#0079c2] shadow-md">
+                                    <h4 class="font-bold text-xl text-gray-900 mb-2">Aircraft Recovery</h4>
+                                    <p class="text-gray-600">12+ recovery kits capable of handling aircraft up to A380 size</p>
+                                </div>
+                                <div class="bg-white p-6 rounded-xl border-l-4 border-[#337ab7] shadow-md">
+                                    <h4 class="font-bold text-xl text-gray-900 mb-2">Equipment Pooling</h4>
+                                    <p class="text-gray-600">248 participants managing 167 pool items</p>
+                                </div>
+                            </div>
+                            <p>
+                                With over 500 delegates worldwide and presence in 890 pooling stations globally, IATP maintains partnerships with more than 40 OEM and service providers to ensure comprehensive support for all member airlines.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Membership Tab -->
+                <div class="tab-content" id="membership">
+                    <div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-10 shadow-lg">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-2xl flex items-center justify-center mr-4">
+                                <i class="fas fa-users text-3xl text-white"></i>
+                            </div>
+                            <h2 class="text-4xl font-black text-gradient">Membership</h2>
+                        </div>
+                        <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-4">
+                            <p>
+                                IATP membership provides airlines with access to a global network of technical resources, reducing operational costs and improving dispatch reliability. Our consortium includes:
+                            </p>
+                            <div class="grid md:grid-cols-3 gap-6 my-8">
+                                <div class="text-center bg-white p-6 rounded-xl shadow-md">
+                                    <div class="text-5xl font-black text-gradient mb-2">133</div>
+                                    <div class="text-gray-600 font-semibold">Member Airlines</div>
+                                </div>
+                                <div class="text-center bg-white p-6 rounded-xl shadow-md">
+                                    <div class="text-5xl font-black text-gradient mb-2">43</div>
+                                    <div class="text-gray-600 font-semibold">Associate Members</div>
+                                </div>
+                                <div class="text-center bg-white p-6 rounded-xl shadow-md">
+                                    <div class="text-5xl font-black text-gradient mb-2">500+</div>
+                                    <div class="text-gray-600 font-semibold">Global Delegates</div>
+                                </div>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Membership Fees</h3>
+                            <div class="bg-white p-6 rounded-xl border border-gray-200">
+                                <ul class="space-y-3">
+                                    <li class="flex items-center justify-between pb-3 border-b border-gray-100">
+                                        <span class="font-semibold text-gray-900">Annual Membership Fee</span>
+                                        <span class="text-2xl font-black text-gradient">$4,300 USD</span>
+                                    </li>
+                                    <li class="flex items-center justify-between">
+                                        <span class="font-semibold text-gray-900">Per-Pool Participation</span>
+                                        <span class="text-2xl font-black text-gradient">$950 USD</span>
+                                    </li>
+                                </ul>
+                                <p class="text-sm text-gray-600 mt-4 italic">* Free usage periods for borrowed equipment during emergency situations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Governance Tab -->
+                <div class="tab-content" id="governance">
+                    <div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-10 shadow-lg">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-2xl flex items-center justify-center mr-4">
+                                <i class="fas fa-gavel text-3xl text-white"></i>
+                            </div>
+                            <h2 class="text-4xl font-black text-gradient">Governance</h2>
+                        </div>
+                        <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-4">
+                            <p>
+                                IATP operates under a two-tier governance model implemented in 2023, ensuring effective oversight and efficient daily operations:
+                            </p>
+                            <div class="grid md:grid-cols-2 gap-6 my-8">
+                                <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-[#0079c2]">
+                                    <div class="text-center mb-4">
+                                        <i class="fas fa-user-tie text-5xl text-[#0079c2] mb-4"></i>
+                                    </div>
+                                    <h4 class="font-bold text-2xl text-gray-900 mb-3 text-center">Advisory Committee</h4>
+                                    <p class="text-gray-600 text-center">Provides strategic oversight and guidance to ensure IATP continues to meet the evolving needs of the global aviation industry</p>
+                                </div>
+                                <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-[#337ab7]">
+                                    <div class="text-center mb-4">
+                                        <i class="fas fa-users-cog text-5xl text-[#337ab7] mb-4"></i>
+                                    </div>
+                                    <h4 class="font-bold text-2xl text-gray-900 mb-3 text-center">Management Board</h4>
+                                    <p class="text-gray-600 text-center">Handles daily operations and ensures efficient coordination across all pooling activities and member services</p>
+                                </div>
+                            </div>
+                            <div class="bg-gradient-to-r from-[#0079c2] to-[#337ab7] p-8 rounded-xl text-white my-8">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <div class="text-sm uppercase tracking-wider mb-2 opacity-90">Chief Executive Officer</div>
+                                        <div class="text-3xl font-black">Giorgio Pietra</div>
+                                    </div>
+                                    <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-user text-4xl"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>
+                                This governance structure enables IATP to maintain the highest standards of transparency, accountability, and service delivery to our global membership.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-[#0079c2] via-[#337ab7] to-[#0079c2] relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full -ml-48 -mt-48"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full -mr-48 -mb-48"></div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
+                Ready to Join IATP?
+            </h2>
+            <p class="text-xl text-white/90 mb-10 leading-relaxed">
+                Become part of the world's leading aviation technical resource sharing platform
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <button class="magnetic-btn px-10 py-4 bg-white text-[#0079c2] rounded-full text-lg font-bold shadow-2xl hover:shadow-white/50 transition-all flex items-center space-x-3 group">
+                    <span>Become a Member</span>
+                    <i class="fas fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
+                </button>
+                <button class="magnetic-btn px-10 py-4 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white rounded-full text-lg font-bold hover:bg-white/20 transition-all">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="img/IATP-logo.png" alt="IATP Logo" class="h-12 w-auto brightness-0 invert">
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        The world's leading aviation technical resource sharing platform since 1949.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Services</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="index.html#services" class="hover:text-[#0079c2] transition-colors">Parts Pooling</a></li>
+                        <li><a href="index.html#services" class="hover:text-[#0079c2] transition-colors">Line Maintenance</a></li>
+                        <li><a href="index.html#services" class="hover:text-[#0079c2] transition-colors">Aircraft Recovery</a></li>
+                        <li><a href="index.html#services" class="hover:text-[#0079c2] transition-colors">Equipment Pooling</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Company</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="about.html" class="hover:text-[#0079c2] transition-colors">About Us</a></li>
+                        <li><a href="index.html#events" class="hover:text-[#0079c2] transition-colors">Events</a></li>
+                        <li><a href="#" class="hover:text-[#0079c2] transition-colors">Membership</a></li>
+                        <li><a href="#" class="hover:text-[#0079c2] transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-[#0079c2] transition-all">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-[#0079c2] transition-all">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-[#0079c2] transition-all">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between text-gray-400">
+                <p>&copy; 2025 IATP. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-[#0079c2] transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-[#0079c2] transition-colors">Terms</a>
+                    <a href="#" class="hover:text-[#0079c2] transition-colors">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab Functionality
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetTab = button.getAttribute('data-tab');
+
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => {
+                    btn.classList.remove('active', 'text-[#0079c2]');
+                    btn.classList.add('text-gray-600');
+                });
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Add active class to clicked button and corresponding content
+                button.classList.add('active', 'text-[#0079c2]');
+                button.classList.remove('text-gray-600');
+                document.getElementById(targetTab).classList.add('active');
+            });
+        });
+
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+        mobileMenuBtn?.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+            document.body.style.overflow = 'hidden';
+        });
+
+        mobileMenuClose?.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+            document.body.style.overflow = '';
+        });
+
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
+</body>
+</html>
