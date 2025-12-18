@@ -9,101 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-blue: #0079c2;
-            --secondary-blue: #337ab7;
-            --white: #FFFFFF;
-        }
-
-        * {
-            font-family: 'Inter', sans-serif;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Space Grotesk', sans-serif;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            overflow-x: hidden;
-        }
-
-        .text-gradient {
-            background: linear-gradient(135deg, #0079c2 0%, #337ab7 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .tab-button {
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .tab-button::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 3px;
-            background: linear-gradient(to right, #0079c2, #337ab7);
-            transform: translateX(-50%);
-            transition: width 0.3s ease;
-        }
-
-        .tab-button.active::after {
-            width: 100%;
-        }
-
-        .tab-content {
-            display: none;
-            animation: fadeIn 0.5s ease-in-out;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .magnetic-btn {
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .magnetic-btn::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.2);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-
-        .magnetic-btn:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-white text-gray-900">
 
@@ -170,8 +76,11 @@
                     About IATP
                 </h1>
                 <p class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-                    A convention of Airlines sharing Technical Resources to generate economic savings and support on time dispatch reliability and operational safety.
+                    A convention of Airlines sharing Technical Resources to generate economic savings and support on time dispatch reliability and operational safety
                 </p>
+                <div class="mt-8 text-white/80 text-lg">
+                    Over 130 Member Airlines, 45 'Sponsored' Airlines, and over 40 OEM and service providers
+                </div>
             </div>
         </div>
     </section>
@@ -208,16 +117,49 @@
                         </div>
                         <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-4">
                             <p>
-                                The International Airlines Technical Pool (IATP) was established in 1948 with two simple purposes: share the cost of component spares and share the cost of technical resources.
+                                In 1948, a few European airlines started sharing aircraft materials, equipment and manpower resources through a gentlemen's agreement. This marked the beginning of what would become the International Airlines Technical Pool.
                             </p>
+
+                            <div class="bg-white p-6 rounded-xl border-l-4 border-[#0079c2] my-6">
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4">Key Milestones</h3>
+                                <div class="space-y-3">
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-20 flex-shrink-0 font-bold text-[#0079c2]">1948</div>
+                                        <div>European airlines started sharing resources through a gentlemen's agreement</div>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-20 flex-shrink-0 font-bold text-[#0079c2]">1950</div>
+                                        <div>Introduction of financial settlement formulas</div>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-20 flex-shrink-0 font-bold text-[#0079c2]">1960</div>
+                                        <div>Formulation of the "Consolidated Pool"</div>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-20 flex-shrink-0 font-bold text-[#0079c2]">1967</div>
+                                        <div>Name changed to "International Airlines Technical Pool"</div>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-20 flex-shrink-0 font-bold text-[#0079c2]">1977</div>
+                                        <div>Merger with North American Airlines Technical Pool</div>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-20 flex-shrink-0 font-bold text-[#0079c2]">2005</div>
+                                        <div>Transfer to Luxembourg with permanent staff</div>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-20 flex-shrink-0 font-bold text-[#0079c2]">2020</div>
+                                        <div>First virtual conference due to COVID-19</div>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-20 flex-shrink-0 font-bold text-[#0079c2]">2024</div>
+                                        <div>Membership reached a record of 133 Airline and 43 Associate Members</div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <p>
-                                Originally based in Copenhagen, the airline pool moved to Geneva in 1963, where it remained until 1995. Today, IATP is headquartered at the International Air Transport Association (IATA) offices in Montreal, Canada.
-                            </p>
-                            <p>
-                                Over the decades, IATP has evolved from a small consortium of European airlines to a global network serving 133 member airlines and 43 associate members worldwide. Our commitment to collaboration and resource sharing has remained constant throughout our history.
-                            </p>
-                            <p>
-                                The organization has continuously adapted to the changing needs of the aviation industry, expanding from simple parts pooling to comprehensive technical support across line maintenance, aircraft recovery, and equipment pooling.
+                                Over the decades, IATP has evolved from a small consortium of European airlines to a global network. Our commitment to collaboration and resource sharing has remained constant throughout our history.
                             </p>
                         </div>
                     </div>
@@ -392,7 +334,7 @@
                         <img src="img/IATP-logo.png" alt="IATP Logo" class="h-12 w-auto brightness-0 invert">
                     </div>
                     <p class="text-gray-400 leading-relaxed">
-                        The world's leading aviation technical resource sharing platform since 1949.
+                        The world's leading aviation technical resource sharing platform since 1948.
                     </p>
                 </div>
 
