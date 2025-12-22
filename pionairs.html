@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIONAIRS - IATP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-xl shadow-lg transition-all duration-500" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-6">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <img src="img/IATP-logo.png" alt="IATP Logo" class="h-14 w-auto transition-transform group-hover:scale-105">
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <!-- About Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium flex items-center space-x-1">
+                            <span>About</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="about.html" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors first:rounded-t-xl">About Us</a>
+                            <a href="about.html#faq" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors">FAQ</a>
+                            <a href="pionairs.html" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors last:rounded-b-xl">PIONAIRS</a>
+                        </div>
+                    </div>
+
+                    <!-- Members Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium flex items-center space-x-1">
+                            <span>Members</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors first:rounded-t-xl">Why Join IATP</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors">Airline Members</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors">Become a Member</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors last:rounded-b-xl">Associate Members</a>
+                        </div>
+                    </div>
+
+                    <!-- News Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium flex items-center space-x-1">
+                            <span>News</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors rounded-xl">Press</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">Contact</a>
+
+                    <button class="magnetic-btn px-8 py-3 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white rounded-full font-semibold shadow-lg shadow-[#0079c2]/30 hover:shadow-xl hover:shadow-[#0079c2]/40 transition-all relative z-10">
+                        Member Portal
+                    </button>
+                </div>
+
+                <button class="md:hidden text-gray-900" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden fixed inset-0 bg-gray-900/95 backdrop-blur-lg transform translate-x-full transition-transform duration-300 ease-in-out" id="mobile-menu">
+            <div class="flex flex-col h-full">
+                <div class="flex items-center justify-between px-6 py-6 border-b border-white/10">
+                    <img src="img/IATP-logo.png" alt="IATP Logo" class="h-12 w-auto brightness-0 invert">
+                    <button class="text-white" id="mobile-menu-close">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                <nav class="flex-1 px-6 py-8 space-y-4">
+                    <!-- About Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-dropdown-btn">
+                            <span>About</span>
+                            <i class="fas fa-chevron-down text-lg transition-transform"></i>
+                        </button>
+                        <div class="mobile-dropdown-content hidden pl-6 pt-3 space-y-3">
+                            <a href="about.html" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">About Us</a>
+                            <a href="about.html#faq" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">FAQ</a>
+                            <a href="pionairs.html" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">PIONAIRS</a>
+                        </div>
+                    </div>
+
+                    <!-- Members Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-dropdown-btn">
+                            <span>Members</span>
+                            <i class="fas fa-chevron-down text-lg transition-transform"></i>
+                        </button>
+                        <div class="mobile-dropdown-content hidden pl-6 pt-3 space-y-3">
+                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">Why Join IATP</a>
+                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">Airline Members</a>
+                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">Become a Member</a>
+                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">Associate Members</a>
+                        </div>
+                    </div>
+
+                    <!-- News Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-dropdown-btn">
+                            <span>News</span>
+                            <i class="fas fa-chevron-down text-lg transition-transform"></i>
+                        </button>
+                        <div class="mobile-dropdown-content hidden pl-6 pt-3 space-y-3">
+                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">Press</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Contact</a>
+                </nav>
+                <div class="px-6 py-8 border-t border-white/10">
+                    <button class="w-full px-8 py-4 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white rounded-full font-semibold shadow-lg text-lg">
+                        Member Portal
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 bg-gradient-to-br from-[#0079c2] to-[#337ab7] overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full -mr-48 -mt-48"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full -ml-48 -mb-48"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center">
+                <div class="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-md px-6 py-3 rounded-full mb-8 border border-white/30">
+                    <i class="fas fa-users text-white"></i>
+                    <span class="text-white font-medium text-sm">Since 1984</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
+                    IATP PIONAIRS Association
+                </h1>
+                <p class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+                    Preserving friendships and fostering continued contact among those who have served the IATP
+                </p>
+                <div class="mt-8 text-white/80 text-lg">
+                    Issue: April 2023
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="text-2xl text-gray-700 leading-relaxed font-medium">
+                The PIONAIRS Association is an independent organization made by former IATP delegates
+            </p>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="inline-block px-6 py-2 bg-blue-50 text-blue-600 rounded-full text-sm font-bold mb-6">
+                    GET IN TOUCH
+                </div>
+                <h2 class="text-5xl md:text-6xl font-black text-gray-900 mb-6">
+                    Contacts
+                </h2>
+            </div>
+
+            <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+                <!-- Chairperson -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-user-tie text-3xl text-white"></i>
+                        </div>
+                        <div class="inline-block px-4 py-1.5 bg-blue-50 text-[#0079c2] rounded-full text-xs font-bold uppercase mb-4">
+                            Chairperson
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Mr. Saud Alahmadi</h3>
+                        <a href="mailto:direast@gmail.com" class="inline-flex items-center space-x-2 text-[#0079c2] hover:text-[#337ab7] transition-colors">
+                            <i class="fas fa-envelope"></i>
+                            <span class="text-sm">direast@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Co-Chairperson -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-user text-3xl text-white"></i>
+                        </div>
+                        <div class="inline-block px-4 py-1.5 bg-blue-50 text-[#0079c2] rounded-full text-xs font-bold uppercase mb-4">
+                            Co-Chairperson
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Mr. Richard Hyam</h3>
+                        <a href="mailto:richard.hyam@gmail.com" class="inline-flex items-center space-x-2 text-[#0079c2] hover:text-[#337ab7] transition-colors">
+                            <i class="fas fa-envelope"></i>
+                            <span class="text-sm">richard.hyam@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Standby Member -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-user-clock text-3xl text-white"></i>
+                        </div>
+                        <div class="inline-block px-4 py-1.5 bg-blue-50 text-[#0079c2] rounded-full text-xs font-bold uppercase mb-4">
+                            Standby Member
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Mr. San Lucktong</h3>
+                        <p class="text-gray-500 text-sm mb-2">(ex-TG)</p>
+                        <a href="mailto:tha17966@yahoo.com" class="inline-flex items-center space-x-2 text-[#0079c2] hover:text-[#337ab7] transition-colors">
+                            <i class="fas fa-envelope"></i>
+                            <span class="text-sm">tha17966@yahoo.com</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms of Reference Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="inline-block px-6 py-2 bg-blue-50 text-blue-600 rounded-full text-sm font-bold mb-6">
+                    TERMS OF REFERENCE
+                </div>
+                <h2 class="text-5xl md:text-6xl font-black text-gray-900 mb-6">
+                    Association Guidelines
+                </h2>
+            </div>
+
+            <div class="max-w-5xl mx-auto space-y-6">
+                <!-- 1. General -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <button class="accordion-header w-full px-8 py-6 text-left flex items-center justify-between hover:bg-blue-50 transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-white font-bold text-lg">1</span>
+                            </div>
+                            <span class="font-bold text-xl text-gray-900">General</span>
+                        </div>
+                        <i class="fas fa-chevron-down text-[#0079c2] transition-transform accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content hidden px-8 pb-6">
+                        <p class="text-gray-700 leading-relaxed">
+                            Many of the people who have enjoyed the association and friendship with colleagues through the IATP have wanted to have a way of continuing these contacts even after their active participation in the IATP business ceases. For this purpose, the IATP PIONAIRS Association was founded in 1984 at the 50th IATP Conference held in Mainz, Germany. The PIONAIRS Association seeks to preserve those friendships which have developed through the IATP across national boundaries and to foster continued contact among those who have served the IATP in the past and between them and the current IATP body.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 2. Name -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <button class="accordion-header w-full px-8 py-6 text-left flex items-center justify-between hover:bg-blue-50 transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-white font-bold text-lg">2</span>
+                            </div>
+                            <span class="font-bold text-xl text-gray-900">Name of the PIONAIRS Association</span>
+                        </div>
+                        <i class="fas fa-chevron-down text-[#0079c2] transition-transform accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content hidden px-8 pb-6">
+                        <p class="text-gray-700 leading-relaxed">
+                            The PIONAIRS Association shall be entitled: "The PIONAIRS Association of the International Airlines Technical Pool (IATP-PA)."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3. Purpose -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <button class="accordion-header w-full px-8 py-6 text-left flex items-center justify-between hover:bg-blue-50 transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-white font-bold text-lg">3</span>
+                            </div>
+                            <span class="font-bold text-xl text-gray-900">Purpose of the PIONAIRS Association</span>
+                        </div>
+                        <i class="fas fa-chevron-down text-[#0079c2] transition-transform accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content hidden px-8 pb-6">
+                        <p class="text-gray-700 leading-relaxed">
+                            The purpose of the PIONAIRS Association shall be to foster and preserve international friendships developed among persons who have served as airline delegates or associate member representatives to the International Airlines Technical Pool (IATP), to maintain contact between its members and the IATP and to attend social events and meetings as per the Meeting Matrix only.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 4. Membership -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <button class="accordion-header w-full px-8 py-6 text-left flex items-center justify-between hover:bg-blue-50 transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-white font-bold text-lg">4</span>
+                            </div>
+                            <span class="font-bold text-xl text-gray-900">Membership</span>
+                        </div>
+                        <i class="fas fa-chevron-down text-[#0079c2] transition-transform accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content hidden px-8 pb-6">
+                        <div class="text-gray-700 leading-relaxed space-y-4">
+                            <p>
+                                Membership in the PIONAIRS Association is open to current or former IATP airline employees or associate member representatives who are no longer active in IATP related functions including but not limited to, selling, or leasing of parts, parts procurement and pooling, technical training, aircraft maintenance, aircraft recovery, engine lease or selling, and MRO services in general, who have attended:
+                            </p>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li>at least six (6) conferences and have taken on a responsibility as a chairperson or co-chairperson of an IATP pool group or project group and/or have held a term of office in the IATP, OR</li>
+                                <li>at least eight (8) conferences as official delegates or representatives of their respective companies.</li>
+                            </ul>
+                            <p>
+                                All members of the PIONAIRS Association are treated as equals. With regards to the membership fee, the only difference could be financial, depending on the date of joining the PIONAIRS Association. Persons may definitely not be active members of the PIONAIRS Association whilst serving as delegates/representatives at IATP Conferences.
+                            </p>
+                            <p>
+                                In cases where an application for membership is rejected, the applicant has the right to ask for an interview with the Chairperson and Co-Chairperson of the PIONAIRS Association for clarification and final decision.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Officers -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <button class="accordion-header w-full px-8 py-6 text-left flex items-center justify-between hover:bg-blue-50 transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-white font-bold text-lg">5</span>
+                            </div>
+                            <span class="font-bold text-xl text-gray-900">Officers</span>
+                        </div>
+                        <i class="fas fa-chevron-down text-[#0079c2] transition-transform accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content hidden px-8 pb-6">
+                        <div class="text-gray-700 leading-relaxed space-y-4">
+                            <p>
+                                The PIONAIRS Association shall have a chairperson, who shall be elected from among the members by electronic mail process in even number years. This process is realistic due to the high absence rate of members to most of the meetings held during conferences. The chairperson shall preside over the meetings and other gatherings of the members, arrange appropriate communication to all members and shall conduct the affairs of the PIONAIRS Association as the membership may authorise. The PIONAIRS Association may also elect a co-chairperson by electronic mail. Other officers may be elected in case of necessity, the duties of said officers being specified before the time of their election.
+                            </p>
+                            <p>
+                                The term of office for the chairperson and the co-chairperson is a four-year term and can be re-elected for a directly subsequent second term. A former chairperson can also be re-elected after at least one full term break. Candidates are elected while getting positive votes of two thirds of the active members. If a member has no objection and does not respond this will be taken as a positive vote.
+                            </p>
+                            <p>
+                                Unless the PIONAIRS Association shall elect a treasurer, the chairperson shall have custody of funds belonging to the Association and shall receive and disburse funds for the purposes of the PIONAIRS Association, giving a 'statement of account' of such funds at least annually to the membership.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Administration -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <button class="accordion-header w-full px-8 py-6 text-left flex items-center justify-between hover:bg-blue-50 transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-white font-bold text-lg">6</span>
+                            </div>
+                            <span class="font-bold text-xl text-gray-900">Administration, Communication, Meetings and Newsletters</span>
+                        </div>
+                        <i class="fas fa-chevron-down text-[#0079c2] transition-transform accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content hidden px-8 pb-6">
+                        <div class="text-gray-700 leading-relaxed space-y-4">
+                            <p>
+                                The PIONAIRS Association shall hold bi-annual meetings in conjunction with regularly scheduled IATP Conferences. At such meetings, interesting information shall be transferred. Any adjustments to membership fees shall be established. A financial report shall be available and such other current information be presented as the members may determine. Minutes of the meetings shall be transmitted to all members with a copy to the IATP. Meetings of IATP-PA are mandatory for all members of the PIONAIRS Association attending the IATP Conference and having previously registered officially as a PIONAIR. Additionally, on request and by approval of the chairperson or co-chairperson, interested IATP delegates will be allowed to join the PA meetings under the following status:
+                            </p>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li><strong>Observer Status:</strong> Delegates who are interested to apply for membership in the PIONAIRS Association in the near future, while retiring from their company - or changing their job and are fulfilling the requirements for membership.</li>
+                                <li><strong>Non-Active Member Status:</strong> Delegates who have been approved as PIONAIRS already but have taken a new service job for a company registered for the conference until further notice.</li>
+                            </ul>
+                            <p>
+                                If, at a conference, the Chair and co-Chair cannot attend, the Chair can appoint a registered active PIONAIR to take the Chair position for that specific conference and the IATP must be informed of the responsible person's name.
+                            </p>
+                            <p>
+                                The PIONAIRS Association provides newsletters to its members to keep them informed of current important and interesting IATP activities, plans for future conferences and news of former delegates. The information on conferences is intended to facilitate attendance at future conferences by PIONAIRS who choose to attend at their own expense, where they have always been welcomed.
+                            </p>
+                            <p>
+                                The continuous updating and distribution of the Membership List shall be mandatory. A Memory List (Past Members), where a member can no longer be traced, or has passed away or has been removed from the Membership List for other reasons, shall be maintained by the chairperson. If a member passes away there will be a notification of the loss to all PIONAIRS and the IATP.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Dues -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <button class="accordion-header w-full px-8 py-6 text-left flex items-center justify-between hover:bg-blue-50 transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-white font-bold text-lg">7</span>
+                            </div>
+                            <span class="font-bold text-xl text-gray-900">Dues</span>
+                        </div>
+                        <i class="fas fa-chevron-down text-[#0079c2] transition-transform accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content hidden px-8 pb-6">
+                        <div class="text-gray-700 leading-relaxed space-y-4">
+                            <p>
+                                The PIONAIRS Association membership shall, at its own meetings, review charges for dues from the members. The dues are subject to be defined by a democratic process depending on the actual situation within the PIONAIRS Association and also depending on the relationship to the IATP Organisation. Past members will be 'grandfathered' under the terms they joined the PIONAIRS Association. All future members will pay the revised dues from the date of their acceptance as a member. Until future decisions are finalised however, those members to pay a fee of 70.- EUR until future notice. Payment of dues shall be by money transfer to the bank account for the PIONAIRS Association in Luxembourg.
+                            </p>
+
+                            <div class="bg-gradient-to-r from-blue-50 to-cyan-50 p-6  border-l-4 border-[#0079c2]">
+                                <h4 class="font-bold text-lg text-gray-900 mb-4">Bank Account Details</h4>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <div class="text-sm text-gray-600 mb-1">Account Holder:</div>
+                                        <div class="font-semibold text-gray-900">IATP PIONAIRS Association</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm text-gray-600 mb-1">Name of Bank:</div>
+                                        <div class="font-semibold text-gray-900">BCEE</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm text-gray-600 mb-1">IBAN-Number:</div>
+                                        <div class="font-semibold text-gray-900">LU98 0019 3455 6034 8000</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm text-gray-600 mb-1">BIC:</div>
+                                        <div class="font-semibold text-gray-900">BCEELULLXXX</div>
+                                    </div>
+                                    <div class="md:col-span-2">
+                                        <div class="text-sm text-gray-600 mb-1">Subject:</div>
+                                        <div class="font-semibold text-gray-900">PA membership fee, surname, given name</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="text-sm italic">
+                                The dues of the PIONAIRS Association do not cover any bank transfer fees or any IATP-fees for attending the conference, including social events.
+                            </p>
+                            <p class="text-sm italic">
+                                The fee for attending the conference, including social events, will be determined by the IATP, and discussed with the PIONAIRS Association before implementation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Termination -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <button class="accordion-header w-full px-8 py-6 text-left flex items-center justify-between hover:bg-blue-50 transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-white font-bold text-lg">8</span>
+                            </div>
+                            <span class="font-bold text-xl text-gray-900">Termination of Membership</span>
+                        </div>
+                        <i class="fas fa-chevron-down text-[#0079c2] transition-transform accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content hidden px-8 pb-6">
+                        <div class="text-gray-700 leading-relaxed space-y-4">
+                            <p>
+                                Membership shall be terminated by resignation, death or return to IATP service as an IATP delegate. If a PIONAIR returns to IATP service for a limited time period and is attending a conference on behalf of a company, the member shall inform the PIONAIRS Association Chair by completing and signing the 'Change of Membership Status' document and forwarding to the Chair before commencement of the conference in question. For the duration of the change of status, the member will be added to the Non-active Membership List for six (6) consecutive conferences or three (3) years, whichever comes first. Before the end of this period, the candidate must reapply for membership, otherwise the membership will expire.
+                            </p>
+                            <p>
+                                When returning from IATP service a new 'Change of Membership Status' document should be completed by the member, including signature and date and forwarded the PIONAIRS Association Chair, who will return the member to the Membership List again. If the above conditions are not followed, the PIONAIR in question may lose their membership.
+                            </p>
+                            <p>
+                                The performance of any private business or any business in favour of a company is definitely prohibited for PIONAIRS attending an IATP Conference and shall be considered as a severe violation to the rules of the PIONAIRS Association, followed by the immediate termination of membership.
+                            </p>
+                            <p>
+                                The PIONAIRS Association may also terminate the membership of a particular member if that member is in arrears for at least two years in payment of dues.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Relationship to IATP -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <button class="accordion-header w-full px-8 py-6 text-left flex items-center justify-between hover:bg-blue-50 transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-white font-bold text-lg">9</span>
+                            </div>
+                            <span class="font-bold text-xl text-gray-900">Relationship to the IATP</span>
+                        </div>
+                        <i class="fas fa-chevron-down text-[#0079c2] transition-transform accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content hidden px-8 pb-6">
+                        <div class="text-gray-700 leading-relaxed space-y-4">
+                            <p>
+                                The PIONAIRS Association and the IATP are separate entities. The budget of the PIONAIRS Association is separate from the IATP budget. The IATP is not responsible for the obligations and duties of the PIONAIRS Association and the PIONAIRS Association is not responsible for the obligations and duties of the IATP.
+                            </p>
+                            <p>
+                                The chairperson of the PIONAIRS Association shall serve as spokesperson for the PIONAIRS Association in dealing with the IATP or other bodies and shall seek to maintain a harmonious and supportive relationship with the IATP. The Chairperson shall encourage PIONAIRS Association members to participate in social or other activities of the IATP as the IATP and its Advisory Committee may require, authorise, or approve, always subject to be defined in case and detail. The Co-Chairperson will act as spokesperson if the Chairperson is not available or incapacitated.
+                            </p>
+                            <p>
+                                The administration role of the PIONAIRS Association is in its own hands.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. Approval or Amendment -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <button class="accordion-header w-full px-8 py-6 text-left flex items-center justify-between hover:bg-blue-50 transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-white font-bold text-lg">10</span>
+                            </div>
+                            <span class="font-bold text-xl text-gray-900">Approval or Amendment of Terms of Reference</span>
+                        </div>
+                        <i class="fas fa-chevron-down text-[#0079c2] transition-transform accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content hidden px-8 pb-6">
+                        <div class="text-gray-700 leading-relaxed space-y-4">
+                            <p>
+                                These Terms of Reference shall become effective when they have been circulated to all members and are thereafter approved by a majority of all members voting by electronic mail, with notification to the IATP. Proposed amendments to the Terms of Reference must also be circulated to all members and shall become effective only when thereafter approved by two thirds of the active members, voting by electronic mail.
+                            </p>
+                            <p>
+                                In the process, with respect to item 9, the Terms of Reference of the PIONAIRS Association and related amendments will be presented to and discussed with the IATP, after being approved beforehand by the members of the PIONAIRS Association. Suggestions for revisions or amendments by the IATP are permitted, followed by a clearing process within the PIONAIRS Association and another discussion with the IATP for general acceptance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Members List Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="inline-block px-6 py-2 bg-blue-50 text-blue-600 rounded-full text-sm font-bold mb-6">
+                    OUR MEMBERS
+                </div>
+                <h2 class="text-5xl md:text-6xl font-black text-gray-900 mb-6">
+                    IATP PIONAIR Members
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Last Updated: July 16, 2024
+                </p>
+            </div>
+
+            <div class="max-w-5xl mx-auto">
+                <div class="bg-white rounded-3xl shadow-xl p-8">
+                    <div class="grid md:grid-cols-2 gap-x-8 gap-y-3">
+                        <!-- A -->
+                        <div class="col-span-2 mt-6 first:mt-0">
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">A</div>
+                        </div>
+                        <div class="text-gray-700">Adcock, Dwayne <span class="text-gray-500">(ex-AER)</span></div>
+                        <div class="text-gray-700">Al-Sandi, Abdullah <span class="text-gray-500">(ex-KU)</span></div>
+                        <div class="text-gray-700">Alahmadi, Saud Ahmed <span class="text-gray-500">(ex-SV)</span></div>
+                        <div class="text-gray-700">Algindari, Abdulla <span class="text-gray-500">(ex-IY)</span></div>
+                        <div class="text-gray-700">Armstrong, John <span class="text-gray-500">(ex-TAV)</span></div>
+                        <div class="text-gray-700">Asano, Kenji <span class="text-gray-500">(ex-NH / LHT)</span></div>
+                        <div class="text-gray-700">Autrey, Stefan <span class="text-gray-500">(ex-CC / FI)</span></div>
+
+                        <!-- B -->
+                        <div class="col-span-2 mt-6">
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">B</div>
+                        </div>
+                        <div class="text-gray-700">Blei, Neil <span class="text-gray-500">(ex-M2M)</span></div>
+                        <div class="text-gray-700">Bridekirk, M.J. <span class="text-gray-500">(ex-QF)</span></div>
+                        <div class="text-gray-700">Brigham, Lu <span class="text-gray-500">(ex-UA)</span></div>
+                        <div class="text-gray-700">Buchfeld, Angéla <span class="text-gray-500">(ex-AIB)</span></div>
+                        <div class="text-gray-700">Buchfeld, Peter <span class="text-gray-500">(ex-AIB / ITL / BOE)</span></div>
+
+                        <!-- C -->
+                        <div class="col-span-2 mt-6">
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">C</div>
+                        </div>
+                        <div class="text-gray-700">Chen Tong Wee, Lennie <span class="text-gray-500">(ex-MH)</span></div>
+                        <div class="text-gray-700">Clarkson, Steve <span class="text-gray-500">(ex-BA)</span></div>
+                        <div class="text-gray-700">Cook, Larry <span class="text-gray-500">(ex-5X)</span></div>
+                        <div class="text-gray-700">Cruz, Antonio <span class="text-gray-500">(ex-TP)</span></div>
+
+                        <!-- D -->
+                        <div class="col-span-2 mt-6">
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">D</div>
+                        </div>
+                        <div class="text-gray-700">Dacoulis, John <span class="text-gray-500">(ex-TS)</span></div>
+                        <div class="text-gray-700">De Jésus, Regelio (Roy) P. <span class="text-gray-500">(ex-PR)</span></div>
+                        <div class="text-gray-700">DeWitt, Elena <span class="text-gray-500">(ex-UA)</span></div>
+                        <div class="text-gray-700">Duarte, Portugal Marques <span class="text-gray-500">(ex-TP)</span></div>
+
+                        <!-- E -->
+                        <div class="col-span-2 mt-6">
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">E</div>
+                        </div>
+                        <div class="text-gray-700">Elliott, Rosa <span class="text-gray-500">(ex-RG)</span></div>
+                        <div class="text-gray-700">Elmegrab, Nouri <span class="text-gray-500">(ex-LY)</span></div>
+
+                        <!-- F -->
+                        <div class="col-span-2 mt-6">
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">F</div>
+                        </div>
+                        <div class="text-gray-700">Fitzgerald, Thomas <span class="text-gray-500">(ex-KL)</span></div>
+                        <div class="text-gray-700">Focken, Horst <span class="text-gray-500">(ex-LH)</span></div>
+
+                        <!-- G -->
+                        <div class="col-span-2 mt-6">
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">G</div>
+                        </div>
+                        <div class="text-gray-700">Goehring, Colleen <span class="text-gray-500">(ex-NW)</span></div>
+                        <div class="text-gray-700">Griem, Ingo <span class="text-gray-500">(ex-LHT)</span></div>
+
+                        <!-- H -->
+                        <div class="col-span-2 mt-6">
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">H</div>
+                        </div>
+                        <div class="text-gray-700">Harper, Donald N. <span class="text-gray-500">(ex-TW)</span></div>
+                        <div class="text-gray-700">Heurteloup, Patrick <span class="text-gray-500">(ex-AF)</span></div>
+                        <div class="text-gray-700">Hidayat, Taufik <span class="text-gray-500">(ex-JAE)</span></div>
+                        <div class="text-gray-700">Huard, Marc-André <span class="text-gray-500">(ex-AC)</span></div>
+                        <div class="text-gray-700">Hyam, Richard <span class="text-gray-500">(ex-GRC/UTA)</span></div>
+                        <div class="text-gray-700">Hyddén, Peter <span class="text-gray-500">(ex-6B)</span></div>
+
+                        <!-- J -->
+                        <div class="col-span-2 mt-6">
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">J</div>
+                        </div>
+                        <div class="text-gray-700">Julin, Liisa <span class="text-gray-500">(ex-AY)</span></div>
+
+                        <!-- K -->
+                        <div class="col-span-2 mt-6">
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">K</div>
+                        </div>
+                        <div class="text-gray-700">Kells, Brian <span class="text-gray-500">(ex-AC)</span></div>
+                        <div class="text-gray-700">Kerr, Annette <span class="text-gray-500">(ex-BA)</span></div>
+                        <div class="text-gray-700">Kerr, Stephen <span class="text-gray-500">(ex-VS)</span></div>
+                        <div class="text-gray-700">Klouvatos, Nick <span class="text-gray-500">(ex-OA)</span></div>
+                        <div class="text-gray-700">Koppers, Ronald <span class="text-gray-500">(ex-KL / DMX)</span></div>
+
+                        <!-- L -->
+                        <div class="col-span-2 mt-6">
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">L</div>
+                        </div>
+                        <div class="text-gray-700">L'Eveille, Jean-Marie <span class="text-gray-500">(ex-QF)</span></div>
+                        <div class="text-gray-700">Lewis, Christopher <span class="text-gray-500">(ex-AB/SAL)</span></div>
+                        <div class="text-gray-700">Lianopoulou, Mara <span class="text-gray-500">(ex-OA)</span></div>
+                        <div class="text-gray-700">Loureiro, Afonso <span class="text-gray-500">(ex-TP)</span></div>
+                        <div class="text-gray-700">Lowell, Michael Peter <span class="text-gray-500">(ex-BOE)</span></div>
+                        <div class="text-gray-700">Lucktong, San <span class="text-gray-500">(ex-TG)</span></div>
+
+                        <!-- M -->
+                        <div class="col-span-2 mt-6">
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">M</div>
+                        </div>
+                        <div class="text-gray-700">Millbank, Matt <span class="text-gray-500">(ex-AJW)</span></div>
+                        <div class="text-gray-700">Murri, Giancarlo <span class="text-gray-500">(ex-AZ)</span></div>
+
+                        <!-- O -->
+                        <div class="col-span-2 mt-6">
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">O</div>
+                        </div>
+                        <div class="text-gray-700">Oades, Robert James <span class="text-gray-500">(ex-EY)</span></div>
+
+                        <!-- P -->
+                        <div class="col-span-2 mt-6">
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">P</div>
+                        </div>
+                        <div class="text-gray-700">Pinto, Mordechai <span class="text-gray-500">(ex-LY)</span></div>
+
+                        <!-- R -->
+                        <div class="col-span-2 mt-6">
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">R</div>
+                        </div>
+                        <div class="text-gray-700">Randall, Anthony Keith <span class="text-gray-500">(ex-KL)</span></div>
+                        <div class="text-gray-700">Robazza, Giancarlo <span class="text-gray-500">(ex-AZ)</span></div>
+                        <div class="text-gray-700">Ross, Patricia <span class="text-gray-500">(ex-AA)</span></div>
+                        <div class="text-gray-700">Rocha, Jorge <span class="text-gray-500">(ex-TP)</span></div>
+
+                        <!-- S -->
+                        <div class="col-span-2 mt-6">
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">S</div>
+                        </div>
+                        <div class="text-gray-700">Savarimuthu, Peter <span class="text-gray-500">(ex-MH)</span></div>
+                        <div class="text-gray-700">Schmitz, Helmut <span class="text-gray-500">(ex-AC)</span></div>
+                        <div class="text-gray-700">Schrader, Horst <span class="text-gray-500">(ex-LH)</span></div>
+                        <div class="text-gray-700">Shilansky, Arie <span class="text-gray-500">(ex-LY)</span></div>
+                        <div class="text-gray-700">Six, Paul <span class="text-gray-500">(ex-LH)</span></div>
+                        <div class="text-gray-700">Stahl, Uwe <span class="text-gray-500">(ex-LH)</span></div>
+                        <div class="text-gray-700">Suliman, Ramzy <span class="text-gray-500">(ex-AC)</span></div>
+                        <div class="text-gray-700">Swallow, Ian <span class="text-gray-500">(ex-BA)</span></div>
+
+                        <!-- T -->
+                        <div class="col-span-2 mt-6">
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">T</div>
+                        </div>
+                        <div class="text-gray-700">Toorani, Isa <span class="text-gray-500">(ex-GF)</span></div>
+
+                        <!-- U -->
+                        <div class="col-span-2 mt-6">
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">U</div>
+                        </div>
+                        <div class="text-gray-700">Umar, Abdullah Osman <span class="text-gray-500">(ex-EK)</span></div>
+                        <div class="text-gray-700">Urich, Wolfgang <span class="text-gray-500">(ex-X3)</span></div>
+
+                        <!-- V -->
+                        <div class="col-span-2 mt-6">
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">V</div>
+                        </div>
+                        <div class="text-gray-700">Vincent, Nicholas (Nick) <span class="text-gray-500">(ex-MNX)</span></div>
+
+                        <!-- W -->
+                        <div class="col-span-2 mt-6">
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">W</div>
+                        </div>
+                        <div class="text-gray-700">Wengler, Alfred <span class="text-gray-500">(ex-NAY)</span></div>
+                        <div class="text-gray-700">Wikner, Uno <span class="text-gray-500">(ex-SK)</span></div>
+                        <div class="text-gray-700">Williams, Colin <span class="text-gray-500">(ex-VS)</span></div>
+
+                        <!-- Y -->
+                        <div class="col-span-2 mt-6">
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">Y</div>
+                        </div>
+                        <div class="text-gray-700">Yawata, Yoshihiro <span class="text-gray-500">(ex-NH)</span></div>
+                        <div class="text-gray-700">Yelloly, Andrew <span class="text-gray-500">(ex-BA)</span></div>
+
+                        <!-- Z -->
+                        <div class="col-span-2 mt-6">
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">Z</div>
+                        </div>
+                        <div class="text-gray-700">Zehnder, Robert <span class="text-gray-500">(ex-SRT)</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Forms Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="inline-block px-6 py-2 bg-blue-50 text-blue-600 rounded-full text-sm font-bold mb-6">
+                    APPLICATION FORMS
+                </div>
+                <h2 class="text-5xl md:text-6xl font-black text-gray-900 mb-6">
+                    Join PIONAIRS
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Download the necessary forms to apply for membership or change your status
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-file-download text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Application for Membership</h3>
+                    <p class="text-gray-600 mb-6">
+                        Download the official IATP-PA Application for Membership form (December 2022)
+                    </p>
+                    <a href="#" class="inline-flex items-center space-x-2 text-[#0079c2] font-bold hover:text-[#337ab7] transition-colors">
+                        <span>Download Form</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-file-alt text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Change of Status Form</h3>
+                    <p class="text-gray-600 mb-6">
+                        Download the IATP-PA Change of Status form for membership status updates (December 2022)
+                    </p>
+                    <a href="#" class="inline-flex items-center space-x-2 text-[#0079c2] font-bold hover:text-[#337ab7] transition-colors">
+                        <span>Download Form</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-[#0079c2] via-[#337ab7] to-[#0079c2] relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full -ml-48 -mt-48"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full -mr-48 -mb-48"></div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
+                Ready to Join PIONAIRS?
+            </h2>
+            <p class="text-xl text-white/90 mb-10 leading-relaxed">
+                Continue your IATP friendships and connections
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <button class="magnetic-btn px-10 py-4 bg-white text-[#0079c2] rounded-full text-lg font-bold shadow-2xl hover:shadow-white/50 transition-all flex items-center space-x-3 group">
+                    <span>Apply Now</span>
+                    <i class="fas fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
+                </button>
+                <button class="magnetic-btn px-10 py-4 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white rounded-full text-lg font-bold hover:bg-white/20 transition-all">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="img/IATP-logo.png" alt="IATP Logo" class="h-12 w-auto brightness-0 invert">
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        The world's leading aviation technical resource sharing platform since 1948.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Services</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-[#0079c2] transition-colors">Parts Pooling</a></li>
+                        <li><a href="#" class="hover:text-[#0079c2] transition-colors">Line Maintenance</a></li>
+                        <li><a href="#" class="hover:text-[#0079c2] transition-colors">Aircraft Recovery</a></li>
+                        <li><a href="#" class="hover:text-[#0079c2] transition-colors">Equipment Pooling</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Company</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="about.html" class="hover:text-[#0079c2] transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-[#0079c2] transition-colors">Events</a></li>
+                        <li><a href="#" class="hover:text-[#0079c2] transition-colors">Membership</a></li>
+                        <li><a href="#" class="hover:text-[#0079c2] transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-[#0079c2] transition-all">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-[#0079c2] transition-all">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-[#0079c2] transition-all">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between text-gray-400">
+                <p>&copy; 2025 IATP. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-[#0079c2] transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-[#0079c2] transition-colors">Terms</a>
+                    <a href="#" class="hover:text-[#0079c2] transition-colors">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+        mobileMenuBtn?.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+            document.body.style.overflow = 'hidden';
+        });
+
+        mobileMenuClose?.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+            document.body.style.overflow = '';
+        });
+
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Mobile Dropdown functionality
+        const mobileDropdownBtns = document.querySelectorAll('.mobile-dropdown-btn');
+        mobileDropdownBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const dropdown = btn.parentElement;
+                const content = dropdown.querySelector('.mobile-dropdown-content');
+                const icon = btn.querySelector('i');
+
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Accordion functionality for Terms of Reference
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const icon = header.querySelector('.accordion-icon');
+
+                // Toggle current item
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+    </script>
+</body>
+</html>

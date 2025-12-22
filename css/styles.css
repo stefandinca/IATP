@@ -20,6 +20,9 @@ body {
     overflow-x: hidden;
 }
 
+a {
+    color: var(--primary-blue);
+}
 
 /* Hero Video Section */
 .hero-video-container {

@@ -1,0 +1,38 @@
+FAQ section content:
+
+Conference
+Information
+IATP organizes two Conferences every year before the Airline Business Seasons start (March and October). All upcoming conference-related information (location, dates, schedule, meeting description, hotel booking link etc.) can be found on IATP website by clicking on “Conferences” in the upper menu of the homepage.
+
+Registration
+Registration usually opens four months before the conference start. Representatives of an IATP Member (Airline Member or Associate Member) should log into IATP Platform to click on the registration link. If you do not have a user account on IATP Platform, the Senior Delegate representing your company at IATP can either create a user account for you or invite you by sending you a registration link. Non-IATP Members should register using the link displayed in the left margin of IATP Homepage.
+
+Cancellation
+To cancel your registration, please log into IATP Platform and click on the registration link; at the bottom of the page, click on “Cancel”. Registration can be cancelled free of charge no later than one week prior to the conference start; after this date, a “No Show” penalty will be charged.
+
+Online Meetings Scheduler
+IATP provides an online meetings scheduler enabling all participants to fix appointments with other delegates during the conference days. The access to the scheduler is given to IATP Members one month prior to the conference start and to non-IATP Members two weeks prior to the conference start.
+
+Visa
+Visa requirements and contact details of conference hosting company/hotel for invitation letter are listed on the conference page of IATP website.
+
+Platform
+Login
+In order to access IATP Platform, you should have a user account. Please request your Airlines’ Senior Delegate at IATP to create a user account for you. Any change can be made to the user account by clicking on “My Profile” in the upper menu of the platform after login.
+
+Password reset
+For security reasons, a password reset feature has been implemented in 2015, requiring all users to renew their password every year. After 11 months, the platform will send automatic reminders every week to reset the password; when logging in, the user will be prompted to reset his/her password.
+
+User Account deactivation
+Accounts of users not logging in for one year are automatically deactivated.
+
+User Account reactivation
+Expired user accounts shall only be reactivated by the Senior Delegate, the Acting Senior Delegate or the IATP Corporate Office.
+
+Downloading documents
+Documents can be downloaded from IATP Platform. Please note that the platform is compatible with IE VII, Mozilla Firefox and Chrome. To avoid any issues accessing the document, please make sure to use one of these browsers or the compatible mode.
+
+Aircraft Recovery
+Thanks to its members IATP ensures a worldwide coverage with 12 Basic Recovery Kits and 4 Large Kits (to be used in conjunction with a basic kit when recovering an aircraft up to maximum take-off weight of 1,300,700 lbs).
+
+Kit configurations are comprised of IATP providers recommended minimum equipment lists. Each kit will have extra tools based upon individual providers. For further information about Aircraft Recovery, please contact IATP Corporate Office here.
