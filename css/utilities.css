@@ -1,0 +1,243 @@
+/**
+ * IATP Utility Classes
+ * Tailwind-style utilities for rapid development
+ */
+
+/* ========================================
+   COLOR UTILITIES
+   ======================================== */
+
+/* Text Colors */
+.text-electric-cyan { color: var(--color-electric-cyan) !important; }
+.text-plasma-blue { color: var(--color-plasma-blue) !important; }
+.text-success-green { color: var(--color-success-green) !important; }
+.text-deep-navy { color: var(--color-deep-navy) !important; }
+.text-primary-blue { color: var(--color-primary-blue) !important; }
+.text-secondary-blue { color: var(--color-secondary-blue) !important; }
+
+/* Background Colors */
+.bg-white { background-color: #ffffff !important; }
+.bg-electric-cyan { background-color: var(--color-electric-cyan) !important; }
+.bg-plasma-blue { background-color: var(--color-plasma-blue) !important; }
+.bg-success-green { background-color: var(--color-success-green) !important; }
+.bg-deep-navy { background-color: var(--color-deep-navy) !important; }
+.bg-primary-blue { background-color: var(--color-primary-blue) !important; }
+.bg-secondary-blue { background-color: var(--color-secondary-blue) !important; }
+
+/* Background with opacity */
+.bg-primary-blue\/10 { background-color: rgba(0, 121, 194, 0.1) !important; }
+.bg-electric-cyan\/20 { background-color: rgba(0, 217, 255, 0.2) !important; }
+.bg-plasma-blue\/20 { background-color: rgba(0, 71, 255, 0.2) !important; }
+.bg-success-green\/20 { background-color: rgba(0, 255, 148, 0.2) !important; }
+.bg-white\/10 { background-color: rgba(255, 255, 255, 0.1) !important; }
+
+/* Border Colors */
+.border-electric-cyan { border-color: var(--color-electric-cyan) !important; }
+.border-plasma-blue { border-color: var(--color-plasma-blue) !important; }
+
+/* ========================================
+   SPACING UTILITIES
+   ======================================== */
+
+.gap-1 { gap: 0.25rem; }
+.gap-2 { gap: 0.5rem; }
+.gap-3 { gap: 0.75rem; }
+.gap-4 { gap: 1rem; }
+.gap-6 { gap: 1.5rem; }
+.gap-8 { gap: 2rem; }
+
+.p-4 { padding: 1rem; }
+.p-6 { padding: 1.5rem; }
+.p-8 { padding: 2rem; }
+.p-10 { padding: 2.5rem; }
+
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mb-12 { margin-bottom: 3rem; }
+.mb-16 { margin-bottom: 4rem; }
+.mb-20 { margin-bottom: 5rem; }
+
+.mt-2 { margin-top: 0.5rem; }
+
+.mr-2 { margin-right: 0.5rem; }
+
+/* ========================================
+   LAYOUT UTILITIES
+   ======================================== */
+
+.flex { display: flex; }
+.inline-flex { display: inline-flex; }
+.grid { display: grid; }
+.hidden { display: none; }
+.block { display: block; }
+.inline-block { display: inline-block; }
+
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+.h-20 { height: 5rem; }
+
+.max-w-2xl { max-width: 42rem; }
+.max-w-4xl { max-width: 56rem; }
+.max-w-6xl { max-width: 72rem; }
+
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+.z-10 { z-index: 10; }
+
+/* ========================================
+   BORDER & ROUNDED
+   ======================================== */
+
+.rounded-full { border-radius: 9999px; }
+.rounded-2xl { border-radius: 1rem; }
+.rounded-3xl { border-radius: 1.5rem; }
+
+/* ========================================
+   SIZE UTILITIES
+   ======================================== */
+
+.w-2 { width: 0.5rem; }
+.h-2 { height: 0.5rem; }
+.w-3 { width: 0.75rem; }
+.h-3 { height: 0.75rem; }
+.w-8 { width: 2rem; }
+.h-8 { height: 2rem; }
+.w-12 { width: 3rem; }
+.h-12 { height: 3rem; }
+.w-16 { width: 4rem; }
+.h-16 { height: 4rem; }
+.w-20 { width: 5rem; }
+.h-20 { height: 5rem; }
+
+/* ========================================
+   TEXT UTILITIES
+   ======================================== */
+
+.text-xs { font-size: 0.75rem; }
+.text-sm { font-size: 0.875rem; }
+.text-base { font-size: 1rem; }
+.text-lg { font-size: 1.125rem; }
+.text-xl { font-size: 1.25rem; }
+.text-2xl { font-size: 1.5rem; }
+.text-3xl { font-size: 1.875rem; }
+.text-4xl { font-size: 2.25rem; }
+.text-5xl { font-size: 3rem; }
+.text-7xl { font-size: 4.5rem; }
+
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+.font-black { font-weight: 900; }
+.font-light { font-weight: 300; }
+
+.text-center { text-align: center; }
+
+.leading-tight { line-height: 1.25; }
+.leading-relaxed { line-height: 1.625; }
+
+.uppercase { text-transform: uppercase; }
+
+/* White with opacity */
+.text-white\/50 { color: rgba(255, 255, 255, 0.5); }
+.text-white\/70 { color: rgba(255, 255, 255, 0.7); }
+.text-white\/80 { color: rgba(255, 255, 255, 0.8); }
+.text-white\/90 { color: rgba(255, 255, 255, 0.9); }
+
+/* ========================================
+   RESPONSIVE GRID
+   ======================================== */
+
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+@media (min-width: 768px) {
+    .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .md\:text-4xl { font-size: 2.25rem; }
+    .md\:text-7xl { font-size: 4.5rem; }
+    .md\:flex-row { flex-direction: row; }
+    .md\:flex { display: flex; }
+}
+
+@media (min-width: 1024px) {
+    .lg\:block { display: block; }
+    .lg\:col-span-12 { grid-column: span 12 / span 12; }
+}
+
+/* ========================================
+   HOVER STATES
+   ======================================== */
+
+.hover\:text-white:hover { color: white; }
+.hover\:scale-105:hover { transform: scale(1.05); }
+
+/* ========================================
+   TRANSITIONS
+   ======================================== */
+
+.transition-all { transition-property: all; }
+.transition-colors { transition-property: color, background-color, border-color; }
+.transition-transform { transition-property: transform; }
+
+.duration-300 { transition-duration: 300ms; }
+.duration-500 { transition-duration: 500ms; }
+
+/* ========================================
+   EFFECTS
+   ======================================== */
+
+.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+.shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+
+.cursor-pointer { cursor: pointer; }
+
+.overflow-hidden { overflow: hidden; }
+
+.inset-0 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.opacity-10 { opacity: 0.1; }
+
+.top-0 { top: 0; }
+.right-0 { right: 0; }
+.bottom-10 { bottom: 2.5rem; }
+.left-1\/2 { left: 50%; }
+
+.transform { transform: translateX(0) translateY(0); }
+.-translate-x-1\/2 { transform: translateX(-50%); }
+
+/* ========================================
+   SPACE BETWEEN
+   ======================================== */
+
+.space-x-3 > * + * { margin-left: 0.75rem; }
+.space-x-8 > * + * { margin-left: 2rem; }
+.space-y-4 > * + * { margin-top: 1rem; }
+
+/* ========================================
+   MISC
+   ======================================== */
+
+.group { position: relative; }
+
+.group:hover .group-hover\:scale-110 { transform: scale(1.1); }
+.group:hover .group-hover\:rotate-6 { transform: rotate(6deg); }
