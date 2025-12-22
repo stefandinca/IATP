@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IATP - International Airlines Technical Pool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-xl shadow-lg transition-all duration-500" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-6">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <img src="img/IATP-logo.png" alt="IATP Logo" class="h-14 w-auto transition-transform group-hover:scale-105">
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <!-- About Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium flex items-center space-x-1">
+                            <span><a href="about.html#hero">About</a></span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="about.html#about" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors first:rounded-t-xl">About Us</a>
+                            <a href="about.html#faq" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors">FAQ</a>
+                            <a href="pionairs.html" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors last:rounded-b-xl">PIONAIRS</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">Events</a>
+
+                    <!-- Members Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium flex items-center space-x-1">
+                            <span>Members</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors first:rounded-t-xl">Why Join IATP</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors">Airline Members</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors">Become a Member</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors last:rounded-b-xl">Associate Members</a>
+                        </div>
+                    </div>
+
+                    <!-- News Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium flex items-center space-x-1">
+                            <span>News</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors rounded-xl">Press</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">Contact</a>
+
+                    <button class="magnetic-btn px-8 py-3 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white rounded-full font-semibold shadow-lg shadow-[#0079c2]/30 hover:shadow-xl hover:shadow-[#0079c2]/40 transition-all relative z-10">
+                        Member Portal
+                    </button>
+                </div>
+
+                <button class="md:hidden text-gray-900" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden fixed inset-0 bg-gray-900/95 backdrop-blur-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50" id="mobile-menu">
+            <div class="flex flex-col h-full">
+                <div class="flex items-center justify-between px-6 py-6 border-b border-white/10">
+                    <a href="index.html"> <img src="img/IATP-logo.png" alt="IATP Logo" class="h-12 w-auto   "></a>
+                    <button class="text-white" id="mobile-menu-close">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                <nav class="flex-1 px-6 py-8 space-y-4 bg-gray-900">
+                    <!-- About Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-dropdown-btn">
+                            <span><a href="about.html#hero">About</a></span>
+                            <i class="fas fa-chevron-down text-lg transition-transform"></i>
+                        </button>
+                        <div class="mobile-dropdown-content hidden pl-6 pt-3 space-y-3">
+                            <a href="about.html#about" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">About Us</a>
+                            <a href="about.html#faq" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">FAQ</a>
+                            <a href="pionairs.html" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">PIONAIRS</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Events</a>
+
+
+                    <!-- Members Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-dropdown-btn">
+                            <span>Members</span>
+                            <i class="fas fa-chevron-down text-lg transition-transform"></i>
+                        </button>
+                        <div class="mobile-dropdown-content hidden pl-6 pt-3 space-y-3">
+                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">Why Join IATP</a>
+                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">Airline Members</a>
+                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">Become a Member</a>
+                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">Associate Members</a>
+                        </div>
+                    </div>
+
+                    <!-- News Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-dropdown-btn">
+                            <span>News</span>
+                            <i class="fas fa-chevron-down text-lg transition-transform"></i>
+                        </button>
+                        <div class="mobile-dropdown-content hidden pl-6 pt-3 space-y-3">
+                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">Press</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Contact</a>
+                </nav>
+                <div class="px-6 py-8 border-t border-white/10 bg-gray-800">
+                    <button class="w-full px-8 py-4 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white rounded-full font-semibold shadow-lg text-lg">
+                        Member Portal
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section with Video -->
+    <section class="relative min-h-screen flex items-center overflow-hidden">
+        <!-- Video Background -->
+        <div class="hero-video-container">
+            <video autoplay muted loop playsinline class="scale-110">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-people-working-in-a-modern-office-4489-large.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- Animated Clouds -->
+        <div class="clouds">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+            <div class="cloud cloud-4"></div>
+            <div class="cloud cloud-5"></div>
+            <div class="cloud cloud-6"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 w-full pt-32 pb-20 px-6">
+            <div class="max-w-7xl mx-auto">
+                <!-- Hero Text -->
+                <div class="text-center mb-16">
+                    <div class="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-md px-6 py-3 rounded-full mb-8 border border-white/30">
+                        <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                        <span class="text-white font-medium text-sm">76 Years of Aviation Excellence</span>
+                    </div>
+
+                    <h1 class="text-6xl md:text-8xl lg:text-9xl font-black text-white mb-8 leading-none tracking-tight">
+                        IATP<br/>
+                        <span class="text-4xl md:text-6xl lg:text-6xl inline-block mt-4 leading-relaxed">International Airlines Technical Pool</span>
+                    </h1>
+
+                    <p class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-12 leading-relaxed font-light">
+                        Sharing Technical Resources to 
+                        
+                    </p>
+                    <div class="columns-2 lg:px-[25%] gap-4 pb-12 text-left  text-white/90 ">
+                        <div>
+                            Generate economic savings
+                        </div>
+                        <div>
+                            Support aog situations
+                        </div>
+                        <div>
+                            On time dispatch reliability
+                        </div>
+                        <div>
+                            Operational safety
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20">
+                        <button class="magnetic-btn group px-10 py-5 bg-white text-blue-600 rounded-full text-lg font-bold shadow-2xl hover:shadow-white/50 transition-all flex items-center space-x-3">
+                            <span>Explore Membership</span>
+                            <i class="fas fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
+                        </button>
+                        <button class="magnetic-btn px-10 py-5 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white rounded-full text-lg font-semibold hover:bg-white/20 transition-all flex items-center space-x-3">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Watch Story</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Bento Grid - Event Cards -->
+                <div class="grid md:grid-cols-3 lg:grid-cols-12 gap-6 max-w-7xl mx-auto">
+                    <!-- Featured Upcoming Event - Takes 2/3 width -->
+                    <div class="lg:col-span-7 boarding-pass shadow-2xl rounded-2xl group hover:shadow-[#0079c2]/30 transition-all duration-500 hover:-translate-y-2">
+                        <div class="relative p-8 pr-[28%]">
+                            <!-- Status Badge -->
+                            <div class="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500 to-orange-500 px-4 py-2 rounded-full badge-pulse mb-6">
+                                <i class="fas fa-star text-white text-xs"></i>
+                                <span class="text-white font-bold text-xs uppercase tracking-wider">Upcoming</span>
+                            </div>
+
+                            <!-- Event Title -->
+                            <div class="mb-6">
+                                <div class="text-sm text-gray-500 mb-2 uppercase tracking-wider">133rd IATP Conference</div>
+                                <h3 class="text-5xl font-black text-gray-900 mb-2">Malta</h3>
+                                <p class="text-lg text-gray-600">St. Julian's, Malta</p>
+                            </div>
+
+                            <!-- Event Details -->
+                            <div class="space-y-4 mb-6">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-calendar text-[#0079c2]"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs text-gray-500 uppercase tracking-wider">Dates</div>
+                                        <div class="font-bold text-gray-900">March 7-11, 2026</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-users text-[#0079c2]"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs text-gray-500 uppercase tracking-wider">Expected</div>
+                                        <div class="font-bold text-gray-900">500+ delegates</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Divider -->
+                            <div class="border-t-2 border-dashed border-gray-300 my-6"></div>
+
+                            <!-- Countdown -->
+                            <div class="bg-gradient-to-r from-[#0079c2]/10 to-[#337ab7]/10 rounded-xl p-4 mb-6">
+                                <div class="text-xs text-gray-600 uppercase tracking-wider mb-3 text-center font-semibold">Countdown to Event</div>
+                                <div class="grid grid-cols-4 gap-2">
+                                    <div class="text-center">
+                                        <div class="text-2xl font-black text-gradient counter" data-target="458" id="days">0</div>
+                                        <div class="text-xs text-gray-500 uppercase tracking-wider mt-1">Days</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-2xl font-black text-gradient" id="hours">0</div>
+                                        <div class="text-xs text-gray-500 uppercase tracking-wider mt-1">Hrs</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-2xl font-black text-gradient" id="minutes">0</div>
+                                        <div class="text-xs text-gray-500 uppercase tracking-wider mt-1">Min</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-2xl font-black text-gradient" id="seconds">0</div>
+                                        <div class="text-xs text-gray-500 uppercase tracking-wider mt-1">Sec</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="w-full py-4 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white rounded-xl font-bold text-base hover:shadow-lg hover:shadow-[#0079c2]/50 transition-all group/btn flex items-center justify-center space-x-2">
+                                <span>Register Now</span>
+                                <i class="fas fa-arrow-right group-hover/btn:translate-x-2 transition-transform"></i>
+                            </button>
+                        </div>
+
+                        <!-- Boarding Pass Stub -->
+                        <div class="boarding-pass-stub">
+                            <div class="text-center">
+                                <div class="text-xs text-gray-400 uppercase tracking-widest mb-3">Conference</div>
+                                <div class="text-5xl font-black text-gradient mb-3">#133</div>
+                                <div class="text-xs text-gray-500 font-semibold">2026</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Past Events - Vertical Stack -->
+                    <div class="lg:col-span-5 flex flex-col gap-6">
+                        <!-- Past Event 1 -->
+                        <div class="boarding-pass shadow-xl rounded-xl group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex-1">
+                            <div class="relative p-6 pr-[28%]">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="px-3 py-1.5 bg-gray-100 text-gray-600 rounded-full text-xs font-bold uppercase">Past</span>
+                                    <span class="text-sm text-gray-400 font-semibold">#132</span>
+                                </div>
+                                <h4 class="text-3xl font-black text-gray-900 mb-3">Dubai</h4>
+                                <div class="space-y-2">
+                                    <div class="flex items-center space-x-2 text-sm text-gray-600">
+                                        <i class="fas fa-calendar text-[#0079c2]"></i>
+                                        <span>September 2025</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 text-sm text-gray-600">
+                                        <i class="fas fa-users text-[#0079c2]"></i>
+                                        <span>480 delegates</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boarding-pass-stub">
+                                <div class="text-4xl font-black text-gray-300">#132</div>
+                            </div>
+                        </div>
+
+                        <!-- Past Event 2 -->
+                        <div class="boarding-pass shadow-xl rounded-xl group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex-1">
+                            <div class="relative p-6 pr-[28%]">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="px-3 py-1.5 bg-gray-100 text-gray-600 rounded-full text-xs font-bold uppercase">Past</span>
+                                    <span class="text-sm text-gray-400 font-semibold">#131</span>
+                                </div>
+                                <h4 class="text-3xl font-black text-gray-900 mb-3">Singapore</h4>
+                                <div class="space-y-2">
+                                    <div class="flex items-center space-x-2 text-sm text-gray-600">
+                                        <i class="fas fa-calendar text-[#0079c2]"></i>
+                                        <span>March 2025</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 text-sm text-gray-600">
+                                        <i class="fas fa-users text-[#0079c2]"></i>
+                                        <span>520 delegates</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boarding-pass-stub">
+                                <div class="text-4xl font-black text-gray-300">#131</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Bar -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mx-auto mt-12">
+                    <div class="bento-card text-center">
+                        <div class="text-4xl font-black text-gradient counter" data-target="890">0</div>
+                        <div class="text-sm text-gray-600 mt-2 font-medium">Global Stations</div>
+                    </div>
+                    <div class="bento-card text-center">
+                        <div class="text-4xl font-black text-gradient counter" data-target="4000">0</div>
+                        <div class="text-sm text-gray-600 mt-2 font-medium">Pooled Parts</div>
+                    </div>
+                    <div class="bento-card text-center">
+                        <div class="text-4xl font-black text-gradient counter" data-target="130">0</div>
+                        <div class="text-sm text-gray-600 mt-2 font-medium">Member Airlines</div>
+                    </div>
+                    <div class="bento-card text-center">
+                        <div class="text-4xl font-black text-gradient counter" data-target="76">0</div>
+                        <div class="text-sm text-gray-600 mt-2 font-medium">Years Legacy</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 scroll-indicator z-10">
+            <div class="w-6 h-10 border-2 border-white rounded-full flex items-start justify-center p-2">
+                <div class="w-1 h-2 bg-white rounded-full animate-pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-32 relative gradient-mesh">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20 reveal-up">
+                <div class="inline-block px-6 py-2 bg-blue-50 text-blue-600 rounded-full text-sm font-bold mb-6">
+                    WHAT WE OFFER
+                </div>
+                <h2 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-tight">
+                    Four Pillars of<br/>
+                    <span class="text-gradient">Excellence</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Comprehensive solutions designed to keep your fleet operational 24/7/365
+                </p>
+            </div>
+
+            <!-- Asymmetric Grid -->
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Large Feature Card -->
+                <div class="lg:row-span-2 gradient-border service-card p-10 bg-white rounded-3xl group cursor-pointer">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-3xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg shadow-blue-500/30">
+                        <i class="fas fa-cogs text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-4xl font-black text-gray-900 mb-6">Parts Pooling</h3>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Access 4,000+ spare parts across 890 global stations. Immediate availability when you need it most, reducing downtime and operational costs dramatically.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                            <span class="text-gray-700">Instant AOG response</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                            <span class="text-gray-700">Global inventory network</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                            <span class="text-gray-700">Cost-effective pooling</span>
+                        </div>
+                    </div>
+
+                    <button class="flex items-center space-x-2 text-blue-600 font-bold group/btn">
+                        <span>Explore More</span>
+                        <i class="fas fa-arrow-right group-hover/btn:translate-x-2 transition-transform"></i>
+                    </button>
+                </div>
+
+                <!-- Smaller Cards -->
+                <div class="service-card p-8 bg-white rounded-3xl border border-gray-100 hover:border-blue-200 group cursor-pointer shadow-sm hover:shadow-xl transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-md">
+                        <i class="fas fa-wrench text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Line Maintenance</h3>
+                    <p class="text-gray-600 mb-6">
+                        81 providers at 890 stations ensuring on-time dispatch and safety compliance.
+                    </p>
+                    <button class="flex items-center space-x-2 text-blue-600 font-semibold">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right text-sm"></i>
+                    </button>
+                </div>
+
+                <div class="service-card p-8 bg-white rounded-3xl border border-gray-100 hover:border-blue-200 group cursor-pointer shadow-sm hover:shadow-xl transition-all">
+                    <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-md">
+                        <i class="fas fa-life-ring text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Aircraft Recovery</h3>
+                    <p class="text-gray-600 mb-6">
+                        Comprehensive kits for any aircraft type. Rapid deployment when it matters most.
+                    </p>
+                    <button class="flex items-center space-x-2 text-blue-600 font-semibold">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right text-sm"></i>
+                    </button>
+                </div>
+
+                <!-- Full Width Bottom Card -->
+                <div class="lg:col-span-2 service-card p-10 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-3xl group cursor-pointer overflow-hidden relative">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32"></div>
+                    <div class="relative z-10 flex flex-col md:flex-row items-center justify-between">
+                        <div class="flex-1 mb-6 md:mb-0">
+                            <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-toolbox text-2xl text-white"></i>
+                            </div>
+                            <h3 class="text-3xl font-bold text-white mb-4">Equipment Pooling</h3>
+                            <p class="text-blue-50 text-lg max-w-xl">
+                                Tools and ground handling resources at 248 locations. Shared resources for maximum efficiency and cost savings.
+                            </p>
+                        </div>
+                        <button class="magnetic-btn px-8 py-4 bg-white text-blue-600 rounded-full font-bold hover:shadow-2xl transition-all">
+                            View Equipment
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Section -->
+    <div id="platform"></div>
+    <section class="py-32 relative bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Content -->
+                <div class="reveal-up">
+                    <div class="inline-block px-6 py-2 bg-blue-50 text-blue-600 rounded-full text-sm font-bold mb-6">
+                        EXCLUSIVE ACCESS
+                    </div>
+                    <h2 class="text-5xl md:text-6xl font-black text-gray-900 mb-8 leading-tight">
+                        Your Digital<br/>
+                        <span class="text-gradient">Command Center</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 mb-12 leading-relaxed">
+                        Access the world's most powerful aviation technical network from anywhere, anytime.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-2xl hover:bg-blue-50 transition-colors group cursor-pointer">
+                            <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-address-book text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">AOG Contact Directory</h4>
+                                <p class="text-gray-600">Instant access to 130+ airlines for rapid emergency response</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-2xl hover:bg-blue-50 transition-colors group cursor-pointer">
+                            <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-broadcast-tower text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">Real-Time Availability</h4>
+                                <p class="text-gray-600">Live broadcasts across the entire network</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-2xl hover:bg-blue-50 transition-colors group cursor-pointer">
+                            <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-chart-line text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">Analytics Dashboard</h4>
+                                <p class="text-gray-600">Comprehensive insights and automated reporting</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Platform Mockup -->
+                <div class="reveal-up float-animate">
+                    <div class="relative">
+                        <!-- Main Card -->
+                        <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl shadow-2xl overflow-hidden">
+                            <!-- Header -->
+                            <div class="bg-gradient-to-r from-blue-600 to-cyan-500 p-6 flex items-center justify-between">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-10 h-10 bg-white/20 rounded-xl"></div>
+                                    <div>
+                                        <div class="font-bold text-white">IATP Platform</div>
+                                        <div class="text-xs text-blue-100">v3.2.1</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-8 h-8 bg-white/20 rounded-full"></div>
+                                    <div class="w-8 h-8 bg-white/20 rounded-full"></div>
+                                </div>
+                            </div>
+
+                            <!-- Dashboard -->
+                            <div class="p-8">
+                                <!-- Stats Grid -->
+                                <div class="grid grid-cols-3 gap-4 mb-6">
+                                    <div class="bg-blue-500/20 rounded-xl p-4 border border-blue-500/30">
+                                        <div class="text-3xl font-black text-white mb-1">24</div>
+                                        <div class="text-xs text-blue-300">Active AOGs</div>
+                                    </div>
+                                    <div class="bg-green-500/20 rounded-xl p-4 border border-green-500/30">
+                                        <div class="text-3xl font-black text-white mb-1">156</div>
+                                        <div class="text-xs text-green-300">Available</div>
+                                    </div>
+                                    <div class="bg-purple-500/20 rounded-xl p-4 border border-purple-500/30">
+                                        <div class="text-3xl font-black text-white mb-1">89</div>
+                                        <div class="text-xs text-purple-300">Online</div>
+                                    </div>
+                                </div>
+
+                                <!-- Activity Feed -->
+                                <div class="space-y-3">
+                                    <div class="flex items-center justify-between bg-white/5 rounded-xl p-4 border border-white/10">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                                            <span class="text-white text-sm font-medium">A320 APU Request</span>
+                                        </div>
+                                        <span class="text-gray-400 text-xs">2m</span>
+                                    </div>
+                                    <div class="flex items-center justify-between bg-white/5 rounded-xl p-4 border border-white/10">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                                            <span class="text-white text-sm font-medium">B777 Maintenance</span>
+                                        </div>
+                                        <span class="text-gray-400 text-xs">5m</span>
+                                    </div>
+                                    <div class="flex items-center justify-between bg-white/5 rounded-xl p-4 border border-white/10">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
+                                            <span class="text-white text-sm font-medium">Recovery Kit</span>
+                                        </div>
+                                        <span class="text-gray-400 text-xs">12m</span>
+                                    </div>
+                                </div>
+
+                                <!-- Chart -->
+                                <div class="mt-6 bg-white/5 rounded-xl p-6 border border-white/10">
+                                    <div class="flex items-end justify-between h-32 space-x-2">
+                                        <div class="flex-1 bg-gradient-to-t from-blue-500 to-blue-400 rounded-t-lg" style="height: 60%;"></div>
+                                        <div class="flex-1 bg-gradient-to-t from-blue-500 to-blue-400 rounded-t-lg" style="height: 80%;"></div>
+                                        <div class="flex-1 bg-gradient-to-t from-blue-500 to-blue-400 rounded-t-lg" style="height: 45%;"></div>
+                                        <div class="flex-1 bg-gradient-to-t from-blue-500 to-blue-400 rounded-t-lg" style="height: 95%;"></div>
+                                        <div class="flex-1 bg-gradient-to-t from-blue-500 to-blue-400 rounded-t-lg" style="height: 70%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Elements -->
+                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-blue-500/20 rounded-3xl backdrop-blur-xl float-animate" style="animation-delay: 0.5s;"></div>
+                        <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-cyan-500/20 rounded-3xl backdrop-blur-xl float-animate" style="animation-delay: 1s;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Network Section -->
+    <div id="network"></div>
+    <section class="py-32 relative bg-gradient-to-b from-blue-50 to-white overflow-hidden">
+        <!-- Marquee -->
+        <div class="mb-20 overflow-hidden">
+            <div class="flex items-center space-x-12 marquee whitespace-nowrap">
+                <span class="text-6xl font-black text-gray-200">890 STATIONS</span>
+                <span class="text-6xl font-black text-gray-200">•</span>
+                <span class="text-6xl font-black text-gray-200">130+ AIRLINES</span>
+                <span class="text-6xl font-black text-gray-200">•</span>
+                <span class="text-6xl font-black text-gray-200">76 YEARS</span>
+                <span class="text-6xl font-black text-gray-200">•</span>
+                <!-- Duplicate for seamless loop -->
+                <span class="text-6xl font-black text-gray-200">890 STATIONS</span>
+                <span class="text-6xl font-black text-gray-200">•</span>
+                <span class="text-6xl font-black text-gray-200">130+ AIRLINES</span>
+                <span class="text-6xl font-black text-gray-200">•</span>
+                <span class="text-6xl font-black text-gray-200">76 YEARS</span>
+                <span class="text-6xl font-black text-gray-200">•</span>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20 reveal-up">
+                <div class="inline-block px-6 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-bold mb-6">
+                    TRUSTED WORLDWIDE
+                </div>
+                <h2 class="text-5xl md:text-7xl font-black text-gray-900 mb-6">
+                    Global <span class="text-gradient">Network</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Connected through decades of trust, expertise, and collaboration
+                </p>
+            </div>
+
+            <!-- Stats -->
+            <div class="grid md:grid-cols-3 gap-8 mb-20">
+                <div class="text-center stagger-item">
+                    <div class="w-24 h-24 mx-auto bg-gradient-to-br from-blue-600 to-cyan-500 rounded-3xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/30">
+                        <i class="fas fa-globe text-4xl text-white"></i>
+                    </div>
+                    <div class="text-6xl font-black text-gradient mb-3">890</div>
+                    <div class="text-lg text-gray-600 font-medium">Stations Worldwide</div>
+                </div>
+
+                <div class="text-center stagger-item" style="animation-delay: 0.1s;">
+                    <div class="w-24 h-24 mx-auto bg-gradient-to-br from-blue-600 to-indigo-600 rounded-3xl flex items-center justify-center mb-6 shadow-lg shadow-indigo-500/30">
+                        <i class="fas fa-handshake text-4xl text-white"></i>
+                    </div>
+                    <div class="text-6xl font-black text-gradient mb-3">175+</div>
+                    <div class="text-lg text-gray-600 font-medium">Partners</div>
+                </div>
+
+                <div class="text-center stagger-item" style="animation-delay: 0.2s;">
+                    <div class="w-24 h-24 mx-auto bg-gradient-to-br from-cyan-500 to-blue-500 rounded-3xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/30">
+                        <i class="fas fa-clock text-4xl text-white"></i>
+                    </div>
+                    <div class="text-6xl font-black text-gradient mb-3">24/7</div>
+                    <div class="text-lg text-gray-600 font-medium">Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-32 relative bg-gradient-to-br from-[#0079c2] via-[#337ab7] to-[#0079c2] overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full -ml-48 -mt-48"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full -mr-48 -mb-48"></div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-5xl md:text-7xl font-black text-white mb-8 leading-tight">
+                Join the Elite<br/>
+                Aviation Network
+            </h2>
+            <p class="text-2xl text-blue-50 mb-12 leading-relaxed">
+                76 years of excellence. 890 stations. 175+ partners.<br/>
+                One mission: keeping your fleet operational.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
+                <button class="magnetic-btn px-12 py-5 bg-white text-blue-600 rounded-full text-xl font-black shadow-2xl hover:shadow-white/50 transition-all flex items-center space-x-3 group">
+                    <span>Become a Member</span>
+                    <i class="fas fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
+                </button>
+                <button class="magnetic-btn px-12 py-5 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white rounded-full text-xl font-bold hover:bg-white/20 transition-all">
+                    Contact Us
+                </button>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center gap-8 text-white/90">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Secure Platform</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Trusted by 130+ Airlines</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-clock"></i>
+                    <span>24/7 Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Footer -->
+    <footer class="py-16 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="img/IATP-logo.png" alt="IATP Logo" class="h-12 w-auto   ">
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        The world's leading aviation technical resource sharing platform since 1948.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Services</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="index.html#services" class="hover:text-[#0079c2] transition-colors">Parts Pooling</a></li>
+                        <li><a href="index.html#services" class="hover:text-[#0079c2] transition-colors">Line Maintenance</a></li>
+                        <li><a href="index.html#services" class="hover:text-[#0079c2] transition-colors">Aircraft Recovery</a></li>
+                        <li><a href="index.html#services" class="hover:text-[#0079c2] transition-colors">Equipment Pooling</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Company</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="about.html" class="hover:text-[#0079c2] transition-colors">About Us</a></li>
+                        <li><a href="index.html#events" class="hover:text-[#0079c2] transition-colors">Events</a></li>
+                        <li><a href="#" class="hover:text-[#0079c2] transition-colors">Membership</a></li>
+                        <li><a href="#" class="hover:text-[#0079c2] transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-[#0079c2] transition-all">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-[#0079c2] transition-all">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-[#0079c2] transition-all">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between text-gray-400">
+                <p>&copy; 2025 IATP. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-[#0079c2] transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-[#0079c2] transition-colors">Terms</a>
+                    <a href="#" class="hover:text-[#0079c2] transition-colors">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Counter Animation
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const duration = 2000;
+            const step = target / (duration / 16);
+            let current = 0;
+
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) {
+                    element.textContent = target + (target >= 100 ? '+' : '');
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 16);
+        }
+
+        // Countdown Timer
+        function updateCountdown() {
+            const conferenceDate = new Date('March 7, 2026 00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = conferenceDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        }
+
+        // Scroll Reveal
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal-up, .stagger-item');
+
+            reveals.forEach((element, index) => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    setTimeout(() => {
+                        element.classList.add('active');
+                    }, index * 100);
+                }
+            });
+        }
+
+        // Navbar Scroll Effect
+        /*function handleNavbarScroll() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('bg-white/95', 'backdrop-blur-xl', 'shadow-lg');
+            } else {
+                navbar.classList.remove('bg-white/95', 'backdrop-blur-xl', 'shadow-lg');
+            }
+        }*/
+
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+        mobileMenuBtn?.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+            document.body.style.overflow = 'hidden';
+        });
+
+        mobileMenuClose?.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+            document.body.style.overflow = '';
+        });
+
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Mobile Dropdown functionality
+        const mobileDropdownBtns = document.querySelectorAll('.mobile-dropdown-btn');
+        mobileDropdownBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const dropdown = btn.parentElement;
+                const content = dropdown.querySelector('.mobile-dropdown-content');
+                const icon = btn.querySelector('i');
+
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Animate counters
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && entry.target.classList.contains('counter')) {
+                        animateCounter(entry.target);
+                        counterObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            document.querySelectorAll('.counter').forEach(counter => {
+                counterObserver.observe(counter);
+            });
+
+            // Start countdown
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+
+            // Initial reveal
+            revealOnScroll();
+        });
+
+        // Event listeners
+        window.addEventListener('scroll', () => {
+            revealOnScroll();
+            handleNavbarScroll();
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

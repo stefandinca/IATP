@@ -101,46 +101,27 @@ class IATPGlobe {
     createGlobe() {
         const geometry = new THREE.SphereGeometry(100, 64, 64);
 
-        // Create custom shader material for gradient effect
-        const material = new THREE.ShaderMaterial({
-            uniforms: {
-                color1: { value: new THREE.Color(0x0A1628) },
-                color2: { value: new THREE.Color(0x0079C2) }
-            },
-            vertexShader: `
-                varying vec3 vNormal;
-                varying vec3 vPosition;
+        // texture loader
+        const textureLoader = new THREE.TextureLoader();
+        const earthTexture = textureLoader.load('img/earth-texture.jpg');
 
-                void main() {
-                    vNormal = normalize(normalMatrix * normal);
-                    vPosition = position;
-                    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-                }
-            `,
-            fragmentShader: `
-                uniform vec3 color1;
-                uniform vec3 color2;
-                varying vec3 vNormal;
-                varying vec3 vPosition;
-
-                void main() {
-                    float intensity = pow(0.7 - dot(vNormal, vec3(0.0, 0.0, 1.0)), 2.0);
-                    vec3 glow = color2 * intensity;
-                    vec3 baseColor = mix(color1, color2, vPosition.y * 0.5 + 0.5);
-                    gl_FragColor = vec4(baseColor + glow, 1.0);
-                }
-            `,
-            transparent: false,
-            side: THREE.FrontSide
+        // Material with texture
+        const material = new THREE.MeshPhongMaterial({
+            map: earthTexture,
+            color: 0xaaaaaa, // Tint the texture
+            specular: 0x333333,
+            shininess: 15,
+            transparent: true,
+            opacity: 0.9
         });
 
         this.globe = new THREE.Mesh(geometry, material);
 
-        // Add wireframe grid
+        // Add wireframe grid (overlay)
         const wireframe = new THREE.WireframeGeometry(geometry);
         const line = new THREE.LineSegments(wireframe);
         line.material.color.setHex(0x00D9FF);
-        line.material.opacity = 0.1;
+        line.material.opacity = 0.15; // Slightly increased opacity
         line.material.transparent = true;
         this.globe.add(line);
 

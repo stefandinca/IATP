@@ -1,0 +1,1 @@
+Please download an earth texture image (JPG format recommended) and save it here as 'earth-texture.jpg' for the globe visualization to work correctly.
