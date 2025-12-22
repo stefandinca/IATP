@@ -14,7 +14,7 @@
 <body class="bg-white text-gray-900">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 transition-all duration-500" id="navbar">
+    <nav class="fixed w-full z-50 transition-all duration-500 bg-white/95 backdrop-blur-xl shadow-lg" id="navbar">
         <div class="max-w-7xl mx-auto px-6 py-6">
             <div class="flex items-center justify-between">
                 <a href="index.html" class="flex items-center space-x-3 group">
@@ -22,11 +22,46 @@
                 </a>
 
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#services" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">Services</a>
-                    <a href="#events" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">Events</a>
-                    <a href="about.html" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">About</a>
-                    <a href="#platform" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">Platform</a>
-                    <a href="#network" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">Network</a>
+                    <!-- About Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium flex items-center space-x-1">
+                            <span>About</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors first:rounded-t-xl">About Us</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors">FAQ</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors last:rounded-b-xl">PIONAIRS</a>
+                        </div>
+                    </div>
+
+                    <!-- Members Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium flex items-center space-x-1">
+                            <span>Members</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors first:rounded-t-xl">Why Join IATP</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors">Airline Members</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors">Become a Member</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors last:rounded-b-xl">Associate Members</a>
+                        </div>
+                    </div>
+
+                    <!-- News Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium flex items-center space-x-1">
+                            <span>News</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors rounded-xl">Press</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">Contact</a>
+
                     <button class="magnetic-btn px-8 py-3 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white rounded-full font-semibold shadow-lg shadow-[#0079c2]/30 hover:shadow-xl hover:shadow-[#0079c2]/40 transition-all relative z-10">
                         Member Portal
                     </button>
@@ -47,12 +82,46 @@
                         <i class="fas fa-times text-2xl"></i>
                     </button>
                 </div>
-                <nav class="flex-1 px-6 py-8 space-y-6">
-                    <a href="#services" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Services</a>
-                    <a href="#events" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Events</a>
-                    <a href="about.html" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">About</a>
-                    <a href="#platform" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Platform</a>
-                    <a href="#network" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Network</a>
+                <nav class="flex-1 px-6 py-8 space-y-4">
+                    <!-- About Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-dropdown-btn">
+                            <span>About</span>
+                            <i class="fas fa-chevron-down text-lg transition-transform"></i>
+                        </button>
+                        <div class="mobile-dropdown-content hidden pl-6 pt-3 space-y-3">
+                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">About Us</a>
+                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">FAQ</a>
+                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">PIONAIRS</a>
+                        </div>
+                    </div>
+
+                    <!-- Members Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-dropdown-btn">
+                            <span>Members</span>
+                            <i class="fas fa-chevron-down text-lg transition-transform"></i>
+                        </button>
+                        <div class="mobile-dropdown-content hidden pl-6 pt-3 space-y-3">
+                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">Why Join IATP</a>
+                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">Airline Members</a>
+                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">Become a Member</a>
+                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">Associate Members</a>
+                        </div>
+                    </div>
+
+                    <!-- News Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-dropdown-btn">
+                            <span>News</span>
+                            <i class="fas fa-chevron-down text-lg transition-transform"></i>
+                        </button>
+                        <div class="mobile-dropdown-content hidden pl-6 pt-3 space-y-3">
+                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">Press</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Contact</a>
                 </nav>
                 <div class="px-6 py-8 border-t border-white/10">
                     <button class="w-full px-8 py-4 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white rounded-full font-semibold shadow-lg text-lg">
@@ -739,14 +808,14 @@
         }
 
         // Navbar Scroll Effect
-        function handleNavbarScroll() {
+        /*function handleNavbarScroll() {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 100) {
                 navbar.classList.add('bg-white/95', 'backdrop-blur-xl', 'shadow-lg');
             } else {
                 navbar.classList.remove('bg-white/95', 'backdrop-blur-xl', 'shadow-lg');
             }
-        }
+        }*/
 
         // Mobile Menu
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -768,6 +837,19 @@
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('translate-x-full');
                 document.body.style.overflow = '';
+            });
+        });
+
+        // Mobile Dropdown functionality
+        const mobileDropdownBtns = document.querySelectorAll('.mobile-dropdown-btn');
+        mobileDropdownBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const dropdown = btn.parentElement;
+                const content = dropdown.querySelector('.mobile-dropdown-content');
+                const icon = btn.querySelector('i');
+
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
             });
         });
 

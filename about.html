@@ -22,11 +22,46 @@
                 </a>
 
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html#services" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">Services</a>
-                    <a href="index.html#events" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">Events</a>
-                    <a href="about.html" class="text-[#0079c2] font-semibold">About</a>
-                    <a href="index.html#platform" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">Platform</a>
-                    <a href="index.html#network" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">Network</a>
+                    <!-- About Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium flex items-center space-x-1">
+                            <span>About</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors first:rounded-t-xl">About Us</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors">FAQ</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors last:rounded-b-xl">PIONAIRS</a>
+                        </div>
+                    </div>
+
+                    <!-- Members Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium flex items-center space-x-1">
+                            <span>Members</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors first:rounded-t-xl">Why Join IATP</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors">Airline Members</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors">Become a Member</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors last:rounded-b-xl">Associate Members</a>
+                        </div>
+                    </div>
+
+                    <!-- News Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium flex items-center space-x-1">
+                            <span>News</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors rounded-xl">Press</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">Contact</a>
+
                     <button class="magnetic-btn px-8 py-3 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white rounded-full font-semibold shadow-lg shadow-[#0079c2]/30 hover:shadow-xl hover:shadow-[#0079c2]/40 transition-all relative z-10">
                         Member Portal
                     </button>
@@ -47,12 +82,46 @@
                         <i class="fas fa-times text-2xl"></i>
                     </button>
                 </div>
-                <nav class="flex-1 px-6 py-8 space-y-6">
-                    <a href="index.html#services" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Services</a>
-                    <a href="index.html#events" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Events</a>
-                    <a href="about.html" class="block text-[#0079c2] text-2xl font-semibold">About</a>
-                    <a href="index.html#platform" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Platform</a>
-                    <a href="index.html#network" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Network</a>
+                <nav class="flex-1 px-6 py-8 space-y-4">
+                    <!-- About Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-dropdown-btn">
+                            <span>About</span>
+                            <i class="fas fa-chevron-down text-lg transition-transform"></i>
+                        </button>
+                        <div class="mobile-dropdown-content hidden pl-6 pt-3 space-y-3">
+                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">About Us</a>
+                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">FAQ</a>
+                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">PIONAIRS</a>
+                        </div>
+                    </div>
+
+                    <!-- Members Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-dropdown-btn">
+                            <span>Members</span>
+                            <i class="fas fa-chevron-down text-lg transition-transform"></i>
+                        </button>
+                        <div class="mobile-dropdown-content hidden pl-6 pt-3 space-y-3">
+                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">Why Join IATP</a>
+                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">Airline Members</a>
+                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">Become a Member</a>
+                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">Associate Members</a>
+                        </div>
+                    </div>
+
+                    <!-- News Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-dropdown-btn">
+                            <span>News</span>
+                            <i class="fas fa-chevron-down text-lg transition-transform"></i>
+                        </button>
+                        <div class="mobile-dropdown-content hidden pl-6 pt-3 space-y-3">
+                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">Press</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Contact</a>
                 </nav>
                 <div class="px-6 py-8 border-t border-white/10">
                     <button class="w-full px-8 py-4 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white rounded-full font-semibold shadow-lg text-lg">
@@ -90,24 +159,27 @@
         <div class="max-w-7xl mx-auto px-6">
             <!-- Tab Buttons -->
             <div class="flex flex-wrap justify-center gap-4 mb-12 border-b border-gray-200 pb-6">
-                <button class="tab-button active px-6 py-3 text-lg font-semibold text-[#0079c2] hover:text-[#0079c2] transition-colors" data-tab="history">
-                    History
+                <button class="tab-button active px-6 py-3 text-lg font-semibold text-[#0079c2] hover:text-[#0079c2] transition-colors" data-tab="about-our-organization">
+                    About our organizaion
                 </button>
-                <button class="tab-button px-6 py-3 text-lg font-semibold text-gray-600 hover:text-[#0079c2] transition-colors" data-tab="organization">
-                    Organization
+                <button class="tab-button px-6 py-3 text-lg font-semibold text-gray-600 hover:text-[#0079c2] transition-colors" data-tab="iatp-mission-statement">
+                    The IATP Misson Statement
                 </button>
-                <button class="tab-button px-6 py-3 text-lg font-semibold text-gray-600 hover:text-[#0079c2] transition-colors" data-tab="membership">
-                    Membership
+                <button class="tab-button px-6 py-3 text-lg font-semibold text-gray-600 hover:text-[#0079c2] transition-colors" data-tab="compliance">
+                    Compliance
                 </button>
-                <button class="tab-button px-6 py-3 text-lg font-semibold text-gray-600 hover:text-[#0079c2] transition-colors" data-tab="governance">
-                    Governance
+                <button class="tab-button px-6 py-3 text-lg font-semibold text-gray-600 hover:text-[#0079c2] transition-colors" data-tab="iatp-leadership">
+                    IATP leadership
+                </button>
+                <button class="tab-button px-6 py-3 text-lg font-semibold text-gray-600 hover:text-[#0079c2] transition-colors" data-tab="iatp-history">
+                    History of IATP
                 </button>
             </div>
 
             <!-- Tab Contents -->
             <div class="max-w-4xl mx-auto">
-                <!-- History Tab -->
-                <div class="tab-content active" id="history">
+                <!--About our organizaion -->
+                <div class="tab-content active" id="about-our-organization">
                     <div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-10 shadow-lg">
                         <div class="flex items-center mb-6">
                             <div class="w-16 h-16 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-2xl flex items-center justify-center mr-4">
@@ -117,7 +189,19 @@
                         </div>
                         <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-4">
                             <p>
-                                In 1948, a few European airlines started sharing aircraft materials, equipment and manpower resources through a gentlemen's agreement. This marked the beginning of what would become the International Airlines Technical Pool.
+                                <strong>The International Airlines Technical Pool (IATP)</strong> is a convention of airlines made up of over 140 Member Airlines, 50 “Sponsored” Airlines, and over 45 OEM and service providers (called Associate Members). In the spirit of co-operation, members of the aviation industry gather twice yearly to discuss sharing of resources, reducing costs, while improving operating efficiency. Under its auspices, members “pool” (share) Aircraft Recovery kits, Spare Parts, Equipment, Line Maintenance and Aircraft Engines for both narrow and wide bodies.
+                            </p>
+                            <p>
+                            The membership has grown to boast more than 500 delegates around the world, making it a diverse and multi-cultural community. There are no boundaries and every member is encouraged to bring forward their ideas, suggestions and opinions without any political prejudice. In the spirit of a "global village" environment, IATP promotes goodwill towards all its members, explores new directions within the frame of its mission, and respects the interest of all member airlines.
+                            </p>
+                            <p>
+                            IATP is well known in the aviation world as the “best solution” to resolve quickly and efficiently AOG situations: the post-pandemic utilization of the IATP platform functionality for this emergency has doubled.
+                            </p>
+                            <p>
+                            Within its 76-year history promoting unparalleled safety in the skies, this organization has not only contributed immensely to the aviation industry as we know it today, but has also forged strong bonds between airlines around the world. Competing airlines are united in the technical field. This bond, which began in 1948, was originally based solely on a gentlemen's agreement. Also, now its mission to provide excellent technical performance in aircraft operations is unmatched due to the high degree of mutual assistance from all member airlines.
+                            </p>
+                            <p>
+                            IATP governance is assured by the Advisory Committee while the day-to-day activities are managed by the Management Board and Corporate Office team. Several Project Groups and Committees have been set up in order to address current industry challenges and maintain the IATP to the highest levels of expertise.
                             </p>
 
                             <div class="bg-white p-6 rounded-xl border-l-4 border-[#0079c2] my-6">
@@ -165,8 +249,8 @@
                     </div>
                 </div>
 
-                <!-- Organization Tab -->
-                <div class="tab-content" id="organization">
+                <!-- The IATP Misson Statement -->
+                <div class="tab-content" id="iatp-mission-statement">
                     <div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-10 shadow-lg">
                         <div class="flex items-center mb-6">
                             <div class="w-16 h-16 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-2xl flex items-center justify-center mr-4">
@@ -203,8 +287,8 @@
                     </div>
                 </div>
 
-                <!-- Membership Tab -->
-                <div class="tab-content" id="membership">
+                <!-- Compliance Tab -->
+                <div class="tab-content" id="compliance">
                     <div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-10 shadow-lg">
                         <div class="flex items-center mb-6">
                             <div class="w-16 h-16 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-2xl flex items-center justify-center mr-4">
@@ -248,8 +332,55 @@
                     </div>
                 </div>
 
-                <!-- Governance Tab -->
-                <div class="tab-content" id="governance">
+                <!-- IATP leadership Tab -->
+                <div class="tab-content" id="iatp-leadership">
+                    <div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-10 shadow-lg">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-2xl flex items-center justify-center mr-4">
+                                <i class="fas fa-gavel text-3xl text-white"></i>
+                            </div>
+                            <h2 class="text-4xl font-black text-gradient">Governance</h2>
+                        </div>
+                        <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-4">
+                            <p>
+                                IATP operates under a two-tier governance model implemented in 2023, ensuring effective oversight and efficient daily operations:
+                            </p>
+                            <div class="grid md:grid-cols-2 gap-6 my-8">
+                                <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-[#0079c2]">
+                                    <div class="text-center mb-4">
+                                        <i class="fas fa-user-tie text-5xl text-[#0079c2] mb-4"></i>
+                                    </div>
+                                    <h4 class="font-bold text-2xl text-gray-900 mb-3 text-center">Advisory Committee</h4>
+                                    <p class="text-gray-600 text-center">Provides strategic oversight and guidance to ensure IATP continues to meet the evolving needs of the global aviation industry</p>
+                                </div>
+                                <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-[#337ab7]">
+                                    <div class="text-center mb-4">
+                                        <i class="fas fa-users-cog text-5xl text-[#337ab7] mb-4"></i>
+                                    </div>
+                                    <h4 class="font-bold text-2xl text-gray-900 mb-3 text-center">Management Board</h4>
+                                    <p class="text-gray-600 text-center">Handles daily operations and ensures efficient coordination across all pooling activities and member services</p>
+                                </div>
+                            </div>
+                            <div class="bg-gradient-to-r from-[#0079c2] to-[#337ab7] p-8 rounded-xl text-white my-8">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <div class="text-sm uppercase tracking-wider mb-2 opacity-90">Chief Executive Officer</div>
+                                        <div class="text-3xl font-black">Giorgio Pietra</div>
+                                    </div>
+                                    <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-user text-4xl"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>
+                                This governance structure enables IATP to maintain the highest standards of transparency, accountability, and service delivery to our global membership.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- IATP history Tab -->
+                <div class="tab-content" id="iatp-history">
                     <div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-10 shadow-lg">
                         <div class="flex items-center mb-6">
                             <div class="w-16 h-16 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-2xl flex items-center justify-center mr-4">
@@ -428,6 +559,19 @@
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('translate-x-full');
                 document.body.style.overflow = '';
+            });
+        });
+
+        // Mobile Dropdown functionality
+        const mobileDropdownBtns = document.querySelectorAll('.mobile-dropdown-btn');
+        mobileDropdownBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const dropdown = btn.parentElement;
+                const content = dropdown.querySelector('.mobile-dropdown-content');
+                const icon = btn.querySelector('i');
+
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
             });
         });
     </script>
