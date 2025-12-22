@@ -35,6 +35,9 @@
                         </div>
                     </div>
 
+                                        <a href="#" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">Events</a>
+
+
                     <!-- Members Dropdown -->
                     <div class="relative group">
                         <button class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium flex items-center space-x-1">
@@ -74,27 +77,29 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div class="md:hidden fixed inset-0 bg-gray-900/95 backdrop-blur-lg transform translate-x-full transition-transform duration-300 ease-in-out" id="mobile-menu">
+        <div class="md:hidden fixed inset-0 bg-gray-900/95 backdrop-blur-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50" id="mobile-menu">
             <div class="flex flex-col h-full">
                 <div class="flex items-center justify-between px-6 py-6 border-b border-white/10">
-                    <img src="img/IATP-logo.png" alt="IATP Logo" class="h-12 w-auto brightness-0 invert">
+                    <a href="index.html"> <img src="img/IATP-logo.png" alt="IATP Logo" class="h-12 w-auto   "></a>
                     <button class="text-white" id="mobile-menu-close">
                         <i class="fas fa-times text-2xl"></i>
                     </button>
                 </div>
-                <nav class="flex-1 px-6 py-8 space-y-4">
+                <nav class="flex-1 px-6 py-8 space-y-4 bg-gray-900">
                     <!-- About Mobile Dropdown -->
                     <div class="mobile-dropdown">
                         <button class="flex items-center justify-between w-full text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-dropdown-btn">
-                            <span>About</span>
+                            <span><a href="about.html#hero">About</a></span>
                             <i class="fas fa-chevron-down text-lg transition-transform"></i>
                         </button>
                         <div class="mobile-dropdown-content hidden pl-6 pt-3 space-y-3">
-                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">About Us</a>
-                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">FAQ</a>
-                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">PIONAIRS</a>
+                            <a href="about.html#about" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">About Us</a>
+                            <a href="about.html#faq" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">FAQ</a>
+                            <a href="pionairs.html" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">PIONAIRS</a>
                         </div>
                     </div>
+
+                    <a href="#" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Events</a>
 
                     <!-- Members Mobile Dropdown -->
                     <div class="mobile-dropdown">
@@ -123,7 +128,7 @@
 
                     <a href="#" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Contact</a>
                 </nav>
-                <div class="px-6 py-8 border-t border-white/10">
+                <div class="px-6 py-8 border-t border-white/10 bg-gray-800">
                     <button class="w-full px-8 py-4 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white rounded-full font-semibold shadow-lg text-lg">
                         Member Portal
                     </button>
@@ -217,21 +222,21 @@
                             <h2 class="text-4xl font-black text-gradient">The IATP Mission Statement</h2>
                         </div>
                         <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-6">
-                            <div class="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl border-l-4 border-[#0079c2]">
+                            <div class="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl  ">
                                 <h3 class="text-2xl font-bold text-gray-900 mb-3">IATP Mission</h3>
                                 <p class="text-gray-700">
                                     The IATP is a convention of Airlines sharing Technical Resources to generate economic savings and support on time dispatch reliability and operational safety.
                                 </p>
                             </div>
 
-                            <div class="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl border-l-4 border-[#337ab7]">
+                            <div class="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl ">
                                 <h3 class="text-2xl font-bold text-gray-900 mb-3">IATP Organization Definition</h3>
                                 <p class="text-gray-700">
                                     The IATP is a non-profit, independent, non-political global organization based on a democratic culture with equal opportunities for all member Airlines and their delegates.
                                 </p>
                             </div>
 
-                            <div class="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl border-l-4 border-[#0079c2]">
+                            <div class="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl  ">
                                 <h3 class="text-2xl font-bold text-gray-900 mb-3">Technical Resources Definition</h3>
                                 <p class="text-gray-700">
                                     Technical Resources includes, but not limited to, aircraft spare parts, line maintenance, ground handling equipment, aircraft recovery kits, engines and technical training.
@@ -296,7 +301,7 @@
                         </div>
                         <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-6">
                             <!-- Advisory Committee -->
-                            <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-[#0079c2]">
+                            <div class="bg-white p-8 rounded-xl shadow-md ">
                                 <div class="flex items-center mb-6">
                                     <i class="fas fa-user-tie text-4xl text-[#0079c2] mr-4"></i>
                                     <h3 class="text-2xl font-bold text-gray-900">Advisory Committee</h3>
@@ -377,7 +382,7 @@
                         </div>
                         <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
                             <!-- Vertical Timeline -->
-                            <div class="relative border-l-4 border-[#0079c2] ml-4 space-y-8">
+                            <div class="relative   ml-4 space-y-8">
                                 <!-- 2024 -->
                                 <div class="relative pl-8 pb-8">
                                     <div class="absolute -left-3 top-0 w-6 h-6 bg-[#0079c2] rounded-full border-4 border-white"></div>
@@ -670,7 +675,7 @@
                                 <span class="font-semibold text-lg text-gray-900 pr-8">Information</span>
                                 <i class="fas fa-chevron-down text-[#0079c2] transition-transform faq-icon"></i>
                             </button>
-                            <div class="faq-answer hidden px-8 pb-6">
+                            <div class="faq-answer hidden px-8 py-3">
                                 <p class="text-gray-600 leading-relaxed">
                                     IATP organizes two Conferences every year before the Airline Business Seasons start (March and October). All upcoming conference-related information (location, dates, schedule, meeting description, hotel booking link etc.) can be found on IATP website by clicking on "Conferences" in the upper menu of the homepage.
                                 </p>
@@ -683,7 +688,7 @@
                                 <span class="font-semibold text-lg text-gray-900 pr-8">Registration</span>
                                 <i class="fas fa-chevron-down text-[#0079c2] transition-transform faq-icon"></i>
                             </button>
-                            <div class="faq-answer hidden px-8 pb-6">
+                            <div class="faq-answer hidden px-8 py-3">
                                 <p class="text-gray-600 leading-relaxed">
                                     Registration usually opens four months before the conference start. Representatives of an IATP Member (Airline Member or Associate Member) should log into IATP Platform to click on the registration link. If you do not have a user account on IATP Platform, the Senior Delegate representing your company at IATP can either create a user account for you or invite you by sending you a registration link. Non-IATP Members should register using the link displayed in the left margin of IATP Homepage.
                                 </p>
@@ -696,7 +701,7 @@
                                 <span class="font-semibold text-lg text-gray-900 pr-8">Cancellation</span>
                                 <i class="fas fa-chevron-down text-[#0079c2] transition-transform faq-icon"></i>
                             </button>
-                            <div class="faq-answer hidden px-8 pb-6">
+                            <div class="faq-answer hidden px-8 py-3">
                                 <p class="text-gray-600 leading-relaxed">
                                     To cancel your registration, please log into IATP Platform and click on the registration link; at the bottom of the page, click on "Cancel". Registration can be cancelled free of charge no later than one week prior to the conference start; after this date, a "No Show" penalty will be charged.
                                 </p>
@@ -709,7 +714,7 @@
                                 <span class="font-semibold text-lg text-gray-900 pr-8">Online Meetings Scheduler</span>
                                 <i class="fas fa-chevron-down text-[#0079c2] transition-transform faq-icon"></i>
                             </button>
-                            <div class="faq-answer hidden px-8 pb-6">
+                            <div class="faq-answer hidden px-8 py-3">
                                 <p class="text-gray-600 leading-relaxed">
                                     IATP provides an online meetings scheduler enabling all participants to fix appointments with other delegates during the conference days. The access to the scheduler is given to IATP Members one month prior to the conference start and to non-IATP Members two weeks prior to the conference start.
                                 </p>
@@ -722,7 +727,7 @@
                                 <span class="font-semibold text-lg text-gray-900 pr-8">Visa</span>
                                 <i class="fas fa-chevron-down text-[#0079c2] transition-transform faq-icon"></i>
                             </button>
-                            <div class="faq-answer hidden px-8 pb-6">
+                            <div class="faq-answer hidden px-8 py-3">
                                 <p class="text-gray-600 leading-relaxed">
                                     Visa requirements and contact details of conference hosting company/hotel for invitation letter are listed on the conference page of IATP website.
                                 </p>
@@ -746,7 +751,7 @@
                                 <span class="font-semibold text-lg text-gray-900 pr-8">Login</span>
                                 <i class="fas fa-chevron-down text-[#0079c2] transition-transform faq-icon"></i>
                             </button>
-                            <div class="faq-answer hidden px-8 pb-6">
+                            <div class="faq-answer hidden px-8 py-3">
                                 <p class="text-gray-600 leading-relaxed">
                                     In order to access IATP Platform, you should have a user account. Please request your Airlines' Senior Delegate at IATP to create a user account for you. Any change can be made to the user account by clicking on "My Profile" in the upper menu of the platform after login.
                                 </p>
@@ -759,7 +764,7 @@
                                 <span class="font-semibold text-lg text-gray-900 pr-8">Password Reset</span>
                                 <i class="fas fa-chevron-down text-[#0079c2] transition-transform faq-icon"></i>
                             </button>
-                            <div class="faq-answer hidden px-8 pb-6">
+                            <div class="faq-answer hidden px-8 py-3">
                                 <p class="text-gray-600 leading-relaxed">
                                     For security reasons, a password reset feature has been implemented in 2015, requiring all users to renew their password every year. After 11 months, the platform will send automatic reminders every week to reset the password; when logging in, the user will be prompted to reset his/her password.
                                 </p>
@@ -772,7 +777,7 @@
                                 <span class="font-semibold text-lg text-gray-900 pr-8">User Account Deactivation</span>
                                 <i class="fas fa-chevron-down text-[#0079c2] transition-transform faq-icon"></i>
                             </button>
-                            <div class="faq-answer hidden px-8 pb-6">
+                            <div class="faq-answer hidden px-8 py-3">
                                 <p class="text-gray-600 leading-relaxed">
                                     Accounts of users not logging in for one year are automatically deactivated.
                                 </p>
@@ -785,7 +790,7 @@
                                 <span class="font-semibold text-lg text-gray-900 pr-8">User Account Reactivation</span>
                                 <i class="fas fa-chevron-down text-[#0079c2] transition-transform faq-icon"></i>
                             </button>
-                            <div class="faq-answer hidden px-8 pb-6">
+                            <div class="faq-answer hidden px-8 py-3">
                                 <p class="text-gray-600 leading-relaxed">
                                     Expired user accounts shall only be reactivated by the Senior Delegate, the Acting Senior Delegate or the IATP Corporate Office.
                                 </p>
@@ -798,7 +803,7 @@
                                 <span class="font-semibold text-lg text-gray-900 pr-8">Downloading Documents</span>
                                 <i class="fas fa-chevron-down text-[#0079c2] transition-transform faq-icon"></i>
                             </button>
-                            <div class="faq-answer hidden px-8 pb-6">
+                            <div class="faq-answer hidden px-8 py-3">
                                 <p class="text-gray-600 leading-relaxed">
                                     Documents can be downloaded from IATP Platform. Please note that the platform is compatible with IE VII, Mozilla Firefox and Chrome. To avoid any issues accessing the document, please make sure to use one of these browsers or the compatible mode.
                                 </p>
@@ -820,7 +825,7 @@
                             <span class="font-semibold text-lg text-gray-900 pr-8">Aircraft Recovery Kits</span>
                             <i class="fas fa-chevron-down text-[#0079c2] transition-transform faq-icon"></i>
                         </button>
-                        <div class="faq-answer hidden px-8 pb-6">
+                        <div class="faq-answer hidden px-8 py-3">
                             <p class="text-gray-600 leading-relaxed mb-4">
                                 Thanks to its members IATP ensures a worldwide coverage with 12 Basic Recovery Kits and 4 Large Kits (to be used in conjunction with a basic kit when recovering an aircraft up to maximum take-off weight of 1,300,700 lbs).
                             </p>
@@ -867,7 +872,7 @@
             <div class="grid md:grid-cols-4 gap-12 mb-12">
                 <div>
                     <div class="flex items-center space-x-3 mb-6">
-                        <img src="img/IATP-logo.png" alt="IATP Logo" class="h-12 w-auto brightness-0 invert">
+                        <img src="img/IATP-logo.png" alt="IATP Logo" class="h-12 w-auto   ">
                     </div>
                     <p class="text-gray-400 leading-relaxed">
                         The world's leading aviation technical resource sharing platform since 1948.

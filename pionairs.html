@@ -13,7 +13,7 @@
 </head>
 <body class="bg-white text-gray-900">
 
-    <!-- Navigation -->
+     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-xl shadow-lg transition-all duration-500" id="navbar">
         <div class="max-w-7xl mx-auto px-6 py-6">
             <div class="flex items-center justify-between">
@@ -25,15 +25,18 @@
                     <!-- About Dropdown -->
                     <div class="relative group">
                         <button class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium flex items-center space-x-1">
-                            <span>About</span>
+                            <span><a href="about.html#hero">About</a></span>
                             <i class="fas fa-chevron-down text-xs"></i>
                         </button>
                         <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
-                            <a href="about.html" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors first:rounded-t-xl">About Us</a>
+                            <a href="about.html#about" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors first:rounded-t-xl">About Us</a>
                             <a href="about.html#faq" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors">FAQ</a>
                             <a href="pionairs.html" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors last:rounded-b-xl">PIONAIRS</a>
                         </div>
                     </div>
+
+                                        <a href="#" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">Events</a>
+
 
                     <!-- Members Dropdown -->
                     <div class="relative group">
@@ -74,27 +77,29 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div class="md:hidden fixed inset-0 bg-gray-900/95 backdrop-blur-lg transform translate-x-full transition-transform duration-300 ease-in-out" id="mobile-menu">
+        <div class="md:hidden fixed inset-0 bg-gray-900/95 backdrop-blur-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50" id="mobile-menu">
             <div class="flex flex-col h-full">
                 <div class="flex items-center justify-between px-6 py-6 border-b border-white/10">
-                    <img src="img/IATP-logo.png" alt="IATP Logo" class="h-12 w-auto brightness-0 invert">
+                    <a href="index.html"> <img src="img/IATP-logo.png" alt="IATP Logo" class="h-12 w-auto   "></a>
                     <button class="text-white" id="mobile-menu-close">
                         <i class="fas fa-times text-2xl"></i>
                     </button>
                 </div>
-                <nav class="flex-1 px-6 py-8 space-y-4">
+                <nav class="flex-1 px-6 py-8 space-y-4 bg-gray-900">
                     <!-- About Mobile Dropdown -->
                     <div class="mobile-dropdown">
                         <button class="flex items-center justify-between w-full text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-dropdown-btn">
-                            <span>About</span>
+                            <span><a href="about.html#hero">About</a></span>
                             <i class="fas fa-chevron-down text-lg transition-transform"></i>
                         </button>
                         <div class="mobile-dropdown-content hidden pl-6 pt-3 space-y-3">
-                            <a href="about.html" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">About Us</a>
+                            <a href="about.html#about" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">About Us</a>
                             <a href="about.html#faq" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">FAQ</a>
                             <a href="pionairs.html" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">PIONAIRS</a>
                         </div>
                     </div>
+
+                    <a href="#" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Events</a>
 
                     <!-- Members Mobile Dropdown -->
                     <div class="mobile-dropdown">
@@ -123,7 +128,7 @@
 
                     <a href="#" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Contact</a>
                 </nav>
-                <div class="px-6 py-8 border-t border-white/10">
+                <div class="px-6 py-8 border-t border-white/10 bg-gray-800">
                     <button class="w-full px-8 py-4 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white rounded-full font-semibold shadow-lg text-lg">
                         Member Portal
                     </button>
@@ -814,7 +819,7 @@
             <div class="grid md:grid-cols-4 gap-12 mb-12">
                 <div>
                     <div class="flex items-center space-x-3 mb-6">
-                        <img src="img/IATP-logo.png" alt="IATP Logo" class="h-12 w-auto brightness-0 invert">
+                        <img src="img/IATP-logo.png" alt="IATP Logo" class="h-12 w-auto   ">
                     </div>
                     <p class="text-gray-400 leading-relaxed">
                         The world's leading aviation technical resource sharing platform since 1948.
