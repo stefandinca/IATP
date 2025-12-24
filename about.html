@@ -138,7 +138,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="relative pt-32 pb-20 bg-gradient-to-br from-[#0079c2] to-[#337ab7] overflow-hidden">
+    <section id="hero" class="relative pt-32 pb-24 bg-gradient-to-br from-[#0079c2] to-[#337ab7] overflow-hidden">
         <div class="absolute inset-0 opacity-10">
             <div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full -mr-48 -mt-48"></div>
             <div class="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full -ml-48 -mb-48"></div>
@@ -146,14 +146,29 @@
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center">
-                <h1 class="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
+                <div class="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-md px-6 py-3 rounded-full mb-8 border border-white/30">
+                    <i class="fas fa-award text-white"></i>
+                    <span class="text-white font-medium text-sm">Recognized Worldwide Since 1948</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black text-white mb-8 leading-tight">
                     About IATP
                 </h1>
-                <p class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+                <p class="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-10">
                     A convention of Airlines sharing Technical Resources to generate economic savings and support on time dispatch reliability and operational safety
                 </p>
-                <div class="mt-8 text-white/80 text-lg">
-                    Over 130 Member Airlines, 45 'Sponsored' Airlines, and over 40 OEM and service providers
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                    <div class="bg-white/10 backdrop-blur-md border border-white/30 rounded-2xl p-6">
+                        <div class="text-4xl font-black text-white mb-2">130+</div>
+                        <div class="text-white/80 text-sm">Member Airlines</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md border border-white/30 rounded-2xl p-6">
+                        <div class="text-4xl font-black text-white mb-2">45+</div>
+                        <div class="text-white/80 text-sm">Sponsored Airlines</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md border border-white/30 rounded-2xl p-6">
+                        <div class="text-4xl font-black text-white mb-2">40+</div>
+                        <div class="text-white/80 text-sm">OEM & Service Providers</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -163,20 +178,20 @@
     <section id="about" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-6">
             <!-- Tab Buttons -->
-            <div class="flex flex-wrap justify-center gap-4 mb-12 border-b border-gray-200 pb-6">
-                <button class="tab-button active px-6 py-3 text-lg font-semibold text-[#0079c2] hover:text-[#0079c2] transition-colors" data-tab="about-our-organization">
+            <div class="flex flex-wrap justify-center gap-3 mb-16">
+                <button class="tab-button active px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-[#0079c2] to-[#337ab7] rounded-full shadow-lg hover:shadow-xl transition-all" data-tab="about-our-organization">
                     About our organizaion
                 </button>
-                <button class="tab-button px-6 py-3 text-lg font-semibold text-gray-600 hover:text-[#0079c2] transition-colors" data-tab="iatp-mission-statement">
+                <button class="tab-button px-6 py-3 text-base font-semibold text-gray-700 bg-white border-2 border-gray-200 rounded-full hover:border-[#0079c2] hover:text-[#0079c2] transition-all" data-tab="iatp-mission-statement">
                     The IATP Misson Statement
                 </button>
-                <button class="tab-button px-6 py-3 text-lg font-semibold text-gray-600 hover:text-[#0079c2] transition-colors" data-tab="compliance">
+                <button class="tab-button px-6 py-3 text-base font-semibold text-gray-700 bg-white border-2 border-gray-200 rounded-full hover:border-[#0079c2] hover:text-[#0079c2] transition-all" data-tab="compliance">
                     Compliance
                 </button>
-                <button class="tab-button px-6 py-3 text-lg font-semibold text-gray-600 hover:text-[#0079c2] transition-colors" data-tab="iatp-leadership">
+                <button class="tab-button px-6 py-3 text-base font-semibold text-gray-700 bg-white border-2 border-gray-200 rounded-full hover:border-[#0079c2] hover:text-[#0079c2] transition-all" data-tab="iatp-leadership">
                     IATP leadership
                 </button>
-                <button class="tab-button px-6 py-3 text-lg font-semibold text-gray-600 hover:text-[#0079c2] transition-colors" data-tab="iatp-history">
+                <button class="tab-button px-6 py-3 text-base font-semibold text-gray-700 bg-white border-2 border-gray-200 rounded-full hover:border-[#0079c2] hover:text-[#0079c2] transition-all" data-tab="iatp-history">
                     History of IATP
                 </button>
             </div>
@@ -872,11 +887,15 @@
             <div class="grid md:grid-cols-4 gap-12 mb-12">
                 <div>
                     <div class="flex items-center space-x-3 mb-6">
-                        <img src="img/IATP-logo.png" alt="IATP Logo" class="h-12 w-auto   ">
+                        <img src="img/IATP-logo.png" alt="IATP Logo" class="h-12 w-auto">
                     </div>
-                    <p class="text-gray-400 leading-relaxed">
-                        The world's leading aviation technical resource sharing platform since 1948.
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        Recognized worldwide as the aviation industry's trusted expert in technical collaboration and AOG support since 1948.
                     </p>
+                    <div class="flex items-center space-x-2 text-gray-500 text-sm">
+                        <i class="fas fa-shield-alt text-blue-500"></i>
+                        <span>Trusted by 130+ Airlines Globally</span>
+                    </div>
                 </div>
 
                 <div>
@@ -902,16 +921,11 @@
                 <div>
                     <h4 class="font-bold text-lg mb-6">Connect</h4>
                     <div class="flex space-x-4">
-                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-[#0079c2] transition-all">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-[#0079c2] transition-all">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-[#0079c2] transition-all">
-                            <i class="fab fa-youtube"></i>
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-[#0079c2] transition-all group">
+                            <i class="fab fa-linkedin text-xl group-hover:scale-110 transition-transform"></i>
                         </a>
                     </div>
+                    <p class="text-gray-400 text-sm mt-4">Follow us on LinkedIn for industry insights and updates</p>
                 </div>
             </div>
 
@@ -937,14 +951,14 @@
 
                 // Remove active class from all buttons and contents
                 tabButtons.forEach(btn => {
-                    btn.classList.remove('active', 'text-[#0079c2]');
-                    btn.classList.add('text-gray-600');
+                    btn.classList.remove('active', 'text-white', 'bg-gradient-to-r', 'from-[#0079c2]', 'to-[#337ab7]', 'shadow-lg');
+                    btn.classList.add('text-gray-700', 'bg-white', 'border-2', 'border-gray-200');
                 });
                 tabContents.forEach(content => content.classList.remove('active'));
 
                 // Add active class to clicked button and corresponding content
-                button.classList.add('active', 'text-[#0079c2]');
-                button.classList.remove('text-gray-600');
+                button.classList.add('active', 'text-white', 'bg-gradient-to-r', 'from-[#0079c2]', 'to-[#337ab7]', 'shadow-lg');
+                button.classList.remove('text-gray-700', 'bg-white', 'border-2', 'border-gray-200');
                 document.getElementById(targetTab).classList.add('active');
             });
         });
