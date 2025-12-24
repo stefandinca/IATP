@@ -133,12 +133,12 @@ const ScrollReveal = {
         reveals.forEach((element, index) => {
             const windowHeight = window.innerHeight;
             const elementTop = element.getBoundingClientRect().top;
-            const elementVisible = 150;
+            const elementVisible = 15; // Increased from 150 to trigger earlier
 
             if (elementTop < windowHeight - elementVisible) {
                 setTimeout(() => {
                     element.classList.add('active');
-                }, index * 100);
+                }, index * 1);
             }
         });
     }
