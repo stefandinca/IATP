@@ -1,9 +1,25 @@
+/* ==========================================
+   IATP - Global Styles & Animations
+   ========================================== */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================
+   CSS Variables
+   ========================================== */
 :root {
     --primary-blue: #0079c2;
     --secondary-blue: #337ab7;
     --white: #FFFFFF;
+    --transition-smooth: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --transition-smooth-in: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* ==========================================
+   Base Styles
+   ========================================== */
 * {
     font-family: 'Inter', sans-serif;
 }
@@ -22,9 +38,12 @@ body {
 
 a {
     color: var(--primary-blue);
+    transition: color 0.3s ease;
 }
 
-/* Hero Video Section */
+/* ==========================================
+   Hero Video Section
+   ========================================== */
 .hero-video-container {
     position: absolute;
     top: 0;
@@ -54,13 +73,17 @@ a {
     object-fit: cover;
 }
 
-/* Bento Grid Styles */
+/* ==========================================
+   Component Styles
+   ========================================== */
+
+/* Bento Grid */
 .bento-card {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
     border-radius: 24px;
     padding: 2rem;
-    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: all 0.5s var(--transition-smooth);
     border: 1px solid rgba(255, 255, 255, 0.4);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
@@ -99,7 +122,7 @@ a {
 .reveal-up {
     opacity: 0;
     transform: translateY(60px);
-    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 1s var(--transition-smooth-in);
 }
 
 .reveal-up.active {
@@ -148,7 +171,11 @@ a {
     background-clip: text;
 }
 
-/* Floating Elements */
+/* ==========================================
+   Animations
+   ========================================== */
+
+/* Float Animation */
 @keyframes float {
     0%, 100% {
         transform: translateY(0) rotate(0deg);
@@ -183,17 +210,12 @@ a {
 .stagger-item {
     opacity: 0;
     transform: translateY(30px);
+    transition: all 0.6s var(--transition-smooth-in);
 }
 
 .stagger-item.active {
-    animation: staggerIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-@keyframes staggerIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Event Badge Pulse */
@@ -223,7 +245,7 @@ a {
 /* Service Card Hover */
 .service-card {
     position: relative;
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: all 0.4s var(--transition-smooth);
 }
 
 .service-card::before {
@@ -258,7 +280,9 @@ a {
     animation: marquee 30s linear infinite;
 }
 
-/* Animated Clouds */
+/* ==========================================
+   Cloud Animations
+   ========================================== */
 .clouds {
     position: absolute;
     top: 0;
@@ -371,7 +395,9 @@ a {
     100% { left: 110%; }
 }
 
-/* Boarding Pass Styles */
+/* ==========================================
+   Boarding Pass Styles
+   ========================================== */
 .boarding-pass {
     background: linear-gradient(to right, #FFFFFF 0%, #FFFFFF 75%, #f8f9fa 75%, #f8f9fa 100%);
     position: relative;
@@ -410,38 +436,90 @@ a {
     border-bottom-right-radius: inherit;
 }
 
+/* ==========================================
+   Tab & Accordion Styles
+   ========================================== */
+
 /* Tab Functionality */
 .tab-button {
     position: relative;
     transition: all 0.3s ease;
 }
 
-.tab-button::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 3px;
-    background: linear-gradient(to right, #0079c2, #337ab7);
-    transform: translateX(-50%);
-    transition: width 0.3s ease;
-}
-
-.tab-button.active::after {
-    width: 100%;
-}
-
 .tab-content {
     display: none;
-    animation: fadeIn 0.5s ease-in-out;
 }
 
 .tab-content.active {
     display: block;
+    animation: fadeInUp 0.5s ease-out;
 }
 
-@keyframes fadeIn {
+/* FAQ/Accordion */
+.faq-answer,
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s var(--transition-smooth-in),
+                padding 0.4s var(--transition-smooth-in),
+                opacity 0.3s ease;
+    opacity: 0;
+}
+
+.faq-answer:not(.hidden),
+.accordion-content:not(.hidden) {
+    max-height: 2000px;
+    opacity: 1;
+}
+
+.faq-icon,
+.accordion-icon {
+    transition: transform 0.3s ease;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+/* ==========================================
+   Dropdown Animations
+   ========================================== */
+.dropdown-menu {
+    transform-origin: top;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.mobile-dropdown-content {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.mobile-dropdown-content:not(.hidden) {
+    max-height: 500px;
+    opacity: 1;
+}
+
+/* ==========================================
+   Image Hover Effects
+   ========================================== */
+.image-hover-zoom {
+    overflow: hidden;
+}
+
+.image-hover-zoom img {
+    transition: transform 0.6s var(--transition-smooth);
+}
+
+.image-hover-zoom:hover img {
+    transform: scale(1.1);
+}
+
+/* ==========================================
+   Utility Animations
+   ========================================== */
+@keyframes fadeInUp {
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -449,5 +527,39 @@ a {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.loading-shimmer {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.2) 20%,
+        rgba(255, 255, 255, 0.5) 60%,
+        rgba(255, 255, 255, 0)
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+}
+
+/* ==========================================
+   Responsive Optimizations
+   ========================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }
