@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:iatp.com)"
+      "WebFetch(domain:iatp.com)",
+      "mcp__ide__getDiagnostics"
     ]
   }
 }

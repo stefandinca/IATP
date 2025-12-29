@@ -3,17 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PIONAIRS - IATP</title>
+    <title>IATP - International Airlines Technical Pool</title>
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'iatp': {
+                            primary: '#1942bd',
+                            secondary: '#194be0',
+                            light: '#4a9fd8',
+                            dark: '#005a8f',
+                            50: '#e6f4fb',
+                            100: '#cce9f7',
+                            200: '#99d3ef',
+                            300: '#66bde7',
+                            400: '#33a7df',
+                            500: '#0079c2',
+                            600: '#00619b',
+                            700: '#004974',
+                            800: '#00314d',
+                            900: '#001926',
+                        },
+                        'iatp-secondary': {
+                            50: '#e8f1f8',
+                            100: '#d1e3f1',
+                            200: '#a3c7e3',
+                            300: '#75abd5',
+                            400: '#478fc7',
+                            500: '#337ab7',
+                            600: '#296192',
+                            700: '#1f496e',
+                            800: '#143149',
+                            900: '#0a1825',
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Iconify (Ant Design Icons) -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-white text-gray-900">
 
-     <!-- Navigation -->
+   <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-xl shadow-lg transition-all duration-500" id="navbar">
         <div class="max-w-7xl mx-auto px-6 py-6">
             <div class="flex items-center justify-between">
@@ -24,126 +72,148 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <!-- About Dropdown -->
                     <div class="relative group">
-                        <button class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium flex items-center space-x-1">
+                        <button class="text-gray-600 hover:text-iatp-primary transition-colors font-medium flex items-center space-x-1">
                             <span><a href="about.html#hero">About</a></span>
-                            <i class="fas fa-chevron-down text-xs"></i>
+                            <span class="iconify text-xs transition-transform group-hover:rotate-180" data-icon="ant-design:down-outlined"></span>
                         </button>
-                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
-                            <a href="about.html#about" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors first:rounded-t-xl">About Us</a>
-                            <a href="about.html#faq" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors">FAQ</a>
-                            <a href="pionairs.html" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors last:rounded-b-xl">PIONAIRS</a>
+                        <div class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="about.html#hero" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors first:rounded-t-xl">About Us</a>
+                            <a href="about.html#faq" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors">FAQ</a>
+                            
                         </div>
                     </div>
 
-                                        <a href="#" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">Events</a>
-
+                    <a href="#" class="text-gray-600 hover:text-iatp-primary transition-colors font-medium">Events</a>
 
                     <!-- Members Dropdown -->
                     <div class="relative group">
-                        <button class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium flex items-center space-x-1">
+                        <button class="text-gray-600 hover:text-iatp-primary transition-colors font-medium flex items-center space-x-1">
                             <span>Members</span>
-                            <i class="fas fa-chevron-down text-xs"></i>
+                            <span class="iconify text-xs transition-transform group-hover:rotate-180" data-icon="ant-design:down-outlined"></span>
                         </button>
-                        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
-                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors first:rounded-t-xl">Why Join IATP</a>
-                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors">Airline Members</a>
-                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors">Become a Member</a>
-                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors last:rounded-b-xl">Associate Members</a>
+                        <div class="dropdown-menu absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors first:rounded-t-xl">Why Join IATP</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors">Airline Members</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors">Become a Member</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors last:rounded-b-xl">Associate Members</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors last:rounded-b-xl">Become an Associate Members</a>
+
+                            <a href="pionairs.html" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors last:rounded-b-xl">PIONAIRS</a>
                         </div>
                     </div>
 
                     <!-- News Dropdown -->
                     <div class="relative group">
-                        <button class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium flex items-center space-x-1">
+                        <button class="text-gray-600 hover:text-iatp-primary transition-colors font-medium flex items-center space-x-1">
                             <span>News</span>
-                            <i class="fas fa-chevron-down text-xs"></i>
+                            <span class="iconify text-xs transition-transform group-hover:rotate-180" data-icon="ant-design:down-outlined"></span>
                         </button>
-                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
-                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-[#0079c2] hover:bg-blue-50 transition-colors rounded-xl">Press</a>
+                        <div class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors rounded-xl">Press</a>
                         </div>
                     </div>
 
-                    <a href="#" class="text-gray-600 hover:text-[#0079c2] transition-colors font-medium">Contact</a>
+                    <a href="#" class="text-gray-600 hover:text-iatp-primary transition-colors font-medium">Contact</a>
 
-                    <button class="magnetic-btn px-8 py-3 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white rounded-full font-semibold shadow-lg shadow-[#0079c2]/30 hover:shadow-xl hover:shadow-[#0079c2]/40 transition-all relative z-10">
+                    <button class="magnetic-btn px-8 py-3 bg-gradient-to-r from-iatp-primary to-iatp-secondary text-white rounded-full font-semibold shadow-lg shadow-iatp-primary/30 hover:shadow-xl hover:shadow-iatp-primary/40 transition-all relative z-10">
                         Member Portal
                     </button>
                 </div>
 
                 <button class="md:hidden text-gray-900" id="mobile-menu-btn">
-                    <i class="fas fa-bars text-2xl"></i>
+                    <span class="iconify text-2xl" data-icon="ant-design:menu-outlined"></span>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu -->
-        <div class="md:hidden fixed inset-0 bg-gray-900/95 backdrop-blur-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50" id="mobile-menu">
+        <div class="md:hidden fixed inset-0 h-screen w-screen transform translate-x-full transition-transform duration-300 ease-in-out z-[100] drop-shadow-2xl bg-white" id="mobile-menu">
             <div class="flex flex-col h-full">
-                <div class="flex items-center justify-between px-6 py-6 border-b border-white/10">
-                    <a href="index.html"> <img src="img/IATP-logo.png" alt="IATP Logo" class="h-12 w-auto   "></a>
-                    <button class="text-white" id="mobile-menu-close">
-                        <i class="fas fa-times text-2xl"></i>
+                <!-- Header -->
+                <div class="flex items-center justify-between px-6 py-6 border-b border-white/20">
+                    <a href="index.html"><img src="img/IATP-logo.png" alt="IATP Logo" class="h-12 w-auto"></a>
+                    <button class="w-10 h-10 flex items-center justify-center rounded-full bg-iatp-primary/10 hover:bg-iatp-primary/20 transition-all" id="mobile-menu-close">
+                        <span class="iconify text-2xl text-iatp-primary" data-icon="ant-design:close-outlined"></span>
                     </button>
                 </div>
-                <nav class="flex-1 px-6 py-8 space-y-4 bg-gray-900">
+
+                <!-- Navigation -->
+                <nav class="flex-1 px-4 py-6 space-y-2 bg-iatp-primary ">
                     <!-- About Mobile Dropdown -->
                     <div class="mobile-dropdown">
-                        <button class="flex items-center justify-between w-full text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-dropdown-btn">
-                            <span><a href="about.html#hero">About</a></span>
-                            <i class="fas fa-chevron-down text-lg transition-transform"></i>
+                        <button class="flex items-center justify-between w-full px-4 py-3 text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all mobile-dropdown-btn">
+                            <span class="flex items-center space-x-3">
+                                <span class="iconify text-xl" data-icon="ant-design:info-circle-outlined"></span>
+                                <span><a href="about.html#hero">About</a></span>
+                            </span>
+                            <span class="iconify text-base transition-transform" data-icon="ant-design:down-outlined"></span>
                         </button>
-                        <div class="mobile-dropdown-content hidden pl-6 pt-3 space-y-3">
-                            <a href="about.html#about" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">About Us</a>
-                            <a href="about.html#faq" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">FAQ</a>
-                            <a href="pionairs.html" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">PIONAIRS</a>
+                        <div class="mobile-dropdown-content hidden mt-2 ml-4 pl-8 space-y-1 border-l-2 border-white/20">
+                            <a href="about.html#hero" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">About Us</a>
+                            <a href="about.html#faq" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">FAQ</a>
+                            
                         </div>
                     </div>
 
-                    <a href="#" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Events</a>
+                    <!-- Events Link -->
+                    <a href="#" class="flex items-center space-x-3 px-4 py-3 text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all mobile-menu-link">
+                        <span class="iconify text-xl" data-icon="ant-design:calendar-outlined"></span>
+                        <span>Events</span>
+                    </a>
 
                     <!-- Members Mobile Dropdown -->
                     <div class="mobile-dropdown">
-                        <button class="flex items-center justify-between w-full text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-dropdown-btn">
-                            <span>Members</span>
-                            <i class="fas fa-chevron-down text-lg transition-transform"></i>
+                        <button class="flex items-center justify-between w-full px-4 py-3 text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all mobile-dropdown-btn">
+                            <span class="flex items-center space-x-3">
+                                <span class="iconify text-xl" data-icon="ant-design:team-outlined"></span>
+                                <span>Members</span>
+                            </span>
+                            <span class="iconify text-base transition-transform" data-icon="ant-design:down-outlined"></span>
                         </button>
-                        <div class="mobile-dropdown-content hidden pl-6 pt-3 space-y-3">
-                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">Why Join IATP</a>
-                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">Airline Members</a>
-                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">Become a Member</a>
-                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">Associate Members</a>
+                        <div class="mobile-dropdown-content hidden mt-2 ml-4 pl-8 space-y-1 border-l-2 border-white/20">
+                            <a href="#" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Why Join IATP</a>
+                            <a href="#" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Airline Members</a>
+                            <a href="#" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Become a Member</a>
+                            <a href="#" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Associate Members</a>
+                            <a href="#" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Become an Associate Members</a>
+                            <a href="pionairs.html" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">PIONAIRS</a>
                         </div>
                     </div>
 
                     <!-- News Mobile Dropdown -->
                     <div class="mobile-dropdown">
-                        <button class="flex items-center justify-between w-full text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-dropdown-btn">
-                            <span>News</span>
-                            <i class="fas fa-chevron-down text-lg transition-transform"></i>
+                        <button class="flex items-center justify-between w-full px-4 py-3 text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all mobile-dropdown-btn">
+                            <span class="flex items-center space-x-3">
+                                <span class="iconify text-xl" data-icon="ant-design:file-text-outlined"></span>
+                                <span>News</span>
+                            </span>
+                            <span class="iconify text-base transition-transform" data-icon="ant-design:down-outlined"></span>
                         </button>
-                        <div class="mobile-dropdown-content hidden pl-6 pt-3 space-y-3">
-                            <a href="#" class="block text-white text-lg hover:text-[#0079c2] transition-colors mobile-menu-link">Press</a>
+                        <div class="mobile-dropdown-content hidden mt-2 ml-4 pl-8 space-y-1 border-l-2 border-white/20">
+                            <a href="#" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Press</a>
                         </div>
                     </div>
 
-                    <a href="#" class="block text-white text-2xl font-semibold hover:text-[#0079c2] transition-colors mobile-menu-link">Contact</a>
+                    <!-- Contact Link -->
+                    <a href="#" class="flex items-center space-x-3 px-4 py-3 text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all mobile-menu-link">
+                        <span class="iconify text-xl" data-icon="ant-design:mail-outlined"></span>
+                        <span>Contact</span>
+                    </a>
                 </nav>
-                <div class="px-6 py-8 border-t border-white/10 bg-gray-800">
-                    <button class="w-full px-8 py-4 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white rounded-full font-semibold shadow-lg text-lg">
-                        Member Portal
+
+                <!-- Footer CTA -->
+                <div class="px-6 py-6  bg-iatp-primary ">
+                    <button class="w-full px-8 py-4 bg-white text-iatp-primary rounded-full font-bold shadow-xl text-lg hover:shadow-2xl hover:scale-105 transition-all flex items-center justify-center space-x-2">
+                        <span class="iconify text-xl" data-icon="ant-design:user-outlined"></span>
+                        <span>Member Portal</span>
                     </button>
                 </div>
             </div>
         </div>
     </nav>
-
     <!-- Hero Section -->
-    <section class="relative pt-32 pb-24 bg-gradient-to-br from-[#0079c2] to-[#337ab7] overflow-hidden">
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full -mr-48 -mt-48"></div>
-            <div class="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full -ml-48 -mb-48"></div>
-            <div class="absolute top-1/2 left-1/4 w-64 h-64 bg-white rounded-full -ml-32 -mt-32"></div>
-        </div>
+    <section class="relative pt-32 pb-24 bg-gradient-to-br from-iatp-primary to-iatp-secondary overflow-hidden">
+        
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center">
@@ -173,7 +243,7 @@
         <div class="max-w-5xl mx-auto px-6">
             <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-12 shadow-xl border border-blue-100">
                 <div class="flex items-center justify-center mb-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-2xl flex items-center justify-center">
+                    <div class="w-16 h-16 bg-gradient-to-br  from-iatp-primary to-iatp-secondary rounded-2xl flex items-center justify-center">
                         <i class="fas fa-info-circle text-3xl text-white"></i>
                     </div>
                 </div>
@@ -200,16 +270,16 @@
                 <!-- Chairperson -->
                 <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
                     <div class="text-center mb-6">
-                        <div class="w-20 h-20 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div class="w-20 h-20 bg-gradient-to-br  from-iatp-primary to-iatp-secondary rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-user-tie text-3xl text-white"></i>
                         </div>
-                        <div class="inline-block px-4 py-1.5 bg-blue-50 text-[#0079c2] rounded-full text-xs font-bold uppercase mb-4">
+                        <div class="inline-block px-4 py-1.5 bg-blue-50  text-iatp-primary rounded-full text-xs font-bold uppercase mb-4">
                             Chairperson
                         </div>
                     </div>
                     <div class="text-center">
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Mr. Saud Alahmadi</h3>
-                        <a href="mailto:direast@gmail.com" class="inline-flex items-center space-x-2 text-[#0079c2] hover:text-[#337ab7] transition-colors">
+                        <a href="mailto:direast@gmail.com" class="inline-flex items-center space-x-2  text-iatp-primary hover: text-iatp-primary transition-colors">
                             <i class="fas fa-envelope"></i>
                             <span class="text-sm">direast@gmail.com</span>
                         </a>
@@ -219,16 +289,16 @@
                 <!-- Co-Chairperson -->
                 <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
                     <div class="text-center mb-6">
-                        <div class="w-20 h-20 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div class="w-20 h-20 bg-gradient-to-br  from-iatp-primary to-iatp-secondary rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-user text-3xl text-white"></i>
                         </div>
-                        <div class="inline-block px-4 py-1.5 bg-blue-50 text-[#0079c2] rounded-full text-xs font-bold uppercase mb-4">
+                        <div class="inline-block px-4 py-1.5 bg-blue-50  text-iatp-primary rounded-full text-xs font-bold uppercase mb-4">
                             Co-Chairperson
                         </div>
                     </div>
                     <div class="text-center">
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Mr. Richard Hyam</h3>
-                        <a href="mailto:richard.hyam@gmail.com" class="inline-flex items-center space-x-2 text-[#0079c2] hover:text-[#337ab7] transition-colors">
+                        <a href="mailto:richard.hyam@gmail.com" class="inline-flex items-center space-x-2  text-iatp-primary hover:text-iatp-primary transition-colors">
                             <i class="fas fa-envelope"></i>
                             <span class="text-sm">richard.hyam@gmail.com</span>
                         </a>
@@ -238,17 +308,17 @@
                 <!-- Standby Member -->
                 <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
                     <div class="text-center mb-6">
-                        <div class="w-20 h-20 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div class="w-20 h-20 bg-gradient-to-br  from-iatp-primary to-iatp-secondary rounded-full flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-user-clock text-3xl text-white"></i>
                         </div>
-                        <div class="inline-block px-4 py-1.5 bg-blue-50 text-[#0079c2] rounded-full text-xs font-bold uppercase mb-4">
+                        <div class="inline-block px-4 py-1.5 bg-blue-50  text-iatp-primary rounded-full text-xs font-bold uppercase mb-4">
                             Standby Member
                         </div>
                     </div>
                     <div class="text-center">
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Mr. San Lucktong</h3>
                         <p class="text-gray-500 text-sm mb-2">(ex-TG)</p>
-                        <a href="mailto:tha17966@yahoo.com" class="inline-flex items-center space-x-2 text-[#0079c2] hover:text-[#337ab7] transition-colors">
+                        <a href="mailto:tha17966@yahoo.com" class="inline-flex items-center space-x-2  text-iatp-primary hover: text-iatp-primary transition-colors">
                             <i class="fas fa-envelope"></i>
                             <span class="text-sm">tha17966@yahoo.com</span>
                         </a>
@@ -275,12 +345,12 @@
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
                     <button class="accordion-header w-full px-8 py-6 text-left flex items-center justify-between hover:bg-blue-50 transition-colors">
                         <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-xl flex items-center justify-center flex-shrink-0">
+                            <div class="w-12 h-12 bg-gradient-to-br  from-iatp-primary to-iatp-secondary rounded-xl flex items-center justify-center flex-shrink-0">
                                 <span class="text-white font-bold text-lg">1</span>
                             </div>
                             <span class="font-bold text-xl text-gray-900">General</span>
                         </div>
-                        <i class="fas fa-chevron-down text-[#0079c2] transition-transform accordion-icon"></i>
+                        <i class="fas fa-chevron-down  text-iatp-primary transition-transform accordion-icon"></i>
                     </button>
                     <div class="accordion-content hidden px-8 pb-6">
                         <p class="text-gray-700 leading-relaxed">
@@ -293,12 +363,12 @@
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
                     <button class="accordion-header w-full px-8 py-6 text-left flex items-center justify-between hover:bg-blue-50 transition-colors">
                         <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-xl flex items-center justify-center flex-shrink-0">
+                            <div class="w-12 h-12 bg-gradient-to-br  from-iatp-primary to-iatp-secondary rounded-xl flex items-center justify-center flex-shrink-0">
                                 <span class="text-white font-bold text-lg">2</span>
                             </div>
                             <span class="font-bold text-xl text-gray-900">Name of the PIONAIRS Association</span>
                         </div>
-                        <i class="fas fa-chevron-down text-[#0079c2] transition-transform accordion-icon"></i>
+                        <i class="fas fa-chevron-down  text-iatp-primary transition-transform accordion-icon"></i>
                     </button>
                     <div class="accordion-content hidden px-8 pb-6">
                         <p class="text-gray-700 leading-relaxed">
@@ -311,12 +381,12 @@
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
                     <button class="accordion-header w-full px-8 py-6 text-left flex items-center justify-between hover:bg-blue-50 transition-colors">
                         <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-xl flex items-center justify-center flex-shrink-0">
+                            <div class="w-12 h-12 bg-gradient-to-br  from-iatp-primary to-iatp-secondary rounded-xl flex items-center justify-center flex-shrink-0">
                                 <span class="text-white font-bold text-lg">3</span>
                             </div>
                             <span class="font-bold text-xl text-gray-900">Purpose of the PIONAIRS Association</span>
                         </div>
-                        <i class="fas fa-chevron-down text-[#0079c2] transition-transform accordion-icon"></i>
+                        <i class="fas fa-chevron-down  text-iatp-primary transition-transform accordion-icon"></i>
                     </button>
                     <div class="accordion-content hidden px-8 pb-6">
                         <p class="text-gray-700 leading-relaxed">
@@ -329,12 +399,12 @@
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
                     <button class="accordion-header w-full px-8 py-6 text-left flex items-center justify-between hover:bg-blue-50 transition-colors">
                         <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-xl flex items-center justify-center flex-shrink-0">
+                            <div class="w-12 h-12 bg-gradient-to-br  from-iatp-primary to-iatp-secondary rounded-xl flex items-center justify-center flex-shrink-0">
                                 <span class="text-white font-bold text-lg">4</span>
                             </div>
                             <span class="font-bold text-xl text-gray-900">Membership</span>
                         </div>
-                        <i class="fas fa-chevron-down text-[#0079c2] transition-transform accordion-icon"></i>
+                        <i class="fas fa-chevron-down  text-iatp-primary transition-transform accordion-icon"></i>
                     </button>
                     <div class="accordion-content hidden px-8 pb-6">
                         <div class="text-gray-700 leading-relaxed space-y-4">
@@ -359,12 +429,12 @@
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
                     <button class="accordion-header w-full px-8 py-6 text-left flex items-center justify-between hover:bg-blue-50 transition-colors">
                         <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-xl flex items-center justify-center flex-shrink-0">
+                            <div class="w-12 h-12 bg-gradient-to-br  from-iatp-primary to-iatp-secondary rounded-xl flex items-center justify-center flex-shrink-0">
                                 <span class="text-white font-bold text-lg">5</span>
                             </div>
                             <span class="font-bold text-xl text-gray-900">Officers</span>
                         </div>
-                        <i class="fas fa-chevron-down text-[#0079c2] transition-transform accordion-icon"></i>
+                        <i class="fas fa-chevron-down  text-iatp-primary transition-transform accordion-icon"></i>
                     </button>
                     <div class="accordion-content hidden px-8 pb-6">
                         <div class="text-gray-700 leading-relaxed space-y-4">
@@ -385,12 +455,12 @@
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
                     <button class="accordion-header w-full px-8 py-6 text-left flex items-center justify-between hover:bg-blue-50 transition-colors">
                         <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-xl flex items-center justify-center flex-shrink-0">
+                            <div class="w-12 h-12 bg-gradient-to-br  from-iatp-primary to-iatp-secondary rounded-xl flex items-center justify-center flex-shrink-0">
                                 <span class="text-white font-bold text-lg">6</span>
                             </div>
                             <span class="font-bold text-xl text-gray-900">Administration, Communication, Meetings and Newsletters</span>
                         </div>
-                        <i class="fas fa-chevron-down text-[#0079c2] transition-transform accordion-icon"></i>
+                        <i class="fas fa-chevron-down  text-iatp-primary transition-transform accordion-icon"></i>
                     </button>
                     <div class="accordion-content hidden px-8 pb-6">
                         <div class="text-gray-700 leading-relaxed space-y-4">
@@ -418,12 +488,12 @@
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
                     <button class="accordion-header w-full px-8 py-6 text-left flex items-center justify-between hover:bg-blue-50 transition-colors">
                         <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-xl flex items-center justify-center flex-shrink-0">
+                            <div class="w-12 h-12 bg-gradient-to-br  from-iatp-primary to-iatp-secondary rounded-xl flex items-center justify-center flex-shrink-0">
                                 <span class="text-white font-bold text-lg">7</span>
                             </div>
                             <span class="font-bold text-xl text-gray-900">Dues</span>
                         </div>
-                        <i class="fas fa-chevron-down text-[#0079c2] transition-transform accordion-icon"></i>
+                        <i class="fas fa-chevron-down  text-iatp-primary transition-transform accordion-icon"></i>
                     </button>
                     <div class="accordion-content hidden px-8 pb-6">
                         <div class="text-gray-700 leading-relaxed space-y-4">
@@ -471,12 +541,12 @@
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
                     <button class="accordion-header w-full px-8 py-6 text-left flex items-center justify-between hover:bg-blue-50 transition-colors">
                         <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-xl flex items-center justify-center flex-shrink-0">
+                            <div class="w-12 h-12 bg-gradient-to-br  from-iatp-primary to-iatp-secondary rounded-xl flex items-center justify-center flex-shrink-0">
                                 <span class="text-white font-bold text-lg">8</span>
                             </div>
                             <span class="font-bold text-xl text-gray-900">Termination of Membership</span>
                         </div>
-                        <i class="fas fa-chevron-down text-[#0079c2] transition-transform accordion-icon"></i>
+                        <i class="fas fa-chevron-down  text-iatp-primary transition-transform accordion-icon"></i>
                     </button>
                     <div class="accordion-content hidden px-8 pb-6">
                         <div class="text-gray-700 leading-relaxed space-y-4">
@@ -500,12 +570,12 @@
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
                     <button class="accordion-header w-full px-8 py-6 text-left flex items-center justify-between hover:bg-blue-50 transition-colors">
                         <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-xl flex items-center justify-center flex-shrink-0">
+                            <div class="w-12 h-12 bg-gradient-to-br  from-iatp-primary to-iatp-secondary rounded-xl flex items-center justify-center flex-shrink-0">
                                 <span class="text-white font-bold text-lg">9</span>
                             </div>
                             <span class="font-bold text-xl text-gray-900">Relationship to the IATP</span>
                         </div>
-                        <i class="fas fa-chevron-down text-[#0079c2] transition-transform accordion-icon"></i>
+                        <i class="fas fa-chevron-down  text-iatp-primary transition-transform accordion-icon"></i>
                     </button>
                     <div class="accordion-content hidden px-8 pb-6">
                         <div class="text-gray-700 leading-relaxed space-y-4">
@@ -526,12 +596,12 @@
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
                     <button class="accordion-header w-full px-8 py-6 text-left flex items-center justify-between hover:bg-blue-50 transition-colors">
                         <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-xl flex items-center justify-center flex-shrink-0">
+                            <div class="w-12 h-12 bg-gradient-to-br  from-iatp-primary to-iatp-secondary rounded-xl flex items-center justify-center flex-shrink-0">
                                 <span class="text-white font-bold text-lg">10</span>
                             </div>
                             <span class="font-bold text-xl text-gray-900">Approval or Amendment of Terms of Reference</span>
                         </div>
-                        <i class="fas fa-chevron-down text-[#0079c2] transition-transform accordion-icon"></i>
+                        <i class="fas fa-chevron-down  text-iatp-primary transition-transform accordion-icon"></i>
                     </button>
                     <div class="accordion-content hidden px-8 pb-6">
                         <div class="text-gray-700 leading-relaxed space-y-4">
@@ -568,7 +638,7 @@
                     <div class="grid md:grid-cols-2 gap-x-8 gap-y-3">
                         <!-- A -->
                         <div class="col-span-2 mt-6 first:mt-0">
-                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">A</div>
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r  from-iatp-primary to-iatp-secondary text-white font-bold rounded-lg mb-4">A</div>
                         </div>
                         <div class="text-gray-700">Adcock, Dwayne <span class="text-gray-500">(ex-AER)</span></div>
                         <div class="text-gray-700">Al-Sandi, Abdullah <span class="text-gray-500">(ex-KU)</span></div>
@@ -580,7 +650,7 @@
 
                         <!-- B -->
                         <div class="col-span-2 mt-6">
-                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">B</div>
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r  from-iatp-primary to-iatp-secondary text-white font-bold rounded-lg mb-4">B</div>
                         </div>
                         <div class="text-gray-700">Blei, Neil <span class="text-gray-500">(ex-M2M)</span></div>
                         <div class="text-gray-700">Bridekirk, M.J. <span class="text-gray-500">(ex-QF)</span></div>
@@ -590,7 +660,7 @@
 
                         <!-- C -->
                         <div class="col-span-2 mt-6">
-                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">C</div>
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r  from-iatp-primary to-iatp-secondary text-white font-bold rounded-lg mb-4">C</div>
                         </div>
                         <div class="text-gray-700">Chen Tong Wee, Lennie <span class="text-gray-500">(ex-MH)</span></div>
                         <div class="text-gray-700">Clarkson, Steve <span class="text-gray-500">(ex-BA)</span></div>
@@ -599,7 +669,7 @@
 
                         <!-- D -->
                         <div class="col-span-2 mt-6">
-                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">D</div>
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r  from-iatp-primary to-iatp-secondary text-white font-bold rounded-lg mb-4">D</div>
                         </div>
                         <div class="text-gray-700">Dacoulis, John <span class="text-gray-500">(ex-TS)</span></div>
                         <div class="text-gray-700">De Jésus, Regelio (Roy) P. <span class="text-gray-500">(ex-PR)</span></div>
@@ -608,28 +678,28 @@
 
                         <!-- E -->
                         <div class="col-span-2 mt-6">
-                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">E</div>
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r  from-iatp-primary to-iatp-secondary text-white font-bold rounded-lg mb-4">E</div>
                         </div>
                         <div class="text-gray-700">Elliott, Rosa <span class="text-gray-500">(ex-RG)</span></div>
                         <div class="text-gray-700">Elmegrab, Nouri <span class="text-gray-500">(ex-LY)</span></div>
 
                         <!-- F -->
                         <div class="col-span-2 mt-6">
-                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">F</div>
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r  from-iatp-primary to-iatp-secondary text-white font-bold rounded-lg mb-4">F</div>
                         </div>
                         <div class="text-gray-700">Fitzgerald, Thomas <span class="text-gray-500">(ex-KL)</span></div>
                         <div class="text-gray-700">Focken, Horst <span class="text-gray-500">(ex-LH)</span></div>
 
                         <!-- G -->
                         <div class="col-span-2 mt-6">
-                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">G</div>
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r  from-iatp-primary to-iatp-secondary text-white font-bold rounded-lg mb-4">G</div>
                         </div>
                         <div class="text-gray-700">Goehring, Colleen <span class="text-gray-500">(ex-NW)</span></div>
                         <div class="text-gray-700">Griem, Ingo <span class="text-gray-500">(ex-LHT)</span></div>
 
                         <!-- H -->
                         <div class="col-span-2 mt-6">
-                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">H</div>
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r  from-iatp-primary to-iatp-secondary text-white font-bold rounded-lg mb-4">H</div>
                         </div>
                         <div class="text-gray-700">Harper, Donald N. <span class="text-gray-500">(ex-TW)</span></div>
                         <div class="text-gray-700">Heurteloup, Patrick <span class="text-gray-500">(ex-AF)</span></div>
@@ -640,13 +710,13 @@
 
                         <!-- J -->
                         <div class="col-span-2 mt-6">
-                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">J</div>
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r  from-iatp-primary to-iatp-secondary text-white font-bold rounded-lg mb-4">J</div>
                         </div>
                         <div class="text-gray-700">Julin, Liisa <span class="text-gray-500">(ex-AY)</span></div>
 
                         <!-- K -->
                         <div class="col-span-2 mt-6">
-                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">K</div>
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r  from-iatp-primary to-iatp-secondary text-white font-bold rounded-lg mb-4">K</div>
                         </div>
                         <div class="text-gray-700">Kells, Brian <span class="text-gray-500">(ex-AC)</span></div>
                         <div class="text-gray-700">Kerr, Annette <span class="text-gray-500">(ex-BA)</span></div>
@@ -656,7 +726,7 @@
 
                         <!-- L -->
                         <div class="col-span-2 mt-6">
-                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">L</div>
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r  from-iatp-primary to-iatp-secondary text-white font-bold rounded-lg mb-4">L</div>
                         </div>
                         <div class="text-gray-700">L'Eveille, Jean-Marie <span class="text-gray-500">(ex-QF)</span></div>
                         <div class="text-gray-700">Lewis, Christopher <span class="text-gray-500">(ex-AB/SAL)</span></div>
@@ -667,26 +737,26 @@
 
                         <!-- M -->
                         <div class="col-span-2 mt-6">
-                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">M</div>
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r  from-iatp-primary to-iatp-secondary text-white font-bold rounded-lg mb-4">M</div>
                         </div>
                         <div class="text-gray-700">Millbank, Matt <span class="text-gray-500">(ex-AJW)</span></div>
                         <div class="text-gray-700">Murri, Giancarlo <span class="text-gray-500">(ex-AZ)</span></div>
 
                         <!-- O -->
                         <div class="col-span-2 mt-6">
-                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">O</div>
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r  from-iatp-primary to-iatp-secondary text-white font-bold rounded-lg mb-4">O</div>
                         </div>
                         <div class="text-gray-700">Oades, Robert James <span class="text-gray-500">(ex-EY)</span></div>
 
                         <!-- P -->
                         <div class="col-span-2 mt-6">
-                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">P</div>
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r  from-iatp-primary to-iatp-secondary text-white font-bold rounded-lg mb-4">P</div>
                         </div>
                         <div class="text-gray-700">Pinto, Mordechai <span class="text-gray-500">(ex-LY)</span></div>
 
                         <!-- R -->
                         <div class="col-span-2 mt-6">
-                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">R</div>
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r  from-iatp-primary to-iatp-secondary text-white font-bold rounded-lg mb-4">R</div>
                         </div>
                         <div class="text-gray-700">Randall, Anthony Keith <span class="text-gray-500">(ex-KL)</span></div>
                         <div class="text-gray-700">Robazza, Giancarlo <span class="text-gray-500">(ex-AZ)</span></div>
@@ -695,7 +765,7 @@
 
                         <!-- S -->
                         <div class="col-span-2 mt-6">
-                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">S</div>
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r  from-iatp-primary to-iatp-secondary text-white font-bold rounded-lg mb-4">S</div>
                         </div>
                         <div class="text-gray-700">Savarimuthu, Peter <span class="text-gray-500">(ex-MH)</span></div>
                         <div class="text-gray-700">Schmitz, Helmut <span class="text-gray-500">(ex-AC)</span></div>
@@ -708,26 +778,26 @@
 
                         <!-- T -->
                         <div class="col-span-2 mt-6">
-                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">T</div>
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r  from-iatp-primary to-iatp-secondary text-white font-bold rounded-lg mb-4">T</div>
                         </div>
                         <div class="text-gray-700">Toorani, Isa <span class="text-gray-500">(ex-GF)</span></div>
 
                         <!-- U -->
                         <div class="col-span-2 mt-6">
-                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">U</div>
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r  from-iatp-primary to-iatp-secondary text-white font-bold rounded-lg mb-4">U</div>
                         </div>
                         <div class="text-gray-700">Umar, Abdullah Osman <span class="text-gray-500">(ex-EK)</span></div>
                         <div class="text-gray-700">Urich, Wolfgang <span class="text-gray-500">(ex-X3)</span></div>
 
                         <!-- V -->
                         <div class="col-span-2 mt-6">
-                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">V</div>
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r  from-iatp-primary to-iatp-secondary text-white font-bold rounded-lg mb-4">V</div>
                         </div>
                         <div class="text-gray-700">Vincent, Nicholas (Nick) <span class="text-gray-500">(ex-MNX)</span></div>
 
                         <!-- W -->
                         <div class="col-span-2 mt-6">
-                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">W</div>
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r  from-iatp-primary to-iatp-secondary text-white font-bold rounded-lg mb-4">W</div>
                         </div>
                         <div class="text-gray-700">Wengler, Alfred <span class="text-gray-500">(ex-NAY)</span></div>
                         <div class="text-gray-700">Wikner, Uno <span class="text-gray-500">(ex-SK)</span></div>
@@ -735,14 +805,14 @@
 
                         <!-- Y -->
                         <div class="col-span-2 mt-6">
-                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">Y</div>
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r  from-iatp-primary to-iatp-secondary text-white font-bold rounded-lg mb-4">Y</div>
                         </div>
                         <div class="text-gray-700">Yawata, Yoshihiro <span class="text-gray-500">(ex-NH)</span></div>
                         <div class="text-gray-700">Yelloly, Andrew <span class="text-gray-500">(ex-BA)</span></div>
 
                         <!-- Z -->
                         <div class="col-span-2 mt-6">
-                            <div class="inline-block px-4 py-2 bg-gradient-to-r from-[#0079c2] to-[#337ab7] text-white font-bold rounded-lg mb-4">Z</div>
+                            <div class="inline-block px-4 py-2 bg-gradient-to-r  from-iatp-primary to-iatp-secondary text-white font-bold rounded-lg mb-4">Z</div>
                         </div>
                         <div class="text-gray-700">Zehnder, Robert <span class="text-gray-500">(ex-SRT)</span></div>
                     </div>
@@ -768,28 +838,28 @@
 
             <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
                 <div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-                    <div class="w-16 h-16 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-2xl flex items-center justify-center mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-br  from-iatp-primary to-iatp-secondary rounded-2xl flex items-center justify-center mb-6">
                         <i class="fas fa-file-download text-3xl text-white"></i>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Application for Membership</h3>
                     <p class="text-gray-600 mb-6">
                         Download the official IATP-PA Application for Membership form (December 2022)
                     </p>
-                    <a href="#" class="inline-flex items-center space-x-2 text-[#0079c2] font-bold hover:text-[#337ab7] transition-colors">
+                    <a href="https://www.iatp.com/Home/IATP-PA%20Application%20for%20Membership%20TEMPLATE%20-%20Dec%202022.pdf" class="inline-flex items-center space-x-2  text-iatp-primary font-bold hover: text-iatp-primary transition-colors">
                         <span>Download Form</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
 
                 <div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-                    <div class="w-16 h-16 bg-gradient-to-br from-[#0079c2] to-[#337ab7] rounded-2xl flex items-center justify-center mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-br  from-iatp-primary to-iatp-secondary rounded-2xl flex items-center justify-center mb-6">
                         <i class="fas fa-file-alt text-3xl text-white"></i>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Change of Status Form</h3>
                     <p class="text-gray-600 mb-6">
                         Download the IATP-PA Change of Status form for membership status updates (December 2022)
                     </p>
-                    <a href="#" class="inline-flex items-center space-x-2 text-[#0079c2] font-bold hover:text-[#337ab7] transition-colors">
+                    <a href="https://www.iatp.com/Home/IATP-PA%20Change%20of%20Status%20TEMPLATE%20-%20Dec%202022.pdf" class="inline-flex items-center space-x-2  text-iatp-primary font-bold hover: text-iatp-primary transition-colors">
                         <span>Download Form</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -798,32 +868,7 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-20 bg-gradient-to-br from-[#0079c2] via-[#337ab7] to-[#0079c2] relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full -ml-48 -mt-48"></div>
-            <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full -mr-48 -mb-48"></div>
-        </div>
-
-        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-            <h2 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
-                Ready to Join PIONAIRS?
-            </h2>
-            <p class="text-xl text-white/90 mb-10 leading-relaxed">
-                Continue your IATP friendships and connections
-            </p>
-
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <button class="magnetic-btn px-10 py-4 bg-white text-[#0079c2] rounded-full text-lg font-bold shadow-2xl hover:shadow-white/50 transition-all flex items-center space-x-3 group">
-                    <span>Apply Now</span>
-                    <i class="fas fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
-                </button>
-                <button class="magnetic-btn px-10 py-4 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white rounded-full text-lg font-bold hover:bg-white/20 transition-all">
-                    Contact Us
-                </button>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Footer -->
     <footer class="py-16 bg-gray-900 text-white">
@@ -845,20 +890,20 @@
                 <div>
                     <h4 class="font-bold text-lg mb-6">Services</h4>
                     <ul class="space-y-3 text-gray-400">
-                        <li><a href="#" class="hover:text-[#0079c2] transition-colors">Parts Pooling</a></li>
-                        <li><a href="#" class="hover:text-[#0079c2] transition-colors">Line Maintenance</a></li>
-                        <li><a href="#" class="hover:text-[#0079c2] transition-colors">Aircraft Recovery</a></li>
-                        <li><a href="#" class="hover:text-[#0079c2] transition-colors">Equipment Pooling</a></li>
+                        <li><a href="#" class="hover: text-iatp-primary transition-colors">Parts Pooling</a></li>
+                        <li><a href="#" class="hover: text-iatp-primary transition-colors">Line Maintenance</a></li>
+                        <li><a href="#" class="hover: text-iatp-primary transition-colors">Aircraft Recovery</a></li>
+                        <li><a href="#" class="hover: text-iatp-primary transition-colors">Equipment Pooling</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="font-bold text-lg mb-6">Company</h4>
                     <ul class="space-y-3 text-gray-400">
-                        <li><a href="about.html" class="hover:text-[#0079c2] transition-colors">About Us</a></li>
-                        <li><a href="#" class="hover:text-[#0079c2] transition-colors">Events</a></li>
-                        <li><a href="#" class="hover:text-[#0079c2] transition-colors">Membership</a></li>
-                        <li><a href="#" class="hover:text-[#0079c2] transition-colors">Contact</a></li>
+                        <li><a href="about.html" class="hover: text-iatp-primary transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover: text-iatp-primary transition-colors">Events</a></li>
+                        <li><a href="#" class="hover: text-iatp-primary transition-colors">Membership</a></li>
+                        <li><a href="#" class="hover: text-iatp-primary transition-colors">Contact</a></li>
                     </ul>
                 </div>
 
@@ -873,12 +918,13 @@
                 </div>
             </div>
 
-            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between text-gray-400">
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between text-gray-400 relative">
                 <p>&copy; 2025 IATP. All rights reserved.</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-[#0079c2] transition-colors">Privacy</a>
-                    <a href="#" class="hover:text-[#0079c2] transition-colors">Terms</a>
-                    <a href="#" class="hover:text-[#0079c2] transition-colors">Cookies</a>
+                <div class="flex items-center space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover: text-iatp-primary transition-colors">Privacy</a>
+                    <a href="#" class="hover: text-iatp-primary transition-colors">Terms</a>
+                    <a href="#" class="hover: text-iatp-primary transition-colors">Cookies</a>
+                    <img src="img/crystal-logo.png" alt="Crystal Logo" class="h-24 w-auto ml-6 ">
                 </div>
             </div>
         </div>

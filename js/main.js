@@ -202,18 +202,18 @@ const MobileDropdown = {
     toggle(btn) {
         const dropdown = btn.parentElement;
         const content = dropdown.querySelector('.mobile-dropdown-content');
-        const icon = btn.querySelector('.fa-chevron-down');
+        const icon = btn.querySelector('.iconify.transition-transform');
 
-        if (!content || !icon) return;
+        if (!content) return;
 
         const isOpen = !content.classList.contains('hidden');
 
         if (isOpen) {
             content.classList.add('hidden');
-            icon.classList.remove('rotate-180');
+            if (icon) icon.classList.remove('rotate-180');
         } else {
             content.classList.remove('hidden');
-            icon.classList.add('rotate-180');
+            if (icon) icon.classList.add('rotate-180');
         }
     }
 };
@@ -380,6 +380,73 @@ const LazyLoad = {
 };
 
 // ==========================================
+// HERO CAROUSEL MODULE
+// ==========================================
+const HeroCarousel = {
+    init() {
+        this.slides = document.querySelectorAll('.hero-slide');
+        this.dots = document.querySelectorAll('.carousel-dot');
+        this.currentSlide = 0;
+        this.autoPlayInterval = null;
+        this.autoPlayDelay = 5000; // 5 seconds
+
+        if (this.slides.length === 0) return;
+
+        // Set up dot click handlers
+        this.dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                this.goToSlide(index);
+                this.resetAutoPlay();
+            });
+        });
+
+        // Pause auto-play on hover
+        const heroSection = document.querySelector('.hero-carousel');
+        if (heroSection) {
+            heroSection.addEventListener('mouseenter', () => this.pauseAutoPlay());
+            heroSection.addEventListener('mouseleave', () => this.startAutoPlay());
+        }
+
+        // Start auto-play
+        this.startAutoPlay();
+    },
+
+    goToSlide(index) {
+        // Hide current slide
+        this.slides[this.currentSlide].classList.remove('active');
+        this.dots[this.currentSlide].classList.remove('active', 'bg-white/80');
+        this.dots[this.currentSlide].classList.add('bg-white/40');
+
+        // Show new slide
+        this.currentSlide = index;
+        this.slides[this.currentSlide].classList.add('active');
+        this.dots[this.currentSlide].classList.add('active', 'bg-white/80');
+        this.dots[this.currentSlide].classList.remove('bg-white/40');
+    },
+
+    nextSlide() {
+        const nextIndex = (this.currentSlide + 1) % this.slides.length;
+        this.goToSlide(nextIndex);
+    },
+
+    startAutoPlay() {
+        this.autoPlayInterval = setInterval(() => this.nextSlide(), this.autoPlayDelay);
+    },
+
+    pauseAutoPlay() {
+        if (this.autoPlayInterval) {
+            clearInterval(this.autoPlayInterval);
+            this.autoPlayInterval = null;
+        }
+    },
+
+    resetAutoPlay() {
+        this.pauseAutoPlay();
+        this.startAutoPlay();
+    }
+};
+
+// ==========================================
 // INITIALIZATION
 // ==========================================
 class IatpApp {
@@ -395,7 +462,8 @@ class IatpApp {
             Accordion,
             SmoothScroll,
             NavbarScroll,
-            LazyLoad
+            LazyLoad,
+            HeroCarousel
         ];
     }
 
