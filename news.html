@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Press - IATP</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'iatp': {
+                            primary: '#1942bd',
+                            secondary: '#194be0',
+                            light: '#4a9fd8',
+                            dark: '#005a8f',
+                            50: '#e6f4fb',
+                            100: '#cce9f7',
+                            200: '#99d3ef',
+                            300: '#66bde7',
+                            400: '#33a7df',
+                            500: '#0079c2',
+                            600: '#00619b',
+                            700: '#004974',
+                            800: '#00314d',
+                            900: '#001926',
+                        },
+                        'iatp-secondary': {
+                            50: '#e8f1f8',
+                            100: '#d1e3f1',
+                            200: '#a3c7e3',
+                            300: '#75abd5',
+                            400: '#478fc7',
+                            500: '#337ab7',
+                            600: '#296192',
+                            700: '#1f496e',
+                            800: '#143149',
+                            900: '#0a1825',
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Iconify (Ant Design Icons) -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white text-gray-900">
+
+      <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-xl shadow-lg transition-all duration-500" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-6">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <img src="img/IATP-logo.png" alt="IATP Logo" class="h-14 w-auto transition-transform group-hover:scale-105">
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <!-- About Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-iatp-primary transition-colors font-medium flex items-center space-x-1">
+                            <span><a href="about.html#hero">About</a></span>
+                            <span class="iconify text-xs transition-transform group-hover:rotate-180" data-icon="ant-design:down-outlined"></span>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="about.html#hero" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors first:rounded-t-xl">About Us</a>
+                            <a href="about.html#faq" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors last:rounded-b-xl">FAQ</a>
+                        </div>
+                    </div>
+
+                    <!-- Events Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-iatp-primary transition-colors font-medium flex items-center space-x-1">
+                            <span>Events</span>
+                            <span class="iconify text-xs transition-transform group-hover:rotate-180" data-icon="ant-design:down-outlined"></span>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors first:rounded-t-xl">Upcoming Events</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors">Practical Information</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors">Location Information</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors">Hotel Info & Booking</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors">Conference Registration</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors last:rounded-b-xl">Past Events</a>
+                        </div>
+                    </div>
+
+                    <!-- Members Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-iatp-primary transition-colors font-medium flex items-center space-x-1">
+                            <span>Members</span>
+                            <span class="iconify text-xs transition-transform group-hover:rotate-180" data-icon="ant-design:down-outlined"></span>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="why-join-IATP.html" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors first:rounded-t-xl">Why join IATP</a>
+                            <a href="how-to-become-an-airline-member.html#airline-members" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors">Airline Members</a>
+                            <a href="how-to-become-an-airline-member.html" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors">Become an Airline Member</a>
+                            <a href="associate-member.html#associate-members" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors">Associate Members</a>
+                            <a href="associate-member.html" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors last:rounded-b-xl">Become an Associate Member</a>
+                        </div>
+                    </div>
+
+                    <a href="pionairs.html" class="text-gray-600 hover:text-iatp-primary transition-colors font-medium">Pionairs</a>
+
+                    <!-- News Dropdown -->
+                    <div class="relative group">
+                        <button class="text-iatp-primary hover:text-iatp-primary transition-colors font-medium flex items-center space-x-1">
+                            <span>News</span>
+                            <span class="iconify text-xs transition-transform group-hover:rotate-180" data-icon="ant-design:down-outlined"></span>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="news.html" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors first:rounded-t-xl">Communications</a>
+                            <a href="news.html#press" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors last:rounded-b-xl">Press</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="text-gray-600 hover:text-iatp-primary transition-colors font-medium">Contact</a>
+
+                    <button class="magnetic-btn px-8 py-3 bg-gradient-to-r from-iatp-primary to-iatp-secondary text-white rounded-full font-semibold shadow-lg shadow-iatp-primary/30 hover:shadow-xl hover:shadow-iatp-primary/40 transition-all relative z-10">
+                        Member Login
+                    </button>
+                </div>
+
+                <button class="md:hidden text-gray-900" id="mobile-menu-btn">
+                    <span class="iconify text-2xl" data-icon="ant-design:menu-outlined"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden fixed inset-0 h-screen w-screen transform translate-x-full transition-transform duration-300 ease-in-out z-[100] drop-shadow-2xl bg-white" id="mobile-menu">
+            <div class="flex flex-col h-full">
+                <!-- Header -->
+                <div class="flex items-center justify-between px-6 py-6 border-b border-white/20">
+                    <a href="index.html"><img src="img/IATP-logo.png" alt="IATP Logo" class="h-12 w-auto"></a>
+                    <button class="w-10 h-10 flex items-center justify-center rounded-full bg-iatp-primary/10 hover:bg-iatp-primary/20 transition-all" id="mobile-menu-close">
+                        <span class="iconify text-2xl text-iatp-primary" data-icon="ant-design:close-outlined"></span>
+                    </button>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="flex-1 px-4 py-6 space-y-2 bg-iatp-primary ">
+                    <!-- About Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full px-4 py-3 text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all mobile-dropdown-btn">
+                            <span class="flex items-center space-x-3">
+                                <span class="iconify text-xl" data-icon="ant-design:info-circle-outlined"></span>
+                                <span><a href="about.html#hero">About</a></span>
+                            </span>
+                            <span class="iconify text-base transition-transform" data-icon="ant-design:down-outlined"></span>
+                        </button>
+                        <div class="mobile-dropdown-content hidden mt-2 ml-4 pl-8 space-y-1 border-l-2 border-white/20">
+                            <a href="about.html#hero" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">About Us</a>
+                            <a href="about.html#faq" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">FAQ</a>
+                        </div>
+                    </div>
+
+                    <!-- Events Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full px-4 py-3 text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all mobile-dropdown-btn">
+                            <span class="flex items-center space-x-3">
+                                <span class="iconify text-xl" data-icon="ant-design:calendar-outlined"></span>
+                                <span>Events</span>
+                            </span>
+                            <span class="iconify text-base transition-transform" data-icon="ant-design:down-outlined"></span>
+                        </button>
+                        <div class="mobile-dropdown-content hidden mt-2 ml-4 pl-8 space-y-1 border-l-2 border-white/20">
+                            <a href="#" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Upcoming Events</a>
+                            <a href="#" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Practical Information</a>
+                            <a href="#" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Location Information</a>
+                            <a href="#" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Hotel Info & Booking</a>
+                            <a href="#" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Conference Registration</a>
+                            <a href="#" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Past Events</a>
+                        </div>
+                    </div>
+
+                    <!-- Members Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full px-4 py-3 text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all mobile-dropdown-btn">
+                            <span class="flex items-center space-x-3">
+                                <span class="iconify text-xl" data-icon="ant-design:team-outlined"></span>
+                                <span>Members</span>
+                            </span>
+                            <span class="iconify text-base transition-transform" data-icon="ant-design:down-outlined"></span>
+                        </button>
+                        <div class="mobile-dropdown-content hidden mt-2 ml-4 pl-8 space-y-1 border-l-2 border-white/20">
+                            <a href="why-join-IATP.html" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Why join IATP</a>
+                            <a href="how-to-become-an-airline-member.html#airline-members" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Airline Members</a>
+                            <a href="how-to-become-an-airline-member.html" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Become an Airline Member</a>
+                            <a href="associate-member.html#associate-members" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Associate Members</a>
+                            <a href="associate-member.html" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Become an Associate Member</a>
+                        </div>
+                    </div>
+
+                    <!-- Pionairs Link -->
+                    <a href="pionairs.html" class="flex items-center space-x-3 px-4 py-3 text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all mobile-menu-link">
+                        <span class="iconify text-xl" data-icon="ant-design:compass-outlined"></span>
+                        <span>Pionairs</span>
+                    </a>
+
+                    <!-- News Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full px-4 py-3 text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all mobile-dropdown-btn">
+                            <span class="flex items-center space-x-3">
+                                <span class="iconify text-xl" data-icon="ant-design:file-text-outlined"></span>
+                                <span>News</span>
+                            </span>
+                            <span class="iconify text-base transition-transform" data-icon="ant-design:down-outlined"></span>
+                        </button>
+                        <div class="mobile-dropdown-content hidden mt-2 ml-4 pl-8 space-y-1 border-l-2 border-white/20">
+                            <a href="news.html" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Communications</a>
+                            <a href="news.html#press" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Press</a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Link -->
+                    <a href="#" class="flex items-center space-x-3 px-4 py-3 text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all mobile-menu-link">
+                        <span class="iconify text-xl" data-icon="ant-design:mail-outlined"></span>
+                        <span>Contact</span>
+                    </a>
+                </nav>
+
+                <!-- Footer CTA -->
+                <div class="px-6 py-6  bg-iatp-primary ">
+                    <button class="w-full px-8 py-4 bg-white text-iatp-primary rounded-full font-bold shadow-xl text-lg hover:shadow-2xl hover:scale-105 transition-all flex items-center justify-center space-x-2">
+                        <span class="iconify text-xl" data-icon="ant-design:user-outlined"></span>
+                        <span>Member Login</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative pt-32 pb-24 bg-gradient-to-br from-iatp-primary to-iatp-secondary overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center">
+                <div class="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-md px-6 py-3 rounded-full mb-8 border border-white/30 animate-fade-in-down">
+                    <span class="iconify text-white" data-icon="ant-design:notification-outlined"></span>
+                    <span class="text-white font-medium text-sm">Latest Updates</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black text-white mb-8 leading-tight animate-fade-in-up">
+                    News & Press
+                </h1>
+                <p class="text-xl md:text-2xl text-blue-50 max-w-3xl mx-auto">
+                    Stay informed about the latest developments, announcements, and press coverage from IATP
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 reveal-up">
+                <div class="inline-block px-6 py-2 bg-blue-50 text-iatp-primary rounded-full text-sm font-bold mb-6">
+                    LATEST NEWS
+                </div>
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                    Recent Announcements
+                </h2>
+            </div>
+
+            <!-- News Items -->
+            <div class="space-y-8">
+                <!-- News Item 1 -->
+                <div class="reveal-up">
+                    <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-10 border border-blue-100 hover:shadow-xl transition-all">
+                        <div class="flex items-start mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-iatp-primary to-iatp-secondary rounded-2xl flex items-center justify-center mr-6 flex-shrink-0">
+                                <span class="iconify text-white text-2xl" data-icon="ant-design:calendar-outlined"></span>
+                            </div>
+                            <div>
+                                <div class="flex items-center space-x-3 mb-3">
+                                    <span class="text-sm font-bold text-iatp-primary bg-white px-4 py-1 rounded-full">November 1st, 2025</span>
+                                    <span class="text-sm text-gray-500">Bali, Indonesia</span>
+                                </div>
+                                <h3 class="text-2xl md:text-3xl font-black text-gray-900 mb-4">6 Airlines and 1 Associate Member joined IATP</h3>
+                                <p class="text-lg text-gray-700 leading-relaxed">
+                                    During the 132nd IATP Conference, six (6) new airlines – Copa (CM), Iberojet (E9), Eurowings (EW), Air Arabia (G9), Omni Air (OY), and VietJet (VJ) – and one (1) Associate Member – Hangar 901 – joined the IATP, enabling the organization to reach a new record of 142 Member Airlines and 45 Associate Members.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Item 2 -->
+                <div class="reveal-up">
+                    <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-10 border border-blue-100 hover:shadow-xl transition-all">
+                        <div class="flex items-start mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-iatp-primary to-iatp-secondary rounded-2xl flex items-center justify-center mr-6 flex-shrink-0">
+                                <span class="iconify text-white text-2xl" data-icon="ant-design:calendar-outlined"></span>
+                            </div>
+                            <div>
+                                <div class="flex items-center space-x-3 mb-3">
+                                    <span class="text-sm font-bold text-iatp-primary bg-white px-4 py-1 rounded-full">Aprill 1st, 2025</span>
+                                    <span class="text-sm text-gray-500">Panama City, Panama</span>
+                                </div>
+                                <h3 class="text-2xl md:text-3xl font-black text-gray-900 mb-4">3 Airlines and 1 Associate Member joined IATP</h3>
+                                <p class="text-lg text-gray-700 leading-relaxed">
+                                    During the 131st IATP Conference, three (3) new airlines – Maersk Air Cargo (DJ), Riyadh Air (RX) and Tway Air (TW) – and one (1) Associate Member – Air Partner – joined the IATP, enabling the organization to reach a new record of 138 Member Airlines and 44 Associate Members.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Item 3 -->
+                <div class="reveal-up">
+                    <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-10 border border-blue-100 hover:shadow-xl transition-all">
+                        <div class="flex items-start mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-iatp-primary to-iatp-secondary rounded-2xl flex items-center justify-center mr-6 flex-shrink-0">
+                                <span class="iconify text-white text-2xl" data-icon="ant-design:calendar-outlined"></span>
+                            </div>
+                            <div>
+                                <div class="flex items-center space-x-3 mb-3">
+                                    <span class="text-sm font-bold text-iatp-primary bg-white px-4 py-1 rounded-full">November 1st, 2024</span>
+                                    <span class="text-sm text-gray-500">Cairo, Egypt</span>
+                                </div>
+                                <h3 class="text-2xl md:text-3xl font-black text-gray-900 mb-4">5 new Airlines joined IATP</h3>
+                                <p class="text-lg text-gray-700 leading-relaxed">
+                                    During the 130th IATP Conference Opening session, five airlines – Azul (AD), China Central Longhao (GI), AirCalin (SB), Uganda Airlines (UR) and IndiGo (6E) joined IATP, enabling the organization to reach a new record of 135 Member Airlines. We warmly welcome them onboard!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Item 4 -->
+                <div class="reveal-up">
+                    <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-10 border border-blue-100 hover:shadow-xl transition-all">
+                        <div class="flex items-start mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-iatp-primary to-iatp-secondary rounded-2xl flex items-center justify-center mr-6 flex-shrink-0">
+                                <span class="iconify text-white text-2xl" data-icon="ant-design:calendar-outlined"></span>
+                            </div>
+                            <div>
+                                <div class="flex items-center space-x-3 mb-3">
+                                    <span class="text-sm font-bold text-iatp-primary bg-white px-4 py-1 rounded-full">Aprill 1st, 2024</span>
+                                    <span class="text-sm text-gray-500">Guangzhou, China</span>
+                                </div>
+                                <h3 class="text-2xl md:text-3xl font-black text-gray-900 mb-4">3 Airlines and 3 Associate Members joined IATP</h3>
+                                <p class="text-lg text-gray-700 leading-relaxed">
+                                    During the 129th IATP Conference Opening session, three airlines – AIRASIA X BERHAD (D7), Transavia (TO) and Vueling (VY) – and 3 Associate Members (AerCap Materials, ANA Trading, PAPAS) joined IATP, enabling the organization to reach a new record of 133 Member Airlines and 43 Associate Members. We warmly welcome them onboard!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Item 5 -->
+                <div class="reveal-up">
+                    <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-10 border border-blue-100 hover:shadow-xl transition-all">
+                        <div class="flex items-start mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-iatp-primary to-iatp-secondary rounded-2xl flex items-center justify-center mr-6 flex-shrink-0">
+                                <span class="iconify text-white text-2xl" data-icon="ant-design:rocket-outlined"></span>
+                            </div>
+                            <div>
+                                <div class="flex items-center space-x-3 mb-3">
+                                    <span class="text-sm font-bold text-iatp-primary bg-white px-4 py-1 rounded-full">March 1st, 2024</span>
+                                    <span class="text-sm text-gray-500">Product Launch</span>
+                                </div>
+                                <h3 class="text-2xl md:text-3xl font-black text-gray-900 mb-4">IATP Engine Pooling launch</h3>
+                                <p class="text-lg text-gray-700 leading-relaxed">
+                                    After years of research and efforts, Guangzhou saw the launch of the IATP Engine Pooling: it is a short-term lease dedicated to unscheduled engine removal. The goal of this additional pooling section, is to help the Airline to resolve quickly and efficiently these very critical situations. In fact, by having a pre-arranged contractual framework implying all legal aspects and pre-defined logistic steps, the IATP Engine pooling aims to allow the engine shipment in 24 hours from the initial request. By paying a monthly engine participation fee, the Member Airlines may also count on guaranteed engine availability. The engine types include regional, narrow body and wide body aircrafts. At this first step IATP only counts on one engine provider; the team is working to add more lessors.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Press Coverage Section -->
+    <section id="press" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal-up">
+                <div class="inline-block px-6 py-2 bg-blue-50 text-iatp-primary rounded-full text-sm font-bold mb-6">
+                    IN THE MEDIA
+                </div>
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                    Press Coverage
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Read what the aviation industry media is saying about IATP
+                </p>
+            </div>
+
+            <!-- Press Articles Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <div class="reveal-up">
+                    <a href="#" class="block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group border border-gray-100">
+                        <div class="relative overflow-hidden h-48 bg-gradient-to-br from-blue-100 to-cyan-100">
+                            <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=800&auto=format&fit=crop"
+                                 alt="Aviation Industry News"
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs font-bold text-iatp-primary mb-3">AviTrader MRO Aerospace Magazine</div>
+                            <h3 class="text-xl font-black text-gray-900 mb-3 group-hover:text-iatp-primary transition-colors">
+                                IATP reinforces the spirit of cooperation in Lisbon
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                The International Airlines Technical Pool (IATP) met in Lisbon, Portugal in October for its biannual conference to further strengthen its objectives of sharing technical resources among its members. AviTrader MRO was present at the event.
+                            </p>
+                            <div class="flex items-center text-iatp-primary font-semibold text-sm">
+                                <span>Read Article</span>
+                                <span class="iconify ml-2 group-hover:translate-x-2 transition-transform" data-icon="ant-design:arrow-right-outlined"></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="reveal-up">
+                    <a href="#" class="block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group border border-gray-100">
+                        <div class="relative overflow-hidden h-48 bg-gradient-to-br from-purple-100 to-pink-100">
+                            <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?q=80&w=800&auto=format&fit=crop"
+                                 alt="Aircraft Maintenance"
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs font-bold text-iatp-primary mb-3">AviTrader Publications</div>
+                            <h3 class="text-xl font-black text-gray-900 mb-3 group-hover:text-iatp-primary transition-colors">
+                                IATP strengthens global outreach with the introduction of new members
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                The International Airlines Technical Pool (IATP) has introduced new members to its organisation of 118 airline members and 37 associated members. 
+                            </p>
+                            <div class="flex items-center text-iatp-primary font-semibold text-sm">
+                                <span>Read Article</span>
+                                <span class="iconify ml-2 group-hover:translate-x-2 transition-transform" data-icon="ant-design:arrow-right-outlined"></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="reveal-up">
+                    <a href="#" class="block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group border border-gray-100">
+                        <div class="relative overflow-hidden h-48 bg-gradient-to-br from-green-100 to-emerald-100">
+                            <img src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?q=80&w=800&auto=format&fit=crop"
+                                 alt="Global Aviation"
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs font-bold text-iatp-primary mb-3">AviTrader MRO Aerospace Magazine</div>
+                            <h3 class="text-xl font-black text-gray-900 mb-3 group-hover:text-iatp-primary transition-colors">
+                                MRO and Aviation Recovery in Africa: Challenges, Opportunities, and Industry Collaboration
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                               IATP is highlighted as a key airline pooling alliance helping African carriers cut costs, boost reliability, and access essential technical support, with growing regional interest in joining the organization.
+                            </p>
+                            <div class="flex items-center text-iatp-primary font-semibold text-sm">
+                                <span>Read Article</span>
+                                <span class="iconify ml-2 group-hover:translate-x-2 transition-transform" data-icon="ant-design:arrow-right-outlined"></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Article 4 -->
+                <div class="reveal-up">
+                    <a href="#" class="block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group border border-gray-100">
+                        <div class="relative overflow-hidden h-48 bg-gradient-to-br from-orange-100 to-amber-100">
+                            <img src="https://images.unsplash.com/photo-1474302770737-173ee21bab63?q=80&w=800&auto=format&fit=crop"
+                                 alt="Industry Conference"
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs font-bold text-iatp-primary mb-3">MRO Management</div>
+                            <h3 class="text-xl font-black text-gray-900 mb-3 group-hover:text-iatp-primary transition-colors">
+                                In at the deep end
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                I ATP (International Airlines Technical Pool) holds two conferences each year, each approximately one month before the start of the summer and winter flying seasons. Here, all Member Airlines and Associate Members, plus invited non-members, convene to establish new pooling agreements covering spares and line maintenance.
+                            </p>
+                            <div class="flex items-center text-iatp-primary font-semibold text-sm">
+                                <span>Read Article</span>
+                                <span class="iconify ml-2 group-hover:translate-x-2 transition-transform" data-icon="ant-design:arrow-right-outlined"></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Article 5 -->
+                <div class="reveal-up">
+                    <a href="#" class="block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group border border-gray-100">
+                        <div class="relative overflow-hidden h-48 bg-gradient-to-br from-red-100 to-rose-100">
+                            <img src="https://images.unsplash.com/photo-1569629743817-70d8db6c323b?q=80&w=800&auto=format&fit=crop"
+                                 alt="Aircraft Parts"
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs font-bold text-iatp-primary mb-3">Aviation Week Network</div>
+                            <h3 class="text-xl font-black text-gray-900 mb-3 group-hover:text-iatp-primary transition-colors">
+                                Pooling Options Beyond Parts Are Expanding
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                With passenger traffic largely shut down, few airlines are worried about spare parts stocks, as they can cannibalize grounded aircraft as needed. Indeed, when an aircraft-on-ground part need arises, the International Airline Technical Pool (IATP) often finds it harder to find airline staff—many of whom have been furloughed—than parts, according to Francesco Tetti, International Airlines Technical Pool senior business manager.
+                            </p>
+                            <div class="flex items-center text-iatp-primary font-semibold text-sm">
+                                <span>Read Article</span>
+                                <span class="iconify ml-2 group-hover:translate-x-2 transition-transform" data-icon="ant-design:arrow-right-outlined"></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Article 6 -->
+                <div class="reveal-up">
+                    <a href="#" class="block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group border border-gray-100">
+                        <div class="relative overflow-hidden h-48 bg-gradient-to-br from-indigo-100 to-blue-100">
+                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop"
+                                 alt="Aviation Technology"
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs font-bold text-iatp-primary mb-3">Aviation Week Network</div>
+                            <h3 class="text-xl font-black text-gray-900 mb-3 group-hover:text-iatp-primary transition-colors">
+                                From Reliability To Pooling At Air Canada
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                Reliability is important to every airline, but it must be balanced against the cost of achieving it. At the recent International Airlines Technical Pool (IATP) conference, Henry Canaday spoke to Marc-Andre Huard, operations manager for components, about how Air Canada achieves this.
+                            </p>
+                            <div class="flex items-center text-iatp-primary font-semibold text-sm">
+                                <span>Read Article</span>
+                                <span class="iconify ml-2 group-hover:translate-x-2 transition-transform" data-icon="ant-design:arrow-right-outlined"></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Article 7 -->
+                <div class="reveal-up">
+                    <a href="#" class="block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group border border-gray-100">
+                        <div class="relative overflow-hidden h-48 bg-gradient-to-br from-teal-100 to-cyan-100">
+                            <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=800&auto=format&fit=crop"
+                                 alt="Airline Collaboration"
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs font-bold text-iatp-primary mb-3">Aerotime News Hub</div>
+                            <h3 class="text-xl font-black text-gray-900 mb-3 group-hover:text-iatp-primary transition-colors">
+                                Airbus and Boeing present their aircraft at IATP conference
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                
+                            </p>
+                            <div class="flex items-center text-iatp-primary font-semibold text-sm">
+                                <span>Read Article</span>
+                                <span class="iconify ml-2 group-hover:translate-x-2 transition-transform" data-icon="ant-design:arrow-right-outlined"></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Article 8 -->
+                <div class="reveal-up">
+                    <a href="#" class="block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group border border-gray-100">
+                        <div class="relative overflow-hidden h-48 bg-gradient-to-br from-yellow-100 to-orange-100">
+                            <img src="https://images.unsplash.com/photo-1544016768-982d1554f0b9?q=80&w=800&auto=format&fit=crop"
+                                 alt="Aircraft Recovery"
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs font-bold text-iatp-primary mb-3">Aerotime News Hub</div>
+                            <h3 class="text-xl font-black text-gray-900 mb-3 group-hover:text-iatp-primary transition-colors">
+                                IATP conference highlights – mixed reality to change aviation
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                IATP's specialized recovery equipment can handle any aircraft type up to and including the A380.
+                            </p>
+                            <div class="flex items-center text-iatp-primary font-semibold text-sm">
+                                <span>Read Article</span>
+                                <span class="iconify ml-2 group-hover:translate-x-2 transition-transform" data-icon="ant-design:arrow-right-outlined"></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Article 9 -->
+                <div class="reveal-up">
+                    <a href="#" class="block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group border border-gray-100">
+                        <div class="relative overflow-hidden h-48 bg-gradient-to-br from-violet-100 to-purple-100">
+                            <img src="https://images.unsplash.com/photo-1583968656116-fef8370c8d3c?q=80&w=800&auto=format&fit=crop"
+                                 alt="Line Maintenance"
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs font-bold text-iatp-primary mb-3">African Aerospace</div>
+                            <h3 class="text-xl font-black text-gray-900 mb-3 group-hover:text-iatp-primary transition-colors">
+                                Sharing: the secret
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                Today, with 102 full airline members and 32
+associate members, IATP companies can be
+found all over the world. They include eight
+African and 15 Middle Eastern airlines (there is
+some overlap with north African members in
+those totals) that will come to the aid of airlines
+usually regarded as competitors. Remarkably, it
+remains a not-for-profit organisation, which
+agrees cost-sharing formulae with its members
+for the services it organises.
+                            </p>
+                            <div class="flex items-center text-iatp-primary font-semibold text-sm">
+                                <span>Read Article</span>
+                                <span class="iconify ml-2 group-hover:translate-x-2 transition-transform" data-icon="ant-design:arrow-right-outlined"></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Press Releases Section -->
+    <section id="press-releases" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 reveal-up">
+                <div class="inline-block px-6 py-2 bg-blue-50 text-iatp-primary rounded-full text-sm font-bold mb-6">
+                    OFFICIAL ANNOUNCEMENTS
+                </div>
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                    Press Releases
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Official press releases and statements from IATP
+                </p>
+            </div>
+
+            <!-- Press Releases List -->
+            <div class="space-y-6">
+                <!-- Press Release 1 -->
+                <div class="reveal-up">
+                    <a href="#" class="block bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-blue-100 hover:shadow-xl transition-all group">
+                        <div class="flex items-start justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center space-x-4 mb-4">
+                                    <span class="text-sm font-bold text-white bg-iatp-primary px-4 py-2 rounded-full">October 2025</span>
+                                    <span class="text-sm text-gray-500">•</span>
+                                    <span class="text-sm font-semibold text-gray-700">Press Release</span>
+                                </div>
+                                <h3 class="text-2xl font-black text-gray-900 mb-3 group-hover:text-iatp-primary transition-colors">
+                                    The 132nd IATP Conference Successfully Concludes in Bali, Indonesia 
+                                </h3>
+                                <p class="text-gray-600 mb-4">
+                                    The 132nd International Airlines Technical Pool (IATP) Conference was successfully held from 27 
+September to 1 October 2025 at the Grand Hyatt Bali Resort, bringing together more than 600 representatives from 
+Airlines, Associate Members, and Authorized Guest Vendors from around the world. 
+                                </p>
+                                <div class="flex items-center text-iatp-primary font-semibold">
+                                    <span>Read Full Release</span>
+                                    <span class="iconify ml-2 group-hover:translate-x-2 transition-transform" data-icon="ant-design:arrow-right-outlined"></span>
+                                </div>
+                            </div>
+                            <div class="ml-6 flex-shrink-0">
+                                <div class="w-16 h-16 bg-gradient-to-br from-iatp-primary to-iatp-secondary rounded-2xl flex items-center justify-center">
+                                    <span class="iconify text-white text-2xl" data-icon="ant-design:file-text-outlined"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Press Release 2 -->
+                <div class="reveal-up">
+                    <a href="#" class="block bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-blue-100 hover:shadow-xl transition-all group">
+                        <div class="flex items-start justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center space-x-4 mb-4">
+                                    <span class="text-sm font-bold text-white bg-iatp-primary px-4 py-2 rounded-full">March 2025</span>
+                                    <span class="text-sm text-gray-500">•</span>
+                                    <span class="text-sm font-semibold text-gray-700">Press Release</span>
+                                </div>
+                                <h3 class="text-2xl font-black text-gray-900 mb-3 group-hover:text-iatp-primary transition-colors">
+                                    Global Airlines Convene in Panama for IATP’s 131st Conference 
+                                </h3>
+                                <p class="text-gray-600 mb-4">
+                                    After many years of absence in Central America, the IATP was pleased to organize the 131st IATP Conference in Panama 
+City, Panama. The conference took place at the RIU Plaza Panama Hotel, on February 22 – 26, 2025 and was attended by 
+around 500 Airline, Associate Member and Authorized Guest Vendor’s representatives coming from all over the world. 
+Mr. Essam Hanafy, Chairman and Custodian of IATP welcomed everyone during his opening speech. 
+                                </p>
+                                <div class="flex items-center text-iatp-primary font-semibold">
+                                    <span>Read Full Release</span>
+                                    <span class="iconify ml-2 group-hover:translate-x-2 transition-transform" data-icon="ant-design:arrow-right-outlined"></span>
+                                </div>
+                            </div>
+                            <div class="ml-6 flex-shrink-0">
+                                <div class="w-16 h-16 bg-gradient-to-br from-iatp-primary to-iatp-secondary rounded-2xl flex items-center justify-center">
+                                    <span class="iconify text-white text-2xl" data-icon="ant-design:file-text-outlined"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Press Release 3 -->
+                 <div class="reveal-up">
+                    <a href="#" class="block bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-blue-100 hover:shadow-xl transition-all group">
+                        <div class="flex items-start justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center space-x-4 mb-4">
+                                    <span class="text-sm font-bold text-white bg-iatp-primary px-4 py-2 rounded-full">October 2024</span>
+                                    <span class="text-sm text-gray-500">•</span>
+                                    <span class="text-sm font-semibold text-gray-700">Press Release</span>
+                                </div>
+                                <h3 class="text-2xl font-black text-gray-900 mb-3 group-hover:text-iatp-primary transition-colors">
+                                    IATP Expands Global Pooling Initiatives at 130th Conference in Egypt
+                                </h3>
+                                <p class="text-gray-600 mb-4">
+                                    The 130th IATP Conference, hosted by EGYPTAIR, took place in InterContinental Cairo Citystars Hotel, Egypt, on October   
+5 – 9, 2024. At the beginning of his opening speech, Eng. Essam Hanafy, IATP Chairman & Custodian, welcomed H. E. Dr. 
+Sameh El-Hefny, Minister of Civil Aviation of Egypt, Eng. Yehia Zakaria, Chairman and CEO of EGYPTAIR HOLDING 
+COMPANY, Eng. Ibrahim Fathy, Chairman and CEO of EGYPTAIR MAINTENANCE & ENGINEERING and all distinguished 
+guests from Egyptian civil aviation sector present at the official opening. The conference was attended by more than 500 
+Airline, Associate Member and Authorized Guest Vendor’s representatives coming from all over the world. 
+                                </p>
+                                <div class="flex items-center text-iatp-primary font-semibold">
+                                    <span>Read Full Release</span>
+                                    <span class="iconify ml-2 group-hover:translate-x-2 transition-transform" data-icon="ant-design:arrow-right-outlined"></span>
+                                </div>
+                            </div>
+                            <div class="ml-6 flex-shrink-0">
+                                <div class="w-16 h-16 bg-gradient-to-br from-iatp-primary to-iatp-secondary rounded-2xl flex items-center justify-center">
+                                    <span class="iconify text-white text-2xl" data-icon="ant-design:file-text-outlined"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+               
+            </div>
+
+            <!-- View All Button -->
+            <div class="text-center mt-12 reveal-up">
+                <a href="#" class="inline-flex items-center px-10 py-4 bg-gradient-to-r from-iatp-primary to-iatp-secondary text-white rounded-full font-bold text-lg hover:shadow-xl transition-all group">
+                    <span>View All Press Releases</span>
+                    <span class="iconify ml-3 text-xl group-hover:translate-x-2 transition-transform" data-icon="ant-design:arrow-right-outlined"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-iatp-primary via-iatp-secondary to-iatp-primary relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight reveal-up">
+                Stay Updated
+            </h2>
+            <p class="text-2xl text-blue-50 mb-12 leading-relaxed reveal-up">
+                Subscribe to receive the latest news and updates from IATP
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 reveal-up">
+                <button class="magnetic-btn px-10 py-4 bg-white text-iatp-primary rounded-full text-lg font-bold shadow-2xl hover:shadow-white/50 transition-all flex items-center space-x-3 group">
+                    <span class="iconify text-xl" data-icon="ant-design:mail-outlined"></span>
+                    <span>Subscribe to Newsletter</span>
+                </button>
+                <button class="magnetic-btn px-10 py-4 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white rounded-full text-lg font-bold hover:bg-white/20 transition-all flex items-center space-x-3">
+                    <span class="iconify text-xl" data-icon="ant-design:linkedin-outlined"></span>
+                    <span>Follow on LinkedIn</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="img/IATP-logo.png" alt="IATP Logo" class="h-12 w-auto">
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        Recognized worldwide as the aviation industry's trusted expert in technical collaboration and AOG support since 1948.
+                    </p>
+                    <div class="flex items-center space-x-2 text-gray-500 text-sm">
+                        <span class="iconify text-iatp-primary" data-icon="ant-design:safety-outlined"></span>
+                        <span>Trusted by 142+ Airlines Globally</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Services</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-iatp-primary transition-colors">Parts Pooling</a></li>
+                        <li><a href="#" class="hover:text-iatp-primary transition-colors">Line Maintenance</a></li>
+                        <li><a href="#" class="hover:text-iatp-primary transition-colors">Aircraft Recovery</a></li>
+                        <li><a href="#" class="hover:text-iatp-primary transition-colors">Equipment Pooling</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Company</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="about.html" class="hover:text-iatp-primary transition-colors">About Us</a></li>
+                        <li><a href="index.html" class="hover:text-iatp-primary transition-colors">Events</a></li>
+                        <li><a href="#" class="hover:text-iatp-primary transition-colors">Membership</a></li>
+                        <li><a href="#" class="hover:text-iatp-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-iatp-primary transition-all group">
+                            <span class="iconify text-xl group-hover:scale-110 transition-transform" data-icon="ant-design:linkedin-outlined"></span>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 text-sm mt-4">Follow us on LinkedIn for industry insights and updates</p>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between text-gray-400 relative">
+                <p>&copy; 2025 IATP. All rights reserved.</p>
+                <div class="flex items-center space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-iatp-primary transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-iatp-primary transition-colors">Terms</a>
+                    <a href="#" class="hover:text-iatp-primary transition-colors">Cookies</a>
+                    <img src="img/crystal-logo.png" alt="Crystal Logo" class="h-24 w-auto ml-6 ">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

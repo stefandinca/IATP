@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Become a Member Airline - IATP</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'iatp': {
+                            primary: '#1942bd',
+                            secondary: '#194be0',
+                            light: '#4a9fd8',
+                            dark: '#005a8f',
+                            50: '#e6f4fb',
+                            100: '#cce9f7',
+                            200: '#99d3ef',
+                            300: '#66bde7',
+                            400: '#33a7df',
+                            500: '#0079c2',
+                            600: '#00619b',
+                            700: '#004974',
+                            800: '#00314d',
+                            900: '#001926',
+                        },
+                        'iatp-secondary': {
+                            50: '#e8f1f8',
+                            100: '#d1e3f1',
+                            200: '#a3c7e3',
+                            300: '#75abd5',
+                            400: '#478fc7',
+                            500: '#337ab7',
+                            600: '#296192',
+                            700: '#1f496e',
+                            800: '#143149',
+                            900: '#0a1825',
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Iconify (Ant Design Icons) -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white text-gray-900">
+
+       <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-xl shadow-lg transition-all duration-500" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-6">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <img src="img/IATP-logo.png" alt="IATP Logo" class="h-14 w-auto transition-transform group-hover:scale-105">
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <!-- About Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-iatp-primary transition-colors font-medium flex items-center space-x-1">
+                            <span><a href="about.html#hero">About</a></span>
+                            <span class="iconify text-xs transition-transform group-hover:rotate-180" data-icon="ant-design:down-outlined"></span>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="about.html#hero" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors first:rounded-t-xl">About Us</a>
+                            <a href="about.html#faq" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors last:rounded-b-xl">FAQ</a>
+                        </div>
+                    </div>
+
+                    <!-- Events Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-iatp-primary transition-colors font-medium flex items-center space-x-1">
+                            <span>Events</span>
+                            <span class="iconify text-xs transition-transform group-hover:rotate-180" data-icon="ant-design:down-outlined"></span>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors first:rounded-t-xl">Upcoming Events</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors">Practical Information</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors">Location Information</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors">Hotel Info & Booking</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors">Conference Registration</a>
+                            <a href="#" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors last:rounded-b-xl">Past Events</a>
+                        </div>
+                    </div>
+
+                    <!-- Members Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-iatp-primary transition-colors font-medium flex items-center space-x-1">
+                            <span>Members</span>
+                            <span class="iconify text-xs transition-transform group-hover:rotate-180" data-icon="ant-design:down-outlined"></span>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="why-join-IATP.html" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors first:rounded-t-xl">Why join IATP</a>
+                            <a href="how-to-become-an-airline-member.html#airline-members" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors">Airline Members</a>
+                            <a href="how-to-become-an-airline-member.html" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors">Become an Airline Member</a>
+                            <a href="associate-member.html#associate-members" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors">Associate Members</a>
+                            <a href="associate-member.html" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors last:rounded-b-xl">Become an Associate Member</a>
+                        </div>
+                    </div>
+
+                    <a href="pionairs.html" class="text-gray-600 hover:text-iatp-primary transition-colors font-medium">Pionairs</a>
+
+                    <!-- News Dropdown -->
+                    <div class="relative group">
+                        <button class="text-iatp-primary hover:text-iatp-primary transition-colors font-medium flex items-center space-x-1">
+                            <span>News</span>
+                            <span class="iconify text-xs transition-transform group-hover:rotate-180" data-icon="ant-design:down-outlined"></span>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="news.html" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors first:rounded-t-xl">Communications</a>
+                            <a href="news.html#press" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors last:rounded-b-xl">Press</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="text-gray-600 hover:text-iatp-primary transition-colors font-medium">Contact</a>
+
+                    <button class="magnetic-btn px-8 py-3 bg-gradient-to-r from-iatp-primary to-iatp-secondary text-white rounded-full font-semibold shadow-lg shadow-iatp-primary/30 hover:shadow-xl hover:shadow-iatp-primary/40 transition-all relative z-10">
+                        Member Login
+                    </button>
+                </div>
+
+                <button class="md:hidden text-gray-900" id="mobile-menu-btn">
+                    <span class="iconify text-2xl" data-icon="ant-design:menu-outlined"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden fixed inset-0 h-screen w-screen transform translate-x-full transition-transform duration-300 ease-in-out z-[100] drop-shadow-2xl bg-white" id="mobile-menu">
+            <div class="flex flex-col h-full">
+                <!-- Header -->
+                <div class="flex items-center justify-between px-6 py-6 border-b border-white/20">
+                    <a href="index.html"><img src="img/IATP-logo.png" alt="IATP Logo" class="h-12 w-auto"></a>
+                    <button class="w-10 h-10 flex items-center justify-center rounded-full bg-iatp-primary/10 hover:bg-iatp-primary/20 transition-all" id="mobile-menu-close">
+                        <span class="iconify text-2xl text-iatp-primary" data-icon="ant-design:close-outlined"></span>
+                    </button>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="flex-1 px-4 py-6 space-y-2 bg-iatp-primary ">
+                    <!-- About Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full px-4 py-3 text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all mobile-dropdown-btn">
+                            <span class="flex items-center space-x-3">
+                                <span class="iconify text-xl" data-icon="ant-design:info-circle-outlined"></span>
+                                <span><a href="about.html#hero">About</a></span>
+                            </span>
+                            <span class="iconify text-base transition-transform" data-icon="ant-design:down-outlined"></span>
+                        </button>
+                        <div class="mobile-dropdown-content hidden mt-2 ml-4 pl-8 space-y-1 border-l-2 border-white/20">
+                            <a href="about.html#hero" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">About Us</a>
+                            <a href="about.html#faq" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">FAQ</a>
+                        </div>
+                    </div>
+
+                    <!-- Events Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full px-4 py-3 text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all mobile-dropdown-btn">
+                            <span class="flex items-center space-x-3">
+                                <span class="iconify text-xl" data-icon="ant-design:calendar-outlined"></span>
+                                <span>Events</span>
+                            </span>
+                            <span class="iconify text-base transition-transform" data-icon="ant-design:down-outlined"></span>
+                        </button>
+                        <div class="mobile-dropdown-content hidden mt-2 ml-4 pl-8 space-y-1 border-l-2 border-white/20">
+                            <a href="#" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Upcoming Events</a>
+                            <a href="#" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Practical Information</a>
+                            <a href="#" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Location Information</a>
+                            <a href="#" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Hotel Info & Booking</a>
+                            <a href="#" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Conference Registration</a>
+                            <a href="#" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Past Events</a>
+                        </div>
+                    </div>
+
+                    <!-- Members Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full px-4 py-3 text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all mobile-dropdown-btn">
+                            <span class="flex items-center space-x-3">
+                                <span class="iconify text-xl" data-icon="ant-design:team-outlined"></span>
+                                <span>Members</span>
+                            </span>
+                            <span class="iconify text-base transition-transform" data-icon="ant-design:down-outlined"></span>
+                        </button>
+                        <div class="mobile-dropdown-content hidden mt-2 ml-4 pl-8 space-y-1 border-l-2 border-white/20">
+                            <a href="why-join-IATP.html" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Why join IATP</a>
+                            <a href="how-to-become-an-airline-member.html#airline-members" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Airline Members</a>
+                            <a href="how-to-become-an-airline-member.html" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Become an Airline Member</a>
+                            <a href="associate-member.html#associate-members" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Associate Members</a>
+                            <a href="associate-member.html" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Become an Associate Member</a>
+                        </div>
+                    </div>
+
+                    <!-- Pionairs Link -->
+                    <a href="pionairs.html" class="flex items-center space-x-3 px-4 py-3 text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all mobile-menu-link">
+                        <span class="iconify text-xl" data-icon="ant-design:compass-outlined"></span>
+                        <span>Pionairs</span>
+                    </a>
+
+                    <!-- News Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full px-4 py-3 text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all mobile-dropdown-btn">
+                            <span class="flex items-center space-x-3">
+                                <span class="iconify text-xl" data-icon="ant-design:file-text-outlined"></span>
+                                <span>News</span>
+                            </span>
+                            <span class="iconify text-base transition-transform" data-icon="ant-design:down-outlined"></span>
+                        </button>
+                        <div class="mobile-dropdown-content hidden mt-2 ml-4 pl-8 space-y-1 border-l-2 border-white/20">
+                            <a href="news.html" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Communications</a>
+                            <a href="news.html#press" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Press</a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Link -->
+                    <a href="#" class="flex items-center space-x-3 px-4 py-3 text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all mobile-menu-link">
+                        <span class="iconify text-xl" data-icon="ant-design:mail-outlined"></span>
+                        <span>Contact</span>
+                    </a>
+                </nav>
+
+                <!-- Footer CTA -->
+                <div class="px-6 py-6  bg-iatp-primary ">
+                    <button class="w-full px-8 py-4 bg-white text-iatp-primary rounded-full font-bold shadow-xl text-lg hover:shadow-2xl hover:scale-105 transition-all flex items-center justify-center space-x-2">
+                        <span class="iconify text-xl" data-icon="ant-design:user-outlined"></span>
+                        <span>Member Login</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative pt-32 pb-24 bg-gradient-to-br from-iatp-primary to-iatp-secondary overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center">
+                <div class="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-md px-6 py-3 rounded-full mb-8 border border-white/30 animate-fade-in-down">
+                    <span class="iconify text-white" data-icon="ant-design:team-outlined"></span>
+                    <span class="text-white font-medium text-sm">Membership Application</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black text-white mb-8 leading-tight animate-fade-in-up">
+                    How to become a<br/>Member Airline
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Main Content -->
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <!-- Eligibility Requirements -->
+            <div class="mb-16 reveal-up">
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-12 border border-blue-100">
+                    <div class="flex items-start mb-8">
+                        <div class="w-20 h-20 bg-gradient-to-br from-iatp-primary to-iatp-secondary rounded-2xl flex items-center justify-center mr-6 flex-shrink-0">
+                            <span class="iconify text-white text-3xl" data-icon="ant-design:safety-certificate-outlined"></span>
+                        </div>
+                        <div>
+                            <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">Eligibility Requirements</h2>
+                            <p class="text-xl text-gray-700 font-semibold">An Airline may be eligible to become member of the IATP if:</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 ml-0 md:ml-26">
+                        <div class="flex items-start group">
+                            <div class="w-12 h-12 bg-iatp-primary/10 rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-iatp-primary/20 transition-colors">
+                                <span class="iconify text-iatp-primary text-xl" data-icon="ant-design:file-done-outlined"></span>
+                            </div>
+                            <p class="text-lg text-gray-700 leading-relaxed pt-2">
+                                It has been granted an air operator's certificate (AOC) by a civil aviation authority (CAA).
+                            </p>
+                        </div>
+
+                        <div class="flex items-start group">
+                            <div class="w-12 h-12 bg-iatp-primary/10 rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-iatp-primary/20 transition-colors">
+                                <span class="iconify text-iatp-primary text-xl" data-icon="ant-design:tool-outlined"></span>
+                            </div>
+                            <p class="text-lg text-gray-700 leading-relaxed pt-2">
+                                It is fit, willing and able to act as Provider at not less than one station in respect of each group in which it wishes to participate.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start group">
+                            <div class="w-12 h-12 bg-iatp-primary/10 rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-iatp-primary/20 transition-colors">
+                                <span class="iconify text-iatp-primary text-xl" data-icon="ant-design:read-outlined"></span>
+                            </div>
+                            <p class="text-lg text-gray-700 leading-relaxed pt-2">
+                                It has familiarized itself with the procedures and practices of pooling.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start group">
+                            <div class="w-12 h-12 bg-iatp-primary/10 rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-iatp-primary/20 transition-colors">
+                                <span class="iconify text-iatp-primary text-xl" data-icon="ant-design:global-outlined"></span>
+                            </div>
+                            <p class="text-lg text-gray-700 leading-relaxed pt-2">
+                                At stations within its own country the pooling of technical facilities or services under this Agreement is not in any way restricted or prohibited.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Application Procedures -->
+            <div class="mb-16 reveal-up">
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-12 border border-blue-100"">
+                    <div class="flex items-start mb-8">
+                        <div class="w-20 h-20 bg-gradient-to-br from-iatp-primary to-iatp-secondary rounded-2xl flex items-center justify-center mr-6 flex-shrink-0">
+                            <span class="iconify text-white text-3xl" data-icon="ant-design:form-outlined"></span>
+                        </div>
+                        <div>
+                            <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">Application Procedures</h2>
+                            <p class="text-xl text-gray-700 font-semibold">If an airline satisfies the conditions above and wishes to join the organization the following procedures are to be followed:</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 ml-0 md:ml-26">
+                        <div class="flex items-start group">
+                            <div class="w-12 h-12 bg-iatp-primary/10 rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-iatp-primary/20 transition-colors">
+                                <span class="iconify text-iatp-primary text-xl" data-icon="ant-design:calendar-outlined"></span>
+                            </div>
+                            <p class="text-lg text-gray-700 leading-relaxed pt-2">
+                                All decisions concerning the admission of new parties shall be taken at a Consolidated Meeting.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start group">
+                            <div class="w-12 h-12 bg-iatp-primary/10 rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-iatp-primary/20 transition-colors">
+                                <span class="iconify text-iatp-primary text-xl" data-icon="ant-design:file-text-outlined"></span>
+                            </div>
+                            <p class="text-lg text-gray-700 leading-relaxed pt-2">
+                                The applicant shall submit a Letter of Application and a Standard Application Form (see Annex "A") to the Advisory Committee Membership Coordinator. Full documentation must be received at least 60 days prior the start of the Consolidated Meeting for the season in which the airline desires to be admitted.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start group">
+                            <div class="w-12 h-12 bg-iatp-primary/10 rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-iatp-primary/20 transition-colors">
+                                <span class="iconify text-iatp-primary text-xl" data-icon="ant-design:mail-outlined"></span>
+                            </div>
+                            <p class="text-lg text-gray-700 leading-relaxed pt-2">
+                                The Advisory Committee Membership Coordinator, having ascertained that the form has been fully completed, shall send a copy thereof to all parties.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Admission Requirements -->
+            <div class="mb-16 reveal-up">
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-12 border border-blue-100"">
+                    <div class="flex items-start mb-8">
+                        <div class="w-20 h-20 bg-gradient-to-br from-iatp-primary to-iatp-secondary rounded-2xl flex items-center justify-center mr-6 flex-shrink-0">
+                            <span class="iconify text-white text-3xl" data-icon="ant-design:check-circle-outlined"></span>
+                        </div>
+                        <div>
+                            <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">Admission Requirements</h2>
+                            <p class="text-xl text-gray-700 font-semibold mb-6">The applicant shall be admitted as a party to this Agreement when:</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 ml-0 md:ml-26">
+                        <div class="flex items-start group">
+                            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-blue-200 transition-colors">
+                                <span class="iconify text-blue-600 text-xl" data-icon="ant-design:bar-chart-outlined"></span>
+                            </div>
+                            <p class="text-lg text-gray-700 leading-relaxed pt-2">
+                                90% of the members present at the Consolidated Meeting (whether in person or by proxy) vote to accept the applicant as a member of IATP and
+                            </p>
+                        </div>
+
+                        <div class="flex items-start group">
+                            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-blue-200 transition-colors">
+                                <span class="iconify text-blue-600 text-xl" data-icon="ant-design:file-protect-outlined"></span>
+                            </div>
+                            <p class="text-lg text-gray-700 leading-relaxed pt-2">
+                                The applicant has executed and lodged with the Custodian a counterpart of this Agreement.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pool Group Membership -->
+            <div class="mb-16 reveal-up">
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-12 border border-blue-100"">
+                    <div class="flex items-start mb-8">
+                        <div class="w-20 h-20 bg-gradient-to-br from-iatp-primary to-iatp-secondary rounded-2xl flex items-center justify-center mr-6 flex-shrink-0">
+                            <span class="iconify text-white text-3xl" data-icon="ant-design:appstore-outlined"></span>
+                        </div>
+                        <div>
+                            <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">Pool Group Membership</h2>
+                        </div>
+                    </div>
+
+                    <div class="ml-0 md:ml-26">
+                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                            A party to this Agreement may become a member of any pool group upon receiving the approval of the members of that group. A standard Application Form shall first be submitted to the group chairman (unless such form has already been submitted in respect of that group under the foregoing provisions of this Article) and the chairman shall send a copy to each group member. The applicant shall become a member of the group upon receiving the approval of 90% of the members of the group present at the meeting (whether in person or by proxy) at which the vote is taken.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visual Image -->
+            <div class="reveal-up mb-16">
+                <div class="image-hover-zoom rounded-3xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                         alt="Join IATP Network"
+                         class="w-full h-96 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Airline Members Section -->
+    <section id="airline-members" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal-up">
+                <div class="inline-block px-6 py-2 bg-blue-50 text-iatp-primary rounded-full text-sm font-bold mb-6">
+                    OUR NETWORK
+                </div>
+                <h2 class="text-5xl md:text-6xl font-black text-gray-900 mb-6">
+                    Airline Members
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Join 142+ airlines worldwide who trust IATP for technical collaboration and AOG support
+                </p>
+            </div>
+
+            <!-- Airlines Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
+                <!-- Row 1 -->
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=AA&size=128&background=0078D2&color=fff&bold=true&format=svg" alt="American Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">American Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=DL&size=128&background=CE0E2D&color=fff&bold=true&format=svg" alt="Delta Air Lines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Delta Air Lines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=UA&size=128&background=002244&color=fff&bold=true&format=svg" alt="United Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">United Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=LH&size=128&background=05164D&color=FFC700&bold=true&format=svg" alt="Lufthansa" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Lufthansa</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=BA&size=128&background=075AAA&color=fff&bold=true&format=svg" alt="British Airways" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">British Airways</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=AF&size=128&background=002157&color=ED1C24&bold=true&format=svg" alt="Air France" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Air France</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=EK&size=128&background=D71921&color=fff&bold=true&format=svg" alt="Emirates" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Emirates</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=QR&size=128&background=621D34&color=fff&bold=true&format=svg" alt="Qatar Airways" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Qatar Airways</p>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=SQ&size=128&background=002D74&color=FFC700&bold=true&format=svg" alt="Singapore Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Singapore Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=CX&size=128&background=006564&color=fff&bold=true&format=svg" alt="Cathay Pacific" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Cathay Pacific</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=QF&size=128&background=E0001B&color=fff&bold=true&format=svg" alt="Qantas" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Qantas</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=TK&size=128&background=C70A13&color=fff&bold=true&format=svg" alt="Turkish Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Turkish Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=KL&size=128&background=00A1E4&color=fff&bold=true&format=svg" alt="KLM" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">KLM</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=AZ&size=128&background=006643&color=fff&bold=true&format=svg" alt="Alitalia" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">ITA Airways</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=IB&size=128&background=EC1C24&color=FFC600&bold=true&format=svg" alt="Iberia" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Iberia</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=SV&size=128&background=00874B&color=fff&bold=true&format=svg" alt="Saudia" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Saudia</p>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=EY&size=128&background=B58B40&color=fff&bold=true&format=svg" alt="Etihad Airways" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Etihad Airways</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=AV&size=128&background=ED1C27&color=fff&bold=true&format=svg" alt="Avianca" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Avianca</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=LA&size=128&background=E3051B&color=fff&bold=true&format=svg" alt="LATAM Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">LATAM Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=AC&size=128&background=D30019&color=fff&bold=true&format=svg" alt="Air Canada" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Air Canada</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=NH&size=128&background=00479D&color=fff&bold=true&format=svg" alt="ANA" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">ANA</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=JL&size=128&background=D50032&color=fff&bold=true&format=svg" alt="JAL" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Japan Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=KE&size=128&background=0E3A8E&color=fff&bold=true&format=svg" alt="Korean Air" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Korean Air</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=OZ&size=128&background=0E58A1&color=fff&bold=true&format=svg" alt="Asiana" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Asiana Airlines</p>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=CA&size=128&background=E21836&color=fff&bold=true&format=svg" alt="Air China" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Air China</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=MU&size=128&background=0D1935&color=fff&bold=true&format=svg" alt="China Eastern" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">China Eastern</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=CZ&size=128&background=1E4597&color=fff&bold=true&format=svg" alt="China Southern" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">China Southern</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=AI&size=128&background=E1251B&color=fff&bold=true&format=svg" alt="Air India" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Air India</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=TG&size=128&background=7E2F80&color=fff&bold=true&format=svg" alt="Thai Airways" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Thai Airways</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=MH&size=128&background=012A5B&color=fff&bold=true&format=svg" alt="Malaysia Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Malaysia Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=GA&size=128&background=004C97&color=fff&bold=true&format=svg" alt="Garuda Indonesia" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Garuda Indonesia</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=PR&size=128&background=003087&color=ED1C24&bold=true&format=svg" alt="Philippine Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Philippine Airlines</p>
+                </div>
+
+                <!-- Row 5 -->
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=VN&size=128&background=D4AF37&color=fff&bold=true&format=svg" alt="Vietnam Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Vietnam Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=EI&size=128&background=00693E&color=fff&bold=true&format=svg" alt="Aer Lingus" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Aer Lingus</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=OS&size=128&background=ED1C24&color=fff&bold=true&format=svg" alt="Austrian Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Austrian Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=SN&size=128&background=D41D2C&color=fff&bold=true&format=svg" alt="Brussels Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Brussels Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=LX&size=128&background=ED1C24&color=fff&bold=true&format=svg" alt="Swiss" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Swiss International</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=SK&size=128&background=003F87&color=fff&bold=true&format=svg" alt="SAS" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">SAS</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=AY&size=128&background=003580&color=fff&bold=true&format=svg" alt="Finnair" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Finnair</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=TP&size=128&background=D71E28&color=fff&bold=true&format=svg" alt="TAP Air Portugal" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">TAP Air Portugal</p>
+                </div>
+
+                <!-- Row 6 -->
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=LO&size=128&background=003399&color=fff&bold=true&format=svg" alt="LOT Polish" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">LOT Polish Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=OK&size=128&background=064A9E&color=fff&bold=true&format=svg" alt="Czech Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Czech Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=RO&size=128&background=00338D&color=FCCE0A&bold=true&format=svg" alt="Tarom" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Tarom</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=MS&size=128&background=003F87&color=fff&bold=true&format=svg" alt="EgyptAir" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">EgyptAir</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=ET&size=128&background=006837&color=FCD116&bold=true&format=svg" alt="Ethiopian Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Ethiopian Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=KQ&size=128&background=C8102E&color=fff&bold=true&format=svg" alt="Kenya Airways" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Kenya Airways</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=SA&size=128&background=002060&color=fff&bold=true&format=svg" alt="South African Airways" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">South African Airways</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=AT&size=128&background=F57F29&color=fff&bold=true&format=svg" alt="Royal Air Maroc" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Royal Air Maroc</p>
+                </div>
+
+                <!-- Row 7 -->
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=RJ&size=128&background=D70F3C&color=fff&bold=true&format=svg" alt="Royal Jordanian" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Royal Jordanian</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=ME&size=128&background=E41F25&color=fff&bold=true&format=svg" alt="Middle East Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Middle East Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=GF&size=128&background=E4002B&color=fff&bold=true&format=svg" alt="Gulf Air" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Gulf Air</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=WY&size=128&background=702283&color=fff&bold=true&format=svg" alt="Oman Air" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Oman Air</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=KU&size=128&background=02498F&color=fff&bold=true&format=svg" alt="Kuwait Airways" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Kuwait Airways</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=AS&size=128&background=003B71&color=fff&bold=true&format=svg" alt="Alaska Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Alaska Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=B6&size=128&background=002F6D&color=fff&bold=true&format=svg" alt="JetBlue" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">JetBlue Airways</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=WN&size=128&background=F9B612&color=002244&bold=true&format=svg" alt="Southwest" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Southwest Airlines</p>
+                </div>
+
+                <!-- Row 8 -->
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=F9&size=128&background=008000&color=fff&bold=true&format=svg" alt="Frontier" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Frontier Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=NK&size=128&background=FFF200&color=000&bold=true&format=svg" alt="Spirit Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Spirit Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=G3&size=128&background=009DDC&color=fff&bold=true&format=svg" alt="Gol" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Gol Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=AD&size=128&background=008ED1&color=fff&bold=true&format=svg" alt="Azul" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Azul Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=CM&size=128&background=ED2028&color=fff&bold=true&format=svg" alt="Copa Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Copa Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=AM&size=128&background=002169&color=CD2027&bold=true&format=svg" alt="Aeromexico" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Aeromexico</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=Y4&size=128&background=EA1B24&color=fff&bold=true&format=svg" alt="Volaris" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Volaris</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=WS&size=128&background=002C5F&color=fff&bold=true&format=svg" alt="WestJet" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">WestJet</p>
+                </div>
+
+                <!-- Row 9 -->
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=NZ&size=128&background=000&color=00D9E5&bold=true&format=svg" alt="Air New Zealand" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Air New Zealand</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=VA&size=128&background=CC0001&color=fff&bold=true&format=svg" alt="Virgin Australia" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Virgin Australia</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=VS&size=128&background=E10A0A&color=fff&bold=true&format=svg" alt="Virgin Atlantic" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Virgin Atlantic</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=HU&size=128&background=E30613&color=fff&bold=true&format=svg" alt="Hainan Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Hainan Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=FM&size=128&background=003087&color=fff&bold=true&format=svg" alt="Shanghai Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Shanghai Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=3U&size=128&background=00338D&color=fff&bold=true&format=svg" alt="Sichuan Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Sichuan Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=MF&size=128&background=00539F&color=fff&bold=true&format=svg" alt="Xiamen Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Xiamen Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=SU&size=128&background=002F87&color=fff&bold=true&format=svg" alt="Aeroflot" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Aeroflot</p>
+                </div>
+
+                <!-- Row 10 -->
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=S7&size=128&background=009D49&color=fff&bold=true&format=svg" alt="S7 Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">S7 Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=AZ&size=128&background=0D4EA2&color=fff&bold=true&format=svg" alt="Azerbaijan Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Azerbaijan Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=HY&size=128&background=E5071C&color=fff&bold=true&format=svg" alt="Uzbekistan Airways" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Uzbekistan Airways</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=KC&size=128&background=007DC3&color=fff&bold=true&format=svg" alt="Air Astana" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Air Astana</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=QZ&size=128&background=ED1B24&color=fff&bold=true&format=svg" alt="AirAsia" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">AirAsia</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=VJ&size=128&background=6CC24A&color=fff&bold=true&format=svg" alt="VietJet Air" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">VietJet Air</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=TR&size=128&background=F58220&color=fff&bold=true&format=svg" alt="Scoot" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Scoot</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=JQ&size=128&background=FF6600&color=fff&bold=true&format=svg" alt="Jetstar" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Jetstar</p>
+                </div>
+
+                <!-- Row 11 -->
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=PC&size=128&background=003F87&color=fff&bold=true&format=svg" alt="Pegasus Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Pegasus Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=FR&size=128&background=073590&color=FED501&bold=true&format=svg" alt="Ryanair" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Ryanair</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=U2&size=128&background=FF6600&color=fff&bold=true&format=svg" alt="easyJet" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">easyJet</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=VY&size=128&background=F6D200&color=000&bold=true&format=svg" alt="Vueling" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Vueling</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=W6&size=128&background=BA0B7E&color=fff&bold=true&format=svg" alt="Wizz Air" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Wizz Air</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=NO&size=128&background=E30613&color=fff&bold=true&format=svg" alt="Norwegian" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Norwegian</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=HA&size=128&background=8E3A80&color=fff&bold=true&format=svg" alt="Hawaiian Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Hawaiian Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=PK&size=128&background=02853E&color=fff&bold=true&format=svg" alt="Pakistan International" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Pakistan International</p>
+                </div>
+
+                <!-- Row 12 -->
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=BG&size=128&background=D70926&color=fff&bold=true&format=svg" alt="Biman Bangladesh" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Biman Bangladesh</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=UL&size=128&background=005499&color=fff&bold=true&format=svg" alt="SriLankan Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">SriLankan Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=BI&size=128&background=00A859&color=fff&bold=true&format=svg" alt="Royal Brunei" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Royal Brunei</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=RL&size=128&background=0D429A&color=fff&bold=true&format=svg" alt="Royal Khmer Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Cambodia Angkor Air</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=QV&size=128&background=00843D&color=fff&bold=true&format=svg" alt="Lao Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Lao Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=K6&size=128&background=ED1C24&color=fff&bold=true&format=svg" alt="Cambodia Airways" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Cambodia Airways</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=IG&size=128&background=0054A4&color=fff&bold=true&format=svg" alt="Air Italy" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Meridiana</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=EW&size=128&background=E2001A&color=fff&bold=true&format=svg" alt="Eurowings" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Eurowings</p>
+                </div>
+
+                <!-- Row 13 -->
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=A3&size=128&background=003E7E&color=fff&bold=true&format=svg" alt="Aegean Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Aegean Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=UX&size=128&background=F14126&color=fff&bold=true&format=svg" alt="Air Europa" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Air Europa</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=NT&size=128&background=FF0000&color=fff&bold=true&format=svg" alt="Binter Canarias" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Binter Canarias</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=PZ&size=128&background=009640&color=fff&bold=true&format=svg" alt="LATAM Paraguay" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">LATAM Paraguay</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=4M&size=128&background=1E4D9D&color=fff&bold=true&format=svg" alt="LATAM Argentina" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">LATAM Argentina</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=AR&size=128&background=0099D8&color=fff&bold=true&format=svg" alt="Aerolineas Argentinas" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Aerolineas Argentinas</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=5N&size=128&background=006838&color=fff&bold=true&format=svg" alt="Nordavia" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Smartavia</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=UT&size=128&background=DA1F26&color=fff&bold=true&format=svg" alt="UTair" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">UTair Aviation</p>
+                </div>
+
+                <!-- Row 14 -->
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=DP&size=128&background=C41E3A&color=fff&bold=true&format=svg" alt="Pobeda" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Pobeda</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=N4&size=128&background=7CB342&color=fff&bold=true&format=svg" alt="Nordwind" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Nordwind Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=FZ&size=128&background=008E59&color=fff&bold=true&format=svg" alt="flydubai" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">flydubai</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=XY&size=128&background=009FE3&color=fff&bold=true&format=svg" alt="flynas" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">flynas</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=J9&size=128&background=D4002A&color=fff&bold=true&format=svg" alt="Jazeera Airways" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Jazeera Airways</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=G9&size=128&background=D71921&color=fff&bold=true&format=svg" alt="Air Arabia" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Air Arabia</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=6E&size=128&background=002F87&color=fff&bold=true&format=svg" alt="IndiGo" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">IndiGo</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=SG&size=128&background=FFC20E&color=000&bold=true&format=svg" alt="SpiceJet" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">SpiceJet</p>
+                </div>
+
+                <!-- Row 15 -->
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=IX&size=128&background=E41F26&color=fff&bold=true&format=svg" alt="Air India Express" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Air India Express</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=I5&size=128&background=00AFD7&color=fff&bold=true&format=svg" alt="AirAsia India" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">AirAsia India</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=UK&size=128&background=002E6D&color=fff&bold=true&format=svg" alt="Vistara" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Vistara</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=QG&size=128&background=ED1C24&color=fff&bold=true&format=svg" alt="Citilink" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Citilink</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=ID&size=128&background=00ADEF&color=fff&bold=true&format=svg" alt="Batik Air" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Batik Air</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=SL&size=128&background=02B4E5&color=fff&bold=true&format=svg" alt="Thai Lion Air" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Thai Lion Air</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=FD&size=128&background=F89E1B&color=000&bold=true&format=svg" alt="Thai AirAsia" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Thai AirAsia</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=DD&size=128&background=003087&color=fff&bold=true&format=svg" alt="Nok Air" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Nok Air</p>
+                </div>
+
+                <!-- Row 16 -->
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=XJ&size=128&background=D71921&color=fff&bold=true&format=svg" alt="Thai AirAsia X" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Thai AirAsia X</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=PG&size=128&background=005EB8&color=fff&bold=true&format=svg" alt="Bangkok Airways" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Bangkok Airways</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=AK&size=128&background=ED1C24&color=fff&bold=true&format=svg" alt="AirAsia Malaysia" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">AirAsia Malaysia</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=D7&size=128&background=FF0000&color=fff&bold=true&format=svg" alt="AirAsia X" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">AirAsia X</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=OD&size=128&background=FF6600&color=fff&bold=true&format=svg" alt="Malindo Air" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Batik Air Malaysia</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=Z2&size=128&background=ED1C24&color=fff&bold=true&format=svg" alt="AirAsia Philippines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">AirAsia Philippines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=5J&size=128&background=FF6600&color=fff&bold=true&format=svg" alt="Cebu Pacific" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Cebu Pacific</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=BL&size=128&background=0F75BC&color=fff&bold=true&format=svg" alt="Jetstar Pacific" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Pacific Airlines</p>
+                </div>
+
+                <!-- Row 17 -->
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=VZ&size=128&background=ED1C24&color=fff&bold=true&format=svg" alt="Thai Vietjet" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Thai Vietjet Air</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=PN&size=128&background=009DDC&color=fff&bold=true&format=svg" alt="West Air China" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">West Air China</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=GS&size=128&background=06B851&color=fff&bold=true&format=svg" alt="Tianjin Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Tianjin Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=SC&size=128&background=F15B2D&color=fff&bold=true&format=svg" alt="Shandong Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Shandong Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=ZH&size=128&background=0066B3&color=fff&bold=true&format=svg" alt="Shenzhen Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Shenzhen Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=8L&size=128&background=D71921&color=fff&bold=true&format=svg" alt="Lucky Air" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Lucky Air</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=DR&size=128&background=E20E14&color=fff&bold=true&format=svg" alt="Ruili Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Ruili Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=GJ&size=128&background=005FAA&color=fff&bold=true&format=svg" alt="Loong Air" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Loong Air</p>
+                </div>
+
+                <!-- Row 18 -->
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=9C&size=128&background=E10019&color=fff&bold=true&format=svg" alt="Spring Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Spring Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=9H&size=128&background=0056A2&color=fff&bold=true&format=svg" alt="Air Changan" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Air Changan</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=HO&size=128&background=D81F26&color=fff&bold=true&format=svg" alt="Juneyao Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Juneyao Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=BK&size=128&background=002F6C&color=fff&bold=true&format=svg" alt="Okay Airways" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Okay Airways</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=JD&size=128&background=002E6D&color=fff&bold=true&format=svg" alt="Beijing Capital Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Beijing Capital Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=EU&size=128&background=003087&color=fff&bold=true&format=svg" alt="Chengdu Airlines" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Chengdu Airlines</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=UQ&size=128&background=00A1E4&color=fff&bold=true&format=svg" alt="Urumqi Air" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Urumqi Air</p>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
+                    <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
+                        <img src="https://ui-avatars.com/api/?name=GT&size=128&background=E3051B&color=fff&bold=true&format=svg" alt="Air Guilin" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-xs text-center text-gray-700 font-semibold">Air Guilin</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-iatp-primary via-iatp-secondary to-iatp-primary relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight reveal-up">
+                Ready to Apply?
+            </h2>
+            <p class="text-2xl text-blue-50 mb-12 leading-relaxed reveal-up">
+                Join the world's most trusted aviation technical network<br/>
+                and unlock the benefits of global collaboration
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 reveal-up">
+                <button class="magnetic-btn px-10 py-4 bg-white text-iatp-primary rounded-full text-lg font-bold shadow-2xl hover:shadow-white/50 transition-all flex items-center space-x-3 group">
+                    <span>Contact Membership Coordinator</span>
+                    <span class="iconify group-hover:translate-x-2 transition-transform" data-icon="ant-design:arrow-right-outlined"></span>
+                </button>
+                <button class="magnetic-btn px-10 py-4 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white rounded-full text-lg font-bold hover:bg-white/20 transition-all">
+                    Learn More About IATP
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="img/IATP-logo.png" alt="IATP Logo" class="h-12 w-auto">
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        Recognized worldwide as the aviation industry's trusted expert in technical collaboration and AOG support since 1948.
+                    </p>
+                    <div class="flex items-center space-x-2 text-gray-500 text-sm">
+                        <span class="iconify text-iatp-primary" data-icon="ant-design:safety-outlined"></span>
+                        <span>Trusted by 142+ Airlines Globally</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Services</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-iatp-primary transition-colors">Parts Pooling</a></li>
+                        <li><a href="#" class="hover:text-iatp-primary transition-colors">Line Maintenance</a></li>
+                        <li><a href="#" class="hover:text-iatp-primary transition-colors">Aircraft Recovery</a></li>
+                        <li><a href="#" class="hover:text-iatp-primary transition-colors">Equipment Pooling</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Company</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="about.html" class="hover:text-iatp-primary transition-colors">About Us</a></li>
+                        <li><a href="index.html" class="hover:text-iatp-primary transition-colors">Events</a></li>
+                        <li><a href="#" class="hover:text-iatp-primary transition-colors">Membership</a></li>
+                        <li><a href="#" class="hover:text-iatp-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-iatp-primary transition-all group">
+                            <span class="iconify text-xl group-hover:scale-110 transition-transform" data-icon="ant-design:linkedin-outlined"></span>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 text-sm mt-4">Follow us on LinkedIn for industry insights and updates</p>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between text-gray-400 relative">
+                <p>&copy; 2025 IATP. All rights reserved.</p>
+                <div class="flex items-center space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-iatp-primary transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-iatp-primary transition-colors">Terms</a>
+                    <a href="#" class="hover:text-iatp-primary transition-colors">Cookies</a>
+                    <img src="img/crystal-logo.png" alt="Crystal Logo" class="h-24 w-auto ml-6 ">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
