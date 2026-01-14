@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - International Airlines Technical Pool</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'iatp': {
+                            primary: '#1942bd',
+                            secondary: '#194be0',
+                            light: '#4a9fd8',
+                            dark: '#005a8f',
+                            50: '#e6f4fb',
+                            100: '#cce9f7',
+                            200: '#99d3ef',
+                            300: '#66bde7',
+                            400: '#33a7df',
+                            500: '#0079c2',
+                            600: '#00619b',
+                            700: '#004974',
+                            800: '#00314d',
+                            900: '#001926',
+                        },
+                        'iatp-secondary': {
+                            50: '#e8f1f8',
+                            100: '#d1e3f1',
+                            200: '#a3c7e3',
+                            300: '#75abd5',
+                            400: '#478fc7',
+                            500: '#337ab7',
+                            600: '#296192',
+                            700: '#1f496e',
+                            800: '#143149',
+                            900: '#0a1825',
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Iconify (Ant Design Icons) -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        .playlist-item.active {
+            background-color: #eff6ff !important;
+            border-left: 4px solid #1942bd;
+        }
+
+        .playlist-item:hover {
+            cursor: pointer;
+        }
+
+        #conference-playlist {
+            scrollbar-width: thin;
+            scrollbar-color: #1942bd #f3f4f6;
+        }
+
+        #conference-playlist::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        #conference-playlist::-webkit-scrollbar-track {
+            background: #f3f4f6;
+            border-radius: 10px;
+        }
+
+        #conference-playlist::-webkit-scrollbar-thumb {
+            background: #1942bd;
+            border-radius: 10px;
+        }
+
+        #conference-playlist::-webkit-scrollbar-thumb:hover {
+            background: #194be0;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-xl shadow-lg transition-all duration-500" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-6">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <img src="img/IATP-logo.png" alt="IATP Logo" class="h-14 w-auto transition-transform group-hover:scale-105">
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <!-- About Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-iatp-primary transition-colors font-medium flex items-center space-x-1">
+                            <span><a href="about.html#hero">About</a></span>
+                            <span class="iconify text-xs transition-transform group-hover:rotate-180" data-icon="ant-design:down-outlined"></span>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="about.html#hero" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors first:rounded-t-xl">About Us</a>
+                            <a href="about.html#faq" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors last:rounded-b-xl">FAQ</a>
+                        </div>
+                    </div>
+
+                    <!-- Events Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-iatp-primary transition-colors font-medium flex items-center space-x-1">
+                            <span>Events</span>
+                            <span class="iconify text-xs transition-transform group-hover:rotate-180" data-icon="ant-design:down-outlined"></span>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="events.html#upcoming" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors first:rounded-t-xl">Upcoming Events</a>
+                            <a href="events.html#practical" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors">Practical Information</a>
+                            <a href="events.html#location" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors">Location Information</a>
+                            <a href="events.html#hotel" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors">Hotel Info & Booking</a>
+                            <a href="events.html#registration" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors">Conference Registration</a>
+                            <a href="events.html#past-events" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors last:rounded-b-xl">Past Events</a>
+                        </div>
+                    </div>
+
+                    <!-- Members Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-iatp-primary transition-colors font-medium flex items-center space-x-1">
+                            <span>Members</span>
+                            <span class="iconify text-xs transition-transform group-hover:rotate-180" data-icon="ant-design:down-outlined"></span>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="why-join-IATP.html" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors first:rounded-t-xl">Why join IATP</a>
+                            <a href="how-to-become-an-airline-member.html#airline-members" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors">Airline Members</a>
+                            <a href="how-to-become-an-airline-member.html" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors">Become an Airline Member</a>
+                            <a href="associate-member.html#associate-members" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors">Associate Members</a>
+                            <a href="associate-member.html" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors last:rounded-b-xl">Become an Associate Member</a>
+                        </div>
+                    </div>
+
+                    <a href="pionairs.html" class="text-gray-600 hover:text-iatp-primary transition-colors font-medium">Pionairs</a>
+
+                    <!-- News Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-iatp-primary transition-colors font-medium flex items-center space-x-1">
+                            <span>News</span>
+                            <span class="iconify text-xs transition-transform group-hover:rotate-180" data-icon="ant-design:down-outlined"></span>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
+                            <a href="news.html" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors first:rounded-t-xl">Communications</a>
+                            <a href="news.html#press" class="block px-6 py-3 text-gray-600 hover:text-iatp-primary hover:bg-blue-50 transition-colors last:rounded-b-xl">Press</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="text-gray-600 hover:text-iatp-primary transition-colors font-medium">Contact</a>
+
+                    <button class="magnetic-btn px-8 py-3 bg-gradient-to-r from-iatp-primary to-iatp-secondary text-white rounded-full font-semibold shadow-lg shadow-iatp-primary/30 hover:shadow-xl hover:shadow-iatp-primary/40 transition-all relative z-10">
+                        Member Login
+                    </button>
+                </div>
+
+                <button class="md:hidden text-gray-900" id="mobile-menu-btn">
+                    <span class="iconify text-2xl" data-icon="ant-design:menu-outlined"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden fixed inset-0 h-screen w-screen transform translate-x-full transition-transform duration-300 ease-in-out z-[100] drop-shadow-2xl bg-white" id="mobile-menu">
+            <div class="flex flex-col h-full">
+                <!-- Header -->
+                <div class="flex items-center justify-between px-6 py-6 border-b border-white/20">
+                    <a href="index.html"><img src="img/IATP-logo.png" alt="IATP Logo" class="h-12 w-auto"></a>
+                    <button class="w-10 h-10 flex items-center justify-center rounded-full bg-iatp-primary/10 hover:bg-iatp-primary/20 transition-all" id="mobile-menu-close">
+                        <span class="iconify text-2xl text-iatp-primary" data-icon="ant-design:close-outlined"></span>
+                    </button>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="flex-1 px-4 py-6 space-y-2 bg-iatp-primary overflow-y-auto">
+                    <!-- About Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full px-4 py-3 text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all mobile-dropdown-btn">
+                            <span class="flex items-center space-x-3">
+                                <span class="iconify text-xl" data-icon="ant-design:info-circle-outlined"></span>
+                                <span><a href="about.html#hero">About</a></span>
+                            </span>
+                            <span class="iconify text-base transition-transform" data-icon="ant-design:down-outlined"></span>
+                        </button>
+                        <div class="mobile-dropdown-content hidden mt-2 ml-4 pl-8 space-y-1 border-l-2 border-white/20">
+                            <a href="about.html#hero" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">About Us</a>
+                            <a href="about.html#faq" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">FAQ</a>
+                        </div>
+                    </div>
+
+                    <!-- Events Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full px-4 py-3 text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all mobile-dropdown-btn">
+                            <span class="flex items-center space-x-3">
+                                <span class="iconify text-xl" data-icon="ant-design:calendar-outlined"></span>
+                                <span>Events</span>
+                            </span>
+                            <span class="iconify text-base transition-transform" data-icon="ant-design:down-outlined"></span>
+                        </button>
+                        <div class="mobile-dropdown-content hidden mt-2 ml-4 pl-8 space-y-1 border-l-2 border-white/20">
+                            <a href="events.html#upcoming" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Upcoming Events</a>
+                            <a href="events.html#practical" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Practical Information</a>
+                            <a href="events.html#location" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Location Information</a>
+                            <a href="events.html#hotel" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Hotel Info & Booking</a>
+                            <a href="events.html#registration" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Conference Registration</a>
+                            <a href="events.html#past-events" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Past Events</a>
+                        </div>
+                    </div>
+
+                    <!-- Members Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full px-4 py-3 text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all mobile-dropdown-btn">
+                            <span class="flex items-center space-x-3">
+                                <span class="iconify text-xl" data-icon="ant-design:team-outlined"></span>
+                                <span>Members</span>
+                            </span>
+                            <span class="iconify text-base transition-transform" data-icon="ant-design:down-outlined"></span>
+                        </button>
+                        <div class="mobile-dropdown-content hidden mt-2 ml-4 pl-8 space-y-1 border-l-2 border-white/20">
+                            <a href="why-join-IATP.html" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Why join IATP</a>
+                            <a href="how-to-become-an-airline-member.html#airline-members" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Airline Members</a>
+                            <a href="how-to-become-an-airline-member.html" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Become an Airline Member</a>
+                            <a href="associate-member.html#associate-members" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Associate Members</a>
+                            <a href="associate-member.html" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Become an Associate Member</a>
+                        </div>
+                    </div>
+
+                    <!-- Pionairs Link -->
+                    <a href="pionairs.html" class="flex items-center space-x-3 px-4 py-3 text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all mobile-menu-link">
+                        <span class="iconify text-xl" data-icon="ant-design:compass-outlined"></span>
+                        <span>Pionairs</span>
+                    </a>
+
+                    <!-- News Mobile Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full px-4 py-3 text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all mobile-dropdown-btn">
+                            <span class="flex items-center space-x-3">
+                                <span class="iconify text-xl" data-icon="ant-design:file-text-outlined"></span>
+                                <span>News</span>
+                            </span>
+                            <span class="iconify text-base transition-transform" data-icon="ant-design:down-outlined"></span>
+                        </button>
+                        <div class="mobile-dropdown-content hidden mt-2 ml-4 pl-8 space-y-1 border-l-2 border-white/20">
+                            <a href="news.html" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Communications</a>
+                            <a href="news.html#press" class="block text-white/80 text-base py-2 px-4 hover:text-white hover:bg-white/10 rounded-lg transition-all mobile-menu-link">Press</a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Link -->
+                    <a href="#" class="flex items-center space-x-3 px-4 py-3 text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all mobile-menu-link">
+                        <span class="iconify text-xl" data-icon="ant-design:mail-outlined"></span>
+                        <span>Contact</span>
+                    </a>
+                </nav>
+
+                <!-- Footer CTA -->
+                <div class="px-6 py-6  bg-iatp-primary ">
+                    <button class="w-full px-8 py-4 bg-white text-iatp-primary rounded-full font-bold shadow-xl text-lg hover:shadow-2xl hover:scale-105 transition-all flex items-center justify-center space-x-2">
+                        <span class="iconify text-xl" data-icon="ant-design:user-outlined"></span>
+                        <span>Member Login</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative pt-32 pb-20 overflow-hidden">
+        <!-- Background gradient -->
+        <div class="absolute inset-0 bg-gradient-to-br from-iatp-primary to-iatp-secondary"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-12 reveal-up">
+                <div class="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-md px-6 py-3 rounded-full mb-8 border border-white/30 animate-fade-in-down">
+                    <div class="text-white font-medium text-sm">IATP EVENTS</div>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
+                    Events
+                </h1>
+                <p class="text-xl text-white max-w-4xl mx-auto leading-relaxed">
+                    The IATP Semi-annual Conference offers a multitude of events that allow attendees to connect with over 130 airlines from around the world. This unique venue gives you the opportunity to conduct your pooling business – whether it's spare parts or line maintenance – in the most efficient manner while allowing you to share your industry knowledge, network, reunite with colleagues, and much more!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section id="upcoming" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal-up">
+                <div class="inline-block px-6 py-2 bg-blue-50 text-iatp-primary rounded-full text-sm font-bold mb-6">
+                    UPCOMING EVENTS
+                </div>
+                <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">
+                    133<sup>rd</sup> IATP Conference
+                </h2>
+                <p class="text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    St. Julian's, Malta<br/>
+                    <span class="text-iatp-primary font-bold">7 - 11 March 2026</span>
+                </p>
+            </div>
+
+            <!-- Featured Event Banner -->
+            <div class="max-w-5xl mx-auto mb-16 reveal-up">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl group">
+                    <img src="img/upcoming-event-malta.png"
+                         alt="133rd IATP Conference Malta"
+                         class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+            </div>
+
+            <!-- Conference Info Box -->
+            <div class="max-w-4xl mx-auto mb-16 reveal-up">
+                <div class="bg-gradient-to-br from-iatp-primary to-iatp-secondary rounded-3xl p-8 md:p-12 text-white shadow-2xl">
+                    <div class="flex items-start space-x-4 mb-6">
+                        <span class="iconify text-4xl" data-icon="ant-design:info-circle-outlined"></span>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4">Conference Information</h3>
+                            <p class="text-lg leading-relaxed opacity-90">
+                                The 133rd IATP Conference will be held in Malta on 7 – 11 March 2026!
+                            </p>
+                            <p class="text-lg leading-relaxed opacity-90 mt-4">
+                                IATP Team is working on all the arrangements as well as the membership growth and hopes to welcome new potential members and observers at the Conference.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conference Events Grid -->
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- APU Project Group -->
+                <div class="service-card group bg-white rounded-3xl shadow-lg border border-gray-100">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-gradient-to-br from-iatp-primary to-iatp-secondary rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="iconify text-white text-2xl" data-icon="ant-design:tool-outlined"></span>
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900 mb-4">APU (Auxiliary Power Unit) Project Group</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Following the encouraging feedback received during the meeting held at the Bali conference regarding the potential launch of APU as a new IATP pool group, a dedicated project group is now actively developing the initiative. We encourage all members interested in providing or using APUs to contact the IATP Office for more information and to get involved.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Engines Pool Group -->
+                <div class="service-card group bg-white rounded-3xl shadow-lg border border-gray-100">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-gradient-to-br from-iatp-primary to-iatp-secondary rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="iconify text-white text-2xl" data-icon="ant-design:rocket-outlined"></span>
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900 mb-4">Engines Pool Group</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            We take the opportunity to remind you about the Engines Pool group, aimed to help the IATP member Airlines to resolve quickly, efficiently and with competitive fees unscheduled engine removals. More information about this initiative will be given during the Engines Pool Group meeting at the conference.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- AOG Speed Meetings -->
+                <div class="service-card group bg-white rounded-3xl shadow-lg border border-gray-100">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-gradient-to-br from-iatp-primary to-iatp-secondary rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="iconify text-white text-2xl" data-icon="ant-design:team-outlined"></span>
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900 mb-4">AOG Speed Meetings</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            As usual, two AOG speed meetings sessions will be organized during the conference:
+                        </p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:check-circle-outlined"></span>
+                                <span class="text-gray-600">Airline-to-Airline</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:check-circle-outlined"></span>
+                                <span class="text-gray-600">Airline-to-Associate Member</span>
+                            </li>
+                        </ul>
+                        <p class="text-gray-600 leading-relaxed">
+                            The speed meetings will enable the delegates to meet other counterparts, exchange contact details, and briefly check the support opportunities between the companies with the aim to solve AOG situations, when no pooling could be set up in advance.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Introduction Sessions -->
+                <div class="service-card group bg-white rounded-3xl shadow-lg border border-gray-100">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-gradient-to-br from-iatp-primary to-iatp-secondary rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="iconify text-white text-2xl" data-icon="ant-design:book-outlined"></span>
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900 mb-4">Introduction Sessions for Newcomers</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            First-time attendees and all delegates who would like to refresh their knowledge on IATP-related activities will have the chance to attend our Introduction Sessions:
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:check-circle-outlined"></span>
+                                <span class="text-gray-600">Introduction to Parts Pooling</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:check-circle-outlined"></span>
+                                <span class="text-gray-600">Introduction to Aircraft Recovery</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:check-circle-outlined"></span>
+                                <span class="text-gray-600">Introduction to IATP Invoicing</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:check-circle-outlined"></span>
+                                <span class="text-gray-600">Senior Delegate Familiarization Session</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Platform Presentation -->
+            <div class="max-w-4xl mx-auto mb-12 reveal-up">
+                <div class="bg-blue-50 rounded-3xl p-8 md:p-12 border border-blue-100">
+                    <div class="flex items-start space-x-4">
+                        <span class="iconify text-4xl text-iatp-primary" data-icon="ant-design:laptop-outlined"></span>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">New Platform Presentation</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                The re-engineering of the IATP Platform, executed by Crystal Airlines Solutions and overseen by the office team, continues to progress. Crystal remains on track to present the platform at the Malta Conference and to move it into production once the Summer Season 2026 begins. During the 133rd IATP Conference, two dedicated sessions "New Platform Presentation" will be organized to introduce the new platform. We look forward to showcasing this important milestone in Malta.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Important Reminders -->
+            <div class="max-w-4xl mx-auto reveal-up">
+                <div class="bg-gradient-to-r from-red-50 to-orange-50 rounded-3xl p-8 md:p-12 border border-red-100">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center space-x-3">
+                        <span class="iconify text-3xl text-red-500" data-icon="ant-design:exclamation-circle-outlined"></span>
+                        <span>Important Reminders</span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start space-x-3">
+                            <span class="iconify text-iatp-primary mt-1 flex-shrink-0" data-icon="ant-design:calendar-outlined"></span>
+                            <span class="text-gray-700">Registration is open until January 30 – don't miss the deadline!</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="iconify text-iatp-primary mt-1 flex-shrink-0" data-icon="ant-design:credit-card-outlined"></span>
+                            <span class="text-gray-700">Guest and Pionair payments must be done online during registration.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="iconify text-iatp-primary mt-1 flex-shrink-0" data-icon="ant-design:file-protect-outlined"></span>
+                            <span class="text-gray-700">Please ensure you apply for a visa in advance, if required.</span>
+                        </li>
+                    </ul>
+                    <p class="text-lg font-semibold text-gray-900 mt-6">
+                        We look forward to meeting you in St. Julian's, Malta!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practical Information Section -->
+    <section id="practical" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal-up">
+                <div class="inline-block px-6 py-2 bg-blue-50 text-iatp-primary rounded-full text-sm font-bold mb-6">
+                    PRACTICAL INFORMATION
+                </div>
+                <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">
+                    Important Dates
+                </h2>
+            </div>
+
+            <!-- Timeline -->
+            <div class="max-w-4xl mx-auto space-y-6 mb-12">
+                <div class="flex items-start space-x-6 bg-white rounded-2xl p-6 shadow-lg border border-gray-100 reveal-up">
+                    <div class="flex-shrink-0 w-32 text-right">
+                        <div class="text-3xl font-black text-iatp-primary">2 Dec</div>
+                        <div class="text-sm text-gray-500">2025</div>
+                    </div>
+                    <div class="flex-grow border-l-4 border-iatp-primary pl-6">
+                        <p class="text-lg text-gray-700 font-semibold">First day to register for conference</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-6 bg-white rounded-2xl p-6 shadow-lg border border-gray-100 reveal-up">
+                    <div class="flex-shrink-0 w-32 text-right">
+                        <div class="text-3xl font-black text-iatp-primary">12 Jan</div>
+                        <div class="text-sm text-gray-500">2026</div>
+                    </div>
+                    <div class="flex-grow border-l-4 border-iatp-primary pl-6">
+                        <p class="text-lg text-gray-700 font-semibold">Last day for payment without penalty for Associate Members</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-6 bg-white rounded-2xl p-6 shadow-lg border border-red-200 reveal-up">
+                    <div class="flex-shrink-0 w-32 text-right">
+                        <div class="text-3xl font-black text-red-500">30 Jan</div>
+                        <div class="text-sm text-gray-500">2026</div>
+                    </div>
+                    <div class="flex-grow border-l-4 border-red-500 pl-6">
+                        <p class="text-lg text-gray-700 font-semibold">Cut-off date for the hotel booking and last day for online registration</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conference Documentation -->
+            <div class="max-w-4xl mx-auto reveal-up">
+                <div class="bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-gray-100">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Conference Information</h3>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        For detailed information about the 133rd IATP Conference, please see the conference documentation below (PDF Documents):
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center space-x-3">
+                            <span class="iconify text-iatp-primary text-xl" data-icon="ant-design:file-pdf-outlined"></span>
+                            <a href="#" class="text-iatp-primary hover:underline font-medium">IATP Conference Schedule/Dress Code</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="iconify text-iatp-primary text-xl" data-icon="ant-design:file-pdf-outlined"></span>
+                            <a href="#" class="text-iatp-primary hover:underline font-medium">IATP Meetings Explanation</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="iconify text-iatp-primary text-xl" data-icon="ant-design:file-pdf-outlined"></span>
+                            <a href="#" class="text-iatp-primary hover:underline font-medium">IATP Meeting Access Matrix</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="iconify text-iatp-primary text-xl" data-icon="ant-design:file-pdf-outlined"></span>
+                            <a href="#" class="text-iatp-primary hover:underline font-medium">Hotel Meeting Rooms Map</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="iconify text-iatp-primary text-xl" data-icon="ant-design:file-pdf-outlined"></span>
+                            <a href="#" class="text-iatp-primary hover:underline font-medium">Code of Conduct conference attendance</a>
+                        </li>
+                    </ul>
+
+                    <div class="bg-blue-50 rounded-2xl p-6 mb-4">
+                        <p class="text-gray-700">
+                            If you need a general Conference invitation letter from the IATP CEO, please send your request to <a href="mailto:info@iatp.com" class="text-iatp-primary hover:underline font-semibold">info@iatp.com</a>
+                        </p>
+                    </div>
+
+                    <div class="bg-blue-50 rounded-2xl p-6 mb-4">
+                        <p class="text-gray-700">
+                            If you need an invitation letter for VISA application, you will find the instructions in the Message Center after logging in to the IATP Platform. For non-platform users, the information is displayed on the bottom of the Registration Form.
+                        </p>
+                    </div>
+
+                    <div class="bg-blue-50 rounded-2xl p-6">
+                        <p class="text-gray-700">
+                            To collect your IATP badge upon arrival and for any additional information on the 133rd IATP Conference, please go to the IATP Secretariat located at Inter Continental hotel in the meeting room Saturn (Level 2).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Information Section -->
+    <section id="location" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal-up">
+                <div class="inline-block px-6 py-2 bg-blue-50 text-iatp-primary rounded-full text-sm font-bold mb-6">
+                    LOCATION INFORMATION
+                </div>
+                <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">
+                    Malta Travel Information
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Visa Requirements -->
+                <div class="service-card bg-white rounded-3xl shadow-lg border border-gray-100">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-gradient-to-br from-iatp-primary to-iatp-secondary rounded-2xl flex items-center justify-center mb-6">
+                            <span class="iconify text-white text-2xl" data-icon="ant-design:file-protect-outlined"></span>
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900 mb-4">Visa Requirements</h3>
+                        <p class="text-sm text-gray-500 mb-4">Source: Government of Malta</p>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Non-EU citizens (also known as third-country nationals) may visit Malta by means of a Schengen visa, which allows free movement within the whole Schengen Zone to European Union Schengen members as well as EFTA Schengen members. A Schengen visa is valid for a maximum of 90 days within every six-month period starting from the date of entry.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Please refer to <a href="https://consularplus.gov.mt/visa-advice?lang=null" target="_blank" class="text-iatp-primary hover:underline font-semibold">consularplus.gov.mt</a> to receive additional information regarding requirements for your nationality/passport.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            If a VISA application is required, third-country nationals are obliged to apply for a visa at the following EU (European Union) Diplomatic Missions and Consular posts, which issue visas in representation of Malta, where Malta has no Diplomatic Mission or Consular post. This website could provide additional information: <a href="https://identita.gov.mt/central-visa-unit-sec-page-schengen-visa/" target="_blank" class="text-iatp-primary hover:underline font-semibold">identita.gov.mt</a>.
+                        </p>
+                        <div class="bg-blue-50 rounded-2xl p-4">
+                            <p class="text-gray-700 text-sm">
+                                If you need an invitation letter for VISA application, you will find the instructions in the Message Center after logging in to the IATP Platform. For non-platform users, the information is displayed on the bottom of the Registration Form.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Electricity -->
+                <div class="service-card bg-white rounded-3xl shadow-lg border border-gray-100">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-gradient-to-br from-iatp-primary to-iatp-secondary rounded-2xl flex items-center justify-center mb-6">
+                            <span class="iconify text-white text-2xl" data-icon="ant-design:thunderbolt-outlined"></span>
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900 mb-4">Electricity</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Malta's power sockets deliver an average voltage of 230 v /- 10%. The frequency of the supply is 50 hertz.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            It's recommended to bring an adaptor to use your electrical appliances.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            Malta uses the type G plug: it has three rectangular pins in a triangular pattern.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Time -->
+                <div class="service-card bg-white rounded-3xl shadow-lg border border-gray-100">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-gradient-to-br from-iatp-primary to-iatp-secondary rounded-2xl flex items-center justify-center mb-6">
+                            <span class="iconify text-white text-2xl" data-icon="ant-design:clock-circle-outlined"></span>
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900 mb-4">Time</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Malta uses Central European Standard Time (CET), which is 1 hour ahead of Greenwich Mean Time (GMT +1).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Currency -->
+                <div class="service-card bg-white rounded-3xl shadow-lg border border-gray-100">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-gradient-to-br from-iatp-primary to-iatp-secondary rounded-2xl flex items-center justify-center mb-6">
+                            <span class="iconify text-white text-2xl" data-icon="ant-design:euro-outlined"></span>
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900 mb-4">Currency</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Malta's currency is the Euro (€/EUR).
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            The Euro coin series comprises eight different denominations: 1, 2, 5, 10, 20 and 50 cent, €1 and €2.
+                            The Euro coins have a common side and a national side. The national side indicates the issuing country
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hotel Info & Booking Section -->
+    <section id="hotel" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal-up">
+                <div class="inline-block px-6 py-2 bg-blue-50 text-iatp-primary rounded-full text-sm font-bold mb-6">
+                    HOTEL INFO & BOOKING
+                </div>
+                <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">
+                    InterContinental Hotel Malta
+                </h2>
+                <p class="text-xl text-gray-600">
+                    St. George's Bay, St. Julian's STJ 3310 Malta
+                </p>
+            </div>
+
+            <!-- Hotel Contact Info -->
+            <div class="max-w-4xl mx-auto mb-12 reveal-up">
+                <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-100">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="flex items-start space-x-3">
+                            <span class="iconify text-iatp-primary text-2xl" data-icon="ant-design:phone-outlined"></span>
+                            <div>
+                                <p class="text-sm text-gray-500 font-semibold">Front desk</p>
+                                <p class="text-lg text-gray-900 font-bold">+356-21-377600</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="iconify text-iatp-primary text-2xl" data-icon="ant-design:mail-outlined"></span>
+                            <div>
+                                <p class="text-sm text-gray-500 font-semibold">Email</p>
+                                <a href="mailto:malta@ihg.com" class="text-lg text-iatp-primary hover:underline font-bold">malta@ihg.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-gray-200">
+                        <p class="text-sm text-gray-500 mb-2">Hotel General link (not to be used for room booking):</p>
+                        <a href="https://www.ihg.com/intercontinental/hotels/gb/en/malta/malha/hoteldetail?cm_mmc=GoogleMaps-_-IC-_-MT-_-MALHA" target="_blank" class="text-iatp-primary hover:underline break-all">www.ihg.com/intercontinental/hotels</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hotel Description -->
+            <div class="max-w-4xl mx-auto mb-12 reveal-up">
+                <div class="bg-gradient-to-br from-blue-50 to-white rounded-3xl p-8 md:p-12 border border-blue-100">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        InterContinental Malta has established itself as the Mediterranean's leading hotel of distinction, located in the prime area of St. George's Bay, in St Julian's, just 7 kilometers from Valletta. All bedrooms are elegantly furnished, having all the comforts expected of a luxury property. With a variety of restaurants and bars, the hotel offers varied cuisine at all times of day. The hotel's leisure facilities include three pools, kids club, fitness center, spa, beach club and room service.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Room Categories & Rates -->
+            <div class="max-w-5xl mx-auto mb-12 reveal-up">
+                <div class="bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-gray-100">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Room Categories and Negotiated Rates</h3>
+                    <p class="text-gray-600 mb-8">
+                        Rates are quoted in EURO (€) per room, per night.<br/>
+                        Breakfast, high speed Wi-Fi, service charge and relevant taxes are included.
+                    </p>
+
+                    <div class="overflow-x-auto mb-8">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="border-b-2 border-iatp-primary">
+                                    <th class="text-left py-4 px-4 text-gray-900 font-bold">Room Category</th>
+                                    <th class="text-left py-4 px-4 text-gray-900 font-bold">Occupancy</th>
+                                    <th class="text-right py-4 px-4 text-gray-900 font-bold">Rate (EUR)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-4 px-4 text-gray-700 font-semibold">Classic Room</td>
+                                    <td class="py-4 px-4 text-gray-600">Single Use</td>
+                                    <td class="py-4 px-4 text-right text-xl font-bold text-iatp-primary">125 EUR</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-4 px-4 text-gray-700 font-semibold">Classic Room</td>
+                                    <td class="py-4 px-4 text-gray-600">Double Use</td>
+                                    <td class="py-4 px-4 text-right text-xl font-bold text-iatp-primary">150 EUR</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-4 px-4 text-gray-700 font-semibold">Club Room</td>
+                                    <td class="py-4 px-4 text-gray-600">Single Use</td>
+                                    <td class="py-4 px-4 text-right text-xl font-bold text-iatp-primary">215 EUR</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-4 px-4 text-gray-700 font-semibold">Club Room</td>
+                                    <td class="py-4 px-4 text-gray-600">Double Use</td>
+                                    <td class="py-4 px-4 text-right text-xl font-bold text-iatp-primary">240 EUR</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="bg-blue-50 rounded-2xl p-6 mb-6">
+                        <p class="text-gray-700 font-semibold mb-2">Payment own account.</p>
+                        <p class="text-gray-700">
+                            Please register for the conference on the IATP platform to receive the room booking link.
+                        </p>
+                        <p class="text-gray-700 mt-2">
+                            The link will be reported in your registration confirmation email.
+                        </p>
+                    </div>
+
+                    <div class="bg-red-50 rounded-2xl p-6 border border-red-200 mb-6">
+                        <p class="text-gray-700 font-semibold">
+                            Cut-off date for the hotel booking is 30 January 2026. After this date the rate and/or availability of the rooms are not guaranteed.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-2xl p-6">
+                        <p class="text-gray-700 mb-4">
+                            Should you encounter any kind of difficulties with your booking, or have any special request (other room category, triple occupancy, stay extension,…), please do not hesitate to contact:
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:right-outlined"></span>
+                                <span class="text-gray-700">InterContinental Malta Reservation Department</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:mail-outlined"></span>
+                                <a href="mailto:malta.reservations@ihg.com" class="text-iatp-primary hover:underline">malta.reservations@ihg.com</a>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:phone-outlined"></span>
+                                <span class="text-gray-700">Direct phone number: +356 2376 5400</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Check-in/Check-out & Cancellation Policy -->
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="service-card bg-white rounded-3xl shadow-lg border border-gray-100">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-gradient-to-br from-iatp-primary to-iatp-secondary rounded-2xl flex items-center justify-center mb-6">
+                            <span class="iconify text-white text-2xl" data-icon="ant-design:calendar-outlined"></span>
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900 mb-4">Check-In & Check-out</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between p-4 bg-blue-50 rounded-xl">
+                                <span class="text-gray-700 font-semibold">Check-In</span>
+                                <span class="text-iatp-primary font-bold">15:00</span>
+                            </div>
+                            <div class="flex items-center justify-between p-4 bg-blue-50 rounded-xl">
+                                <span class="text-gray-700 font-semibold">Check-Out</span>
+                                <span class="text-iatp-primary font-bold">12:00 (noon)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card bg-white rounded-3xl shadow-lg border border-gray-100">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-gradient-to-br from-iatp-primary to-iatp-secondary rounded-2xl flex items-center justify-center mb-6">
+                            <span class="iconify text-white text-2xl" data-icon="ant-design:close-circle-outlined"></span>
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900 mb-4">Cancellation Policy</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-green-500 mt-1 flex-shrink-0" data-icon="ant-design:check-circle-outlined"></span>
+                                <span class="text-gray-600">No cancellation charge until 5th of February 2026</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-orange-500 mt-1 flex-shrink-0" data-icon="ant-design:warning-outlined"></span>
+                                <span class="text-gray-600">Cancellations received between 5th of February until 3 days prior to arrival subject 1 (one) night cancellation charge</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-red-500 mt-1 flex-shrink-0" data-icon="ant-design:stop-outlined"></span>
+                                <span class="text-gray-600">Cancellation received less than 3 days prior to arrival and no-shows hall be charged the equivalent of the total value of the booking</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hotel Facilities -->
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="service-card bg-white rounded-3xl shadow-lg border border-gray-100">
+                    <div class="p-8">
+                        <h3 class="text-xl font-black text-gray-900 mb-4">Facility</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:check-outlined"></span>
+                                <span class="text-gray-600">19 Floors</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:check-outlined"></span>
+                                <span class="text-gray-600">481 Rooms</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:check-outlined"></span>
+                                <span class="text-gray-600">24 hour business center</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:check-outlined"></span>
+                                <span class="text-gray-600">Laundry and dry cleaning</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:check-outlined"></span>
+                                <span class="text-gray-600">Swimming pool</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:check-outlined"></span>
+                                <span class="text-gray-600">Fully-equipped gym</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:check-outlined"></span>
+                                <span class="text-gray-600">Spa</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:check-outlined"></span>
+                                <span class="text-gray-600">Room Service</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:check-outlined"></span>
+                                <span class="text-gray-600">Hair Salon</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:check-outlined"></span>
+                                <span class="text-gray-600">Currency Exchange</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card bg-white rounded-3xl shadow-lg border border-gray-100">
+                    <div class="p-8">
+                        <h3 class="text-xl font-black text-gray-900 mb-4">Room Features</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:check-outlined"></span>
+                                <span class="text-gray-600">Room size from 35m²</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:check-outlined"></span>
+                                <span class="text-gray-600">Workspace</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:check-outlined"></span>
+                                <span class="text-gray-600">In-room safe</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:check-outlined"></span>
+                                <span class="text-gray-600">Air conditioning</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:check-outlined"></span>
+                                <span class="text-gray-600">Hair dryer</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:check-outlined"></span>
+                                <span class="text-gray-600">Television</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:check-outlined"></span>
+                                <span class="text-gray-600">Coffee maker</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:check-outlined"></span>
+                                <span class="text-gray-600">Bath amenities</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card bg-white rounded-3xl shadow-lg border border-gray-100">
+                    <div class="p-8">
+                        <h3 class="text-xl font-black text-gray-900 mb-4">Additional Info</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="text-sm font-semibold text-gray-500 mb-1">Internet Access</p>
+                                <p class="text-gray-700">Available</p>
+                            </div>
+                            <div>
+                                <p class="text-sm font-semibold text-gray-500 mb-1">Parking</p>
+                                <p class="text-gray-700">Available, at a charge</p>
+                            </div>
+                            <div>
+                                <p class="text-sm font-semibold text-gray-500 mb-1">Pet Policy</p>
+                                <p class="text-gray-700">Only dogs allowed, pet fee per night 49 EUR, pet weight limit 25 KG</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restaurants -->
+            <div class="max-w-6xl mx-auto mb-12 reveal-up">
+                <h3 class="text-3xl font-bold text-gray-900 mb-8 text-center">Restaurants</h3>
+                <p class="text-center text-gray-600 mb-8">
+                    At InterContinental Malta, one can choose from a variety of restaurants offering a varied local international cuisine at all times of day, both indoor and al fresco.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Harruba -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Harruba</h4>
+                        <p class="text-sm text-iatp-primary font-semibold mb-3">Cuisine: continental</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            The breakfast venue of InterContinental Malta, where each morning begins with an experience designed to inspire. Indulge in a vibrant buffet where international favourites meet local flavours, from freshly baked pastries and seasonal fruits to live stations and wholesome choices.
+                        </p>
+                    </div>
+
+                    <!-- Waterbiscuit -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Waterbiscuit Restaurant</h4>
+                        <p class="text-sm text-iatp-primary font-semibold mb-3">Cuisine: international</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Waterbiscuit offers a gastronomic experience to delight all with a charming and contemporary atmosphere and enthusiastically accomplished cuisine, using the freshest Mediterranean ingredients.
+                        </p>
+                    </div>
+
+                    <!-- Paranga -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Paranga</h4>
+                        <p class="text-sm text-iatp-primary font-semibold mb-3">Cuisine: Sicilian</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            is the hotel's seaside restaurant, set on teak decking adjacent to the rippling Mediterranean Sea. The menu offers a superb array of stimulating and diverse Sicilian flavors interpreted from a traditional or contemporary style.
+                        </p>
+                    </div>
+
+                    <!-- The Brass Bar -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">The Brass Bar</h4>
+                        <p class="text-sm text-iatp-primary font-semibold mb-3">Bar</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Bar is located in the hotel lobby and is continuously seeking ways to push boundaries and challenge the beverage culture status quo locally.
+                        </p>
+                    </div>
+
+                    <!-- Lubelli -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Lubelli – Neapolitan Pizzeria and Birreria</h4>
+                        <p class="text-sm text-iatp-primary font-semibold mb-3">Cuisine: Italian</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            is home to the most authentic and scrumptious Neapolitan Pizza, along with some exclusive beer. Set right next to St George's Bay, Lubelli is the place to be when it comes to your pizza cravings! Open for lunch and dinner.
+                        </p>
+                    </div>
+
+                    <!-- The Opal Lounge -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">The Opal Lounge</h4>
+                        <p class="text-sm text-iatp-primary font-semibold mb-3">Cuisine: international</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            InterContinental Malta launches another addition to make the premium lounge experience accessible for everyone. From Al Fresco breakfast to pre dinner cocktails under the stars, from a range of entertainment services to Netflix binging, there is so much to do at The Opal Lounge.
+                        </p>
+                    </div>
+
+                    <!-- Narcis Pool Bar -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Narcis Pool Bar</h4>
+                        <p class="text-sm text-iatp-primary font-semibold mb-3">Cuisine: international</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Set next to the lagoon style, outdoor pool on the hotel's 10th floor, the Narcis Pool Bar and Grill offers summer dining complemented by panoramic sea views. You can savour enticing Mediterranean inspired grill dishes as you cool off in the shade with a refreshing cocktail.
+                        </p>
+                    </div>
+
+                    <!-- SKYBEACH -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">SKYBEACH Rooftop Infinity Pool</h4>
+                        <p class="text-sm text-iatp-primary font-semibold mb-3">Cuisine: international</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Relax and let the world pass by with stunning island views, the Mediterranean Sea views and a rooftop infinity pool as a company. All are located on the 19th floor of the hotel.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transport -->
+            <div class="max-w-4xl mx-auto reveal-up">
+                <div class="bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-gray-100">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Transport to/from Hotel</h3>
+                    <div class="flex items-start space-x-4 mb-6">
+                        <span class="iconify text-4xl text-iatp-primary" data-icon="ant-design:car-outlined"></span>
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Malta International Airport (MLA)</h4>
+                            <p class="text-gray-600 mb-4">Distance 12 KM / 7.5 MI</p>
+                            <p class="text-gray-700 font-semibold mb-3">You can reach the hotel by:</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-start space-x-2">
+                                    <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:car-outlined"></span>
+                                    <span class="text-gray-600">Taxi - Approximate charge: 30/35€</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <span class="iconify text-iatp-primary mt-1" data-icon="ant-design:car-outlined"></span>
+                                    <span class="text-gray-600">Uber, Bolt and Ecabs - Approximate charge: 15/20€</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conference Registration Section -->
+    <section id="registration" class="py-20 bg-gradient-to-br from-iatp-primary to-iatp-secondary">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="reveal-up">
+                <h2 class="text-4xl md:text-6xl font-black text-white mb-8 leading-tight">
+                    Conference Registration
+                </h2>
+                <p class="text-xl text-white/90 mb-8 leading-relaxed">
+                    IATP members please LOGIN to register.<br/>
+                    Non-IATP members please submit registration request using the form.
+                </p>
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 mb-8 border border-white/20">
+                    <p class="text-white leading-relaxed">
+                        Please note: Guest and Pionairs registration fees should be paid compulsory to the conference registration through Stripe, hence a Debit/Credit Card, Bank account or PayPal account will be required.
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                    <button class="magnetic-btn px-10 py-4 bg-white text-iatp-primary rounded-full text-lg font-bold shadow-2xl hover:shadow-white/50 transition-all flex items-center space-x-3 group">
+                        <span>Member Login</span>
+                        <span class="iconify group-hover:translate-x-2 transition-transform" data-icon="ant-design:arrow-right-outlined"></span>
+                    </button>
+                    <button class="magnetic-btn px-10 py-4 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white rounded-full text-lg font-bold hover:bg-white/20 transition-all">
+                        Registration Form
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Past Conferences Section -->
+    <section id="past-events" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal-up">
+                <div class="inline-block px-6 py-2 bg-blue-50 text-iatp-primary rounded-full text-sm font-bold mb-6">
+                    PAST CONFERENCES
+                </div>
+                <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">
+                    Our Legacy of Excellence
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Look back at the highlights from our previous conferences where aviation professionals from around the world came together to share knowledge and strengthen partnerships.
+                </p>
+            </div>
+
+            <!-- Video Container -->
+            <div class="max-w-6xl mx-auto reveal-up">
+                <div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 md:p-12 shadow-2xl border border-gray-200">
+                    <div class="mb-8">
+                        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2" id="conference-title">131<sup>st</sup> IATP Conference</h3>
+                        <p class="text-lg text-gray-600" id="conference-location">Panama | March 2025</p>
+                    </div>
+
+                    <!-- Responsive Video Wrapper -->
+                    <div class="relative w-full rounded-2xl overflow-hidden shadow-xl" style="padding-bottom: 56.25%; background: #000;">
+                        <iframe
+                            src="https://player.vimeo.com/video/1124796026?player_id=player_0&amp;api=1&amp;app_id=122963"
+                            class="absolute top-0 left-0 w-full h-full"
+                            frameborder="0"
+                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            title="131st IATP Conference Panama Mar.2025"
+                            id="conference-video">
+                        </iframe>
+                    </div>
+
+                    <!-- Conference Playlist -->
+                    <div class="mt-8">
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">Previous Conferences</h4>
+                        <div class="bg-white rounded-2xl border border-gray-200 max-h-96 overflow-y-auto">
+                            <div class="divide-y divide-gray-100" id="conference-playlist">
+                                <!-- Conference items will be dynamically generated -->
+                                <button class="playlist-item w-full px-4 py-3 hover:bg-blue-50 transition-colors flex items-center space-x-4 text-left active"
+                                        data-video-id="1124796026"
+                                        data-title="131st IATP Conference"
+                                        data-location="Panama | March 2025"
+                                        data-duration="5:53">
+                                    <img src="https://i.vimeocdn.com/video/2066771924-85c07a1ea63c918adc31c076417dd2b4999101d84b789623d1243992341bf90f-d_100x75?region=us"
+                                         alt="131st Conference"
+                                         class="w-24 h-16 object-cover rounded-lg flex-shrink-0">
+                                    <div class="flex-grow">
+                                        <h5 class="font-semibold text-gray-900 mb-1">131st IATP Conference</h5>
+                                        <p class="text-sm text-gray-600">Panama | March 2025</p>
+                                    </div>
+                                    <span class="text-sm text-gray-500 flex-shrink-0">5:53</span>
+                                </button>
+
+                                <button class="playlist-item w-full px-4 py-3 hover:bg-blue-50 transition-colors flex items-center space-x-4 text-left"
+                                        data-video-id="1062458722"
+                                        data-title="130th IATP Conference"
+                                        data-location="Cairo | October 2024"
+                                        data-duration="5:29">
+                                    <img src="https://i.vimeocdn.com/video/1989378109-b0ac14f39c5aecce3fe146e475b0bc5ab41411d0a5f0adac28d88f81dd7d1014-d_100x75?region=us"
+                                         alt="130th Conference"
+                                         class="w-24 h-16 object-cover rounded-lg flex-shrink-0">
+                                    <div class="flex-grow">
+                                        <h5 class="font-semibold text-gray-900 mb-1">130th IATP Conference</h5>
+                                        <p class="text-sm text-gray-600">Cairo | October 2024</p>
+                                    </div>
+                                    <span class="text-sm text-gray-500 flex-shrink-0">5:29</span>
+                                </button>
+
+                                <button class="playlist-item w-full px-4 py-3 hover:bg-blue-50 transition-colors flex items-center space-x-4 text-left"
+                                        data-video-id="1020547711"
+                                        data-title="129th IATP Conference"
+                                        data-location="Guangzhou | March 2024"
+                                        data-duration="5:30">
+                                    <img src="https://i.vimeocdn.com/video/1939134209-31ccf0ce34ae2ef9e030ac60f352e8ecbb75267e9404d0296b6c50fba52f0319-d_100x75?region=us"
+                                         alt="129th Conference"
+                                         class="w-24 h-16 object-cover rounded-lg flex-shrink-0">
+                                    <div class="flex-grow">
+                                        <h5 class="font-semibold text-gray-900 mb-1">129th IATP Conference</h5>
+                                        <p class="text-sm text-gray-600">Guangzhou | March 2024</p>
+                                    </div>
+                                    <span class="text-sm text-gray-500 flex-shrink-0">5:30</span>
+                                </button>
+
+                                <button class="playlist-item w-full px-4 py-3 hover:bg-blue-50 transition-colors flex items-center space-x-4 text-left"
+                                        data-video-id="917773125"
+                                        data-title="128th IATP Conference"
+                                        data-location="Istanbul | October 2023"
+                                        data-duration="5:26">
+                                    <img src="https://i.vimeocdn.com/video/1806257852-41b187c9db5adadc08231ef2bf3021a0c01c8abd797c49ed2bbb970ad0589032-d_100x75?region=us"
+                                         alt="128th Conference"
+                                         class="w-24 h-16 object-cover rounded-lg flex-shrink-0">
+                                    <div class="flex-grow">
+                                        <h5 class="font-semibold text-gray-900 mb-1">128th IATP Conference</h5>
+                                        <p class="text-sm text-gray-600">Istanbul | October 2023</p>
+                                    </div>
+                                    <span class="text-sm text-gray-500 flex-shrink-0">5:26</span>
+                                </button>
+
+                                <button class="playlist-item w-full px-4 py-3 hover:bg-blue-50 transition-colors flex items-center space-x-4 text-left"
+                                        data-video-id="877023147"
+                                        data-title="127th IATP Conference"
+                                        data-location="Manama | March 2023"
+                                        data-duration="6:05">
+                                    <img src="https://i.vimeocdn.com/video/1742362323-d57553e302817c755759085e15f97418bd3e17e01cf6137200aaafbfe0f03133-d_100x75?region=us"
+                                         alt="127th Conference"
+                                         class="w-24 h-16 object-cover rounded-lg flex-shrink-0">
+                                    <div class="flex-grow">
+                                        <h5 class="font-semibold text-gray-900 mb-1">127th IATP Conference</h5>
+                                        <p class="text-sm text-gray-600">Manama | March 2023</p>
+                                    </div>
+                                    <span class="text-sm text-gray-500 flex-shrink-0">6:05</span>
+                                </button>
+
+                                <button class="playlist-item w-full px-4 py-3 hover:bg-blue-50 transition-colors flex items-center space-x-4 text-left"
+                                        data-video-id="813177316"
+                                        data-title="126th IATP Conference"
+                                        data-location="Lisbon | October 2022"
+                                        data-duration="5:56">
+                                    <img src="https://i.vimeocdn.com/video/1644405571-831feb0878427b7d5547e6826c936bc9b06937402468b43720992e3ed5ca0b18-d_100x75?region=us"
+                                         alt="126th Conference"
+                                         class="w-24 h-16 object-cover rounded-lg flex-shrink-0">
+                                    <div class="flex-grow">
+                                        <h5 class="font-semibold text-gray-900 mb-1">126th IATP Conference</h5>
+                                        <p class="text-sm text-gray-600">Lisbon | October 2022</p>
+                                    </div>
+                                    <span class="text-sm text-gray-500 flex-shrink-0">5:56</span>
+                                </button>
+
+                                <button class="playlist-item w-full px-4 py-3 hover:bg-blue-50 transition-colors flex items-center space-x-4 text-left"
+                                        data-video-id="761137157"
+                                        data-title="125th IATP Conference"
+                                        data-location="Dubai | March 2022"
+                                        data-duration="5:39">
+                                    <img src="https://i.vimeocdn.com/video/1528786661-f1b662f484148c5aa1435cff8b7e902e749853a4b93a02be87c3d8b5200a9edf-d_100x75?region=us"
+                                         alt="125th Conference"
+                                         class="w-24 h-16 object-cover rounded-lg flex-shrink-0">
+                                    <div class="flex-grow">
+                                        <h5 class="font-semibold text-gray-900 mb-1">125th IATP Conference</h5>
+                                        <p class="text-sm text-gray-600">Dubai | March 2022</p>
+                                    </div>
+                                    <span class="text-sm text-gray-500 flex-shrink-0">5:39</span>
+                                </button>
+
+                                <button class="playlist-item w-full px-4 py-3 hover:bg-blue-50 transition-colors flex items-center space-x-4 text-left"
+                                        data-video-id="687875300"
+                                        data-title="124th IATP Conference"
+                                        data-location="Copenhagen | October 2020"
+                                        data-duration="5:30">
+                                    <img src="https://i.vimeocdn.com/video/1393505433-571e85046391193fe88ec757dc55e3347715abfd1483634e179912dfcd4a87e8-d_100x75?region=us"
+                                         alt="124th Conference"
+                                         class="w-24 h-16 object-cover rounded-lg flex-shrink-0">
+                                    <div class="flex-grow">
+                                        <h5 class="font-semibold text-gray-900 mb-1">124th IATP Conference</h5>
+                                        <p class="text-sm text-gray-600">Copenhagen | October 2020</p>
+                                    </div>
+                                    <span class="text-sm text-gray-500 flex-shrink-0">5:30</span>
+                                </button>
+
+                                <button class="playlist-item w-full px-4 py-3 hover:bg-blue-50 transition-colors flex items-center space-x-4 text-left"
+                                        data-video-id="472632010"
+                                        data-title="121st IATP Conference"
+                                        data-location="Nashville | March 2020 - Part 2"
+                                        data-duration="3:11">
+                                    <img src="https://i.vimeocdn.com/video/983118143-113e9e8fb870168caf2a4c1ac42de53df82a7500f43db9ba48619b48e1bd3297-d_100x75?region=us"
+                                         alt="121st Conference Part 2"
+                                         class="w-24 h-16 object-cover rounded-lg flex-shrink-0">
+                                    <div class="flex-grow">
+                                        <h5 class="font-semibold text-gray-900 mb-1">121st IATP Conference - Part 2</h5>
+                                        <p class="text-sm text-gray-600">Nashville | March 2020</p>
+                                    </div>
+                                    <span class="text-sm text-gray-500 flex-shrink-0">3:11</span>
+                                </button>
+
+                                <button class="playlist-item w-full px-4 py-3 hover:bg-blue-50 transition-colors flex items-center space-x-4 text-left"
+                                        data-video-id="472631504"
+                                        data-title="121st IATP Conference"
+                                        data-location="Nashville | March 2020 - Part 1"
+                                        data-duration="2:54">
+                                    <img src="https://i.vimeocdn.com/video/983115305-0ddf000067f80e00a2d5926b8f8119d937c6cfcedaff40baea7a146c99a4c03e-d_100x75?region=us"
+                                         alt="121st Conference Part 1"
+                                         class="w-24 h-16 object-cover rounded-lg flex-shrink-0">
+                                    <div class="flex-grow">
+                                        <h5 class="font-semibold text-gray-900 mb-1">121st IATP Conference - Part 1</h5>
+                                        <p class="text-sm text-gray-600">Nashville | March 2020</p>
+                                    </div>
+                                    <span class="text-sm text-gray-500 flex-shrink-0">2:54</span>
+                                </button>
+
+                                <button class="playlist-item w-full px-4 py-3 hover:bg-blue-50 transition-colors flex items-center space-x-4 text-left"
+                                        data-video-id="396645587"
+                                        data-title="120th IATP Conference"
+                                        data-location="Rome | October 2019"
+                                        data-duration="5:28">
+                                    <img src="https://i.vimeocdn.com/video/863501199-95b5542ea0999c72e965ee264a27648efb3c8d4f1de65872d657f476cffa459d-d_100x75?region=us"
+                                         alt="120th Conference"
+                                         class="w-24 h-16 object-cover rounded-lg flex-shrink-0">
+                                    <div class="flex-grow">
+                                        <h5 class="font-semibold text-gray-900 mb-1">120th IATP Conference</h5>
+                                        <p class="text-sm text-gray-600">Rome | October 2019</p>
+                                    </div>
+                                    <span class="text-sm text-gray-500 flex-shrink-0">5:28</span>
+                                </button>
+
+                                <button class="playlist-item w-full px-4 py-3 hover:bg-blue-50 transition-colors flex items-center space-x-4 text-left"
+                                        data-video-id="365018480"
+                                        data-title="119th IATP Conference"
+                                        data-location="Athens | March 2019"
+                                        data-duration="5:19">
+                                    <img src="https://i.vimeocdn.com/video/820623491-504fc7d041ac37b3e18ae23b6e4482cae1aca91c4b687337e5f716e106b07ae5-d_100x75?region=us"
+                                         alt="119th Conference"
+                                         class="w-24 h-16 object-cover rounded-lg flex-shrink-0">
+                                    <div class="flex-grow">
+                                        <h5 class="font-semibold text-gray-900 mb-1">119th IATP Conference</h5>
+                                        <p class="text-sm text-gray-600">Athens | March 2019</p>
+                                    </div>
+                                    <span class="text-sm text-gray-500 flex-shrink-0">5:19</span>
+                                </button>
+
+                                <button class="playlist-item w-full px-4 py-3 hover:bg-blue-50 transition-colors flex items-center space-x-4 text-left"
+                                        data-video-id="326557707"
+                                        data-title="118th IATP Conference"
+                                        data-location="Yogyakarta | October 2018"
+                                        data-duration="4:55">
+                                    <img src="https://i.vimeocdn.com/video/770609721-5500224bf77c9e65917db23aa23d68c1f86a3f9fae747764fda0748ca1777aac-d_100x75?region=us"
+                                         alt="118th Conference"
+                                         class="w-24 h-16 object-cover rounded-lg flex-shrink-0">
+                                    <div class="flex-grow">
+                                        <h5 class="font-semibold text-gray-900 mb-1">118th IATP Conference</h5>
+                                        <p class="text-sm text-gray-600">Yogyakarta | October 2018</p>
+                                    </div>
+                                    <span class="text-sm text-gray-500 flex-shrink-0">4:55</span>
+                                </button>
+
+                                <button class="playlist-item w-full px-4 py-3 hover:bg-blue-50 transition-colors flex items-center space-x-4 text-left"
+                                        data-video-id="302262569"
+                                        data-title="117th IATP Conference"
+                                        data-location="Riga | March 2018"
+                                        data-duration="5:32">
+                                    <img src="https://i.vimeocdn.com/video/741006632-8d04adb76aaca08adc217245c54ad277f69a4e006a6493b9e3a688727afeb49a-d_100x75?region=us"
+                                         alt="117th Conference"
+                                         class="w-24 h-16 object-cover rounded-lg flex-shrink-0">
+                                    <div class="flex-grow">
+                                        <h5 class="font-semibold text-gray-900 mb-1">117th IATP Conference</h5>
+                                        <p class="text-sm text-gray-600">Riga | March 2018</p>
+                                    </div>
+                                    <span class="text-sm text-gray-500 flex-shrink-0">5:32</span>
+                                </button>
+
+                                <button class="playlist-item w-full px-4 py-3 hover:bg-blue-50 transition-colors flex items-center space-x-4 text-left"
+                                        data-video-id="260066327"
+                                        data-title="116th IATP Conference"
+                                        data-location="Shenyang | October 2017"
+                                        data-duration="5:28">
+                                    <img src="https://i.vimeocdn.com/video/688695003-9b52d4167b94b1e279ea56933bb782dcf10ecb3b320ff57b4fd452f1f4115428-d_100x75?region=us"
+                                         alt="116th Conference"
+                                         class="w-24 h-16 object-cover rounded-lg flex-shrink-0">
+                                    <div class="flex-grow">
+                                        <h5 class="font-semibold text-gray-900 mb-1">116th IATP Conference</h5>
+                                        <p class="text-sm text-gray-600">Shenyang | October 2017</p>
+                                    </div>
+                                    <span class="text-sm text-gray-500 flex-shrink-0">5:28</span>
+                                </button>
+
+                                <button class="playlist-item w-full px-4 py-3 hover:bg-blue-50 transition-colors flex items-center space-x-4 text-left"
+                                        data-video-id="239979091"
+                                        data-title="115th IATP Conference"
+                                        data-location="Dublin | March 2017"
+                                        data-duration="5:20">
+                                    <img src="https://i.vimeocdn.com/video/663120016-a4c4b80a97d6979956bce9ce5b6520d4ab135f0df3d376e8216d5b0253509136-d_100x75?region=us"
+                                         alt="115th Conference"
+                                         class="w-24 h-16 object-cover rounded-lg flex-shrink-0">
+                                    <div class="flex-grow">
+                                        <h5 class="font-semibold text-gray-900 mb-1">115th IATP Conference</h5>
+                                        <p class="text-sm text-gray-600">Dublin | March 2017</p>
+                                    </div>
+                                    <span class="text-sm text-gray-500 flex-shrink-0">5:20</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Conference Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
+                        <div class="text-center p-4 bg-white rounded-xl shadow-md border border-gray-100">
+                            <div class="text-3xl font-black text-iatp-primary mb-2">130+</div>
+                            <p class="text-sm text-gray-600 font-semibold">Airlines</p>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-xl shadow-md border border-gray-100">
+                            <div class="text-3xl font-black text-iatp-primary mb-2">500+</div>
+                            <p class="text-sm text-gray-600 font-semibold">Delegates</p>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-xl shadow-md border border-gray-100">
+                            <div class="text-3xl font-black text-iatp-primary mb-2">50+</div>
+                            <p class="text-sm text-gray-600 font-semibold">Countries</p>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-xl shadow-md border border-gray-100">
+                            <div class="text-3xl font-black text-iatp-primary mb-2">5</div>
+                            <p class="text-sm text-gray-600 font-semibold">Days</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Past Conference Highlights -->
+            <div class="max-w-5xl mx-auto mt-16 reveal-up">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Conference Highlights</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                        <div class="w-12 h-12 bg-gradient-to-br from-iatp-primary to-iatp-secondary rounded-xl flex items-center justify-center mb-4">
+                            <span class="iconify text-white text-2xl" data-icon="ant-design:team-outlined"></span>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">Networking Opportunities</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Connect with industry leaders and forge lasting partnerships through speed meetings and social events.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                        <div class="w-12 h-12 bg-gradient-to-br from-iatp-primary to-iatp-secondary rounded-xl flex items-center justify-center mb-4">
+                            <span class="iconify text-white text-2xl" data-icon="ant-design:book-outlined"></span>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">Knowledge Sharing</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Participate in technical sessions, workshops, and presentations on the latest industry trends and best practices.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                        <div class="w-12 h-12 bg-gradient-to-br from-iatp-primary to-iatp-secondary rounded-xl flex items-center justify-center mb-4">
+                            <span class="iconify text-white text-2xl" data-icon="ant-design:global-outlined"></span>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">Global Collaboration</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Experience the power of worldwide cooperation as airlines come together to solve AOG situations and pool resources.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="img/IATP-logo.png" alt="IATP Logo" class="h-12 w-auto">
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        Recognized worldwide as the aviation industry's trusted expert in technical collaboration and AOG support since 1948.
+                    </p>
+                    <div class="flex items-center space-x-2 text-gray-500 text-sm">
+                        <span class="iconify text-iatp-primary" data-icon="ant-design:safety-outlined"></span>
+                        <span>Trusted by 142+ Airlines Globally</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Services</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-iatp-primary transition-colors">Parts Pooling</a></li>
+                        <li><a href="#" class="hover:text-iatp-primary transition-colors">Line Maintenance</a></li>
+                        <li><a href="#" class="hover:text-iatp-primary transition-colors">Aircraft Recovery</a></li>
+                        <li><a href="#" class="hover:text-iatp-primary transition-colors">Equipment Pooling</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Company</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="about.html" class="hover:text-iatp-primary transition-colors">About Us</a></li>
+                        <li><a href="events.html" class="hover:text-iatp-primary transition-colors">Events</a></li>
+                        <li><a href="#" class="hover:text-iatp-primary transition-colors">Membership</a></li>
+                        <li><a href="#" class="hover:text-iatp-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-iatp-primary transition-all group">
+                            <span class="iconify text-xl group-hover:scale-110 transition-transform" data-icon="ant-design:linkedin-outlined"></span>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 text-sm mt-4">Follow us on LinkedIn for industry insights and updates</p>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between text-gray-400 relative">
+                <p>&copy; 2025 IATP. All rights reserved.</p>
+                <div class="flex items-center space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-iatp-primary transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-iatp-primary transition-colors">Terms</a>
+                    <a href="#" class="hover:text-iatp-primary transition-colors">Cookies</a>
+                    <img src="img/crystal-logo.png" alt="Crystal Logo" class="h-24 w-auto ml-6 ">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="js/main.js"></script>
+
+    <!-- Conference Playlist Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const playlistItems = document.querySelectorAll('.playlist-item');
+            const videoIframe = document.getElementById('conference-video');
+            const conferenceTitle = document.getElementById('conference-title');
+            const conferenceLocation = document.getElementById('conference-location');
+
+            playlistItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remove active class from all items
+                    playlistItems.forEach(i => i.classList.remove('active', 'bg-blue-50'));
+
+                    // Add active class to clicked item
+                    this.classList.add('active', 'bg-blue-50');
+
+                    // Get video data
+                    const videoId = this.dataset.videoId;
+                    const title = this.dataset.title;
+                    const location = this.dataset.location;
+
+                    // Update video source
+                    videoIframe.src = `https://player.vimeo.com/video/${videoId}?player_id=player_0&api=1&app_id=122963`;
+
+                    // Update title and location with proper superscript formatting
+                    const numberMatch = title.match(/(\d+)(st|nd|rd|th)/);
+                    if (numberMatch) {
+                        const number = numberMatch[1];
+                        const suffix = numberMatch[2];
+                        const rest = title.replace(/\d+(st|nd|rd|th)/, '');
+                        conferenceTitle.innerHTML = `${number}<sup>${suffix}</sup>${rest}`;
+                    } else {
+                        conferenceTitle.textContent = title;
+                    }
+
+                    conferenceLocation.textContent = location;
+
+                    // Scroll to top of video
+                    videoIframe.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
