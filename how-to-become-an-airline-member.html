@@ -129,9 +129,9 @@
 
                     <a href="contact.html" class="text-gray-600 hover:text-iatp-primary transition-colors font-medium">Contact</a>
 
-                    <button class="magnetic-btn px-8 py-3 bg-gradient-to-r from-iatp-primary to-iatp-secondary text-white rounded-full font-semibold shadow-lg shadow-iatp-primary/30 hover:shadow-xl hover:shadow-iatp-primary/40 transition-all relative z-10">
+                    <a href="contact.html" class="magnetic-btn px-8 py-3 bg-gradient-to-r from-iatp-primary to-iatp-secondary text-white rounded-full font-semibold shadow-lg shadow-iatp-primary/30 hover:shadow-xl hover:shadow-iatp-primary/40 transition-all relative z-10">
                         Member Login
-                    </button>
+                    </a>
                 </div>
 
                 <button class="md:hidden text-gray-900" id="mobile-menu-btn">
@@ -227,7 +227,7 @@
                     </div>
 
                     <!-- Contact Link -->
-                    <a href="#" class="flex items-center space-x-3 px-4 py-3 text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all mobile-menu-link">
+                    <a href="contact.html" class="flex items-center space-x-3 px-4 py-3 text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all mobile-menu-link">
                         <span class="iconify text-xl" data-icon="ant-design:mail-outlined"></span>
                         <span>Contact</span>
                     </a>
@@ -431,20 +431,74 @@
     <!-- Airline Members Section -->
     <section id="airline-members" class="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16 reveal-up">
+            <div class="text-center mb-12 reveal-up">
                 <div class="inline-block px-6 py-2 bg-blue-50 text-iatp-primary rounded-full text-sm font-bold mb-6">
                     OUR NETWORK
                 </div>
                 <h2 class="text-5xl md:text-6xl font-black text-gray-900 mb-6">
                     Airline Members
                 </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Join 142+ airlines worldwide who trust IATP for technical collaboration and AOG support
-                </p>
+            </div>
+
+            <!-- Search and Filter Controls -->
+            <div class="mb-12 reveal-up">
+                <!-- Search Bar -->
+                <div class="max-w-2xl mx-auto mb-8">
+                    <div class="relative">
+                        <span class="iconify absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-xl" data-icon="ant-design:search-outlined"></span>
+                        <input
+                            type="text"
+                            id="memberSearch"
+                            placeholder="Search associate members..."
+                            class="w-full pl-12 pr-4 py-4 rounded-2xl border-2 border-gray-200 focus:border-iatp-primary focus:outline-none transition-colors text-gray-900 placeholder-gray-400"
+                        >
+                    </div>
+                </div>
+
+                <!-- A-Z Filter Buttons -->
+                <div class="flex flex-wrap justify-center gap-2 max-w-5xl mx-auto">
+                    <button
+                        class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-iatp-primary text-white hover:bg-iatp-secondary"
+                        data-letter="all"
+                    >
+                        All
+                    </button>
+                    <button class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-gray-200 text-gray-700 hover:bg-iatp-primary hover:text-white" data-letter="A">A</button>
+                    <button class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-gray-200 text-gray-700 hover:bg-iatp-primary hover:text-white" data-letter="B">B</button>
+                    <button class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-gray-200 text-gray-700 hover:bg-iatp-primary hover:text-white" data-letter="C">C</button>
+                    <button class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-gray-200 text-gray-700 hover:bg-iatp-primary hover:text-white" data-letter="D">D</button>
+                    <button class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-gray-200 text-gray-700 hover:bg-iatp-primary hover:text-white" data-letter="E">E</button>
+                    <button class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-gray-200 text-gray-700 hover:bg-iatp-primary hover:text-white" data-letter="F">F</button>
+                    <button class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-gray-200 text-gray-700 hover:bg-iatp-primary hover:text-white" data-letter="G">G</button>
+                    <button class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-gray-200 text-gray-700 hover:bg-iatp-primary hover:text-white" data-letter="H">H</button>
+                    <button class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-gray-200 text-gray-700 hover:bg-iatp-primary hover:text-white" data-letter="I">I</button>
+                    <button class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-gray-200 text-gray-700 hover:bg-iatp-primary hover:text-white" data-letter="J">J</button>
+                    <button class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-gray-200 text-gray-700 hover:bg-iatp-primary hover:text-white" data-letter="K">K</button>
+                    <button class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-gray-200 text-gray-700 hover:bg-iatp-primary hover:text-white" data-letter="L">L</button>
+                    <button class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-gray-200 text-gray-700 hover:bg-iatp-primary hover:text-white" data-letter="M">M</button>
+                    <button class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-gray-200 text-gray-700 hover:bg-iatp-primary hover:text-white" data-letter="N">N</button>
+                    <button class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-gray-200 text-gray-700 hover:bg-iatp-primary hover:text-white" data-letter="O">O</button>
+                    <button class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-gray-200 text-gray-700 hover:bg-iatp-primary hover:text-white" data-letter="P">P</button>
+                    <button class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-gray-200 text-gray-700 hover:bg-iatp-primary hover:text-white" data-letter="Q">Q</button>
+                    <button class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-gray-200 text-gray-700 hover:bg-iatp-primary hover:text-white" data-letter="R">R</button>
+                    <button class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-gray-200 text-gray-700 hover:bg-iatp-primary hover:text-white" data-letter="S">S</button>
+                    <button class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-gray-200 text-gray-700 hover:bg-iatp-primary hover:text-white" data-letter="T">T</button>
+                    <button class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-gray-200 text-gray-700 hover:bg-iatp-primary hover:text-white" data-letter="U">U</button>
+                    <button class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-gray-200 text-gray-700 hover:bg-iatp-primary hover:text-white" data-letter="V">V</button>
+                    <button class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-gray-200 text-gray-700 hover:bg-iatp-primary hover:text-white" data-letter="W">W</button>
+                    <button class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-gray-200 text-gray-700 hover:bg-iatp-primary hover:text-white" data-letter="X">X</button>
+                    <button class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-gray-200 text-gray-700 hover:bg-iatp-primary hover:text-white" data-letter="Y">Y</button>
+                    <button class="letter-filter px-4 py-2 rounded-lg font-bold text-sm transition-all bg-gray-200 text-gray-700 hover:bg-iatp-primary hover:text-white" data-letter="Z">Z</button>
+                </div>
+
+                <!-- Results Counter -->
+                <div class="text-center mt-6">
+                    <p id="resultsCount" class="text-gray-600 font-semibold"></p>
+                </div>
             </div>
 
             <!-- Airlines Grid -->
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
+            <div id="membersGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
                 <!-- Row 1 -->
                 <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all group border border-gray-100">
                     <div class="aspect-square flex items-center justify-center mb-3 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg group-hover:scale-105 transition-transform">
@@ -1361,13 +1415,13 @@
             </p>
 
             <div class="flex flex-col sm:flex-row items-center justify-center gap-6 reveal-up">
-                <button class="magnetic-btn px-10 py-4 bg-white text-iatp-primary rounded-full text-lg font-bold shadow-2xl hover:shadow-white/50 transition-all flex items-center space-x-3 group">
+                <a href="contact.html" class="magnetic-btn px-10 py-4 bg-white text-iatp-primary rounded-full text-lg font-bold shadow-2xl hover:shadow-white/50 transition-all flex items-center space-x-3 group">
                     <span>Contact Membership Coordinator</span>
                     <span class="iconify group-hover:translate-x-2 transition-transform" data-icon="ant-design:arrow-right-outlined"></span>
-                </button>
-                <button class="magnetic-btn px-10 py-4 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white rounded-full text-lg font-bold hover:bg-white/20 transition-all">
+                </a>
+                <a href="about.html" class="magnetic-btn px-10 py-4 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white rounded-full text-lg font-bold hover:bg-white/20 transition-all">
                     Learn More About IATP
-                </button>
+                </a>
             </div>
         </div>
     </section>
@@ -1392,10 +1446,10 @@
                 <div>
                     <h4 class="font-bold text-lg mb-6">Services</h4>
                     <ul class="space-y-3 text-gray-400">
-                        <li><a href="#" class="hover:text-iatp-primary transition-colors">Parts Pooling</a></li>
-                        <li><a href="#" class="hover:text-iatp-primary transition-colors">Line Maintenance</a></li>
-                        <li><a href="#" class="hover:text-iatp-primary transition-colors">Aircraft Recovery</a></li>
-                        <li><a href="#" class="hover:text-iatp-primary transition-colors">Equipment Pooling</a></li>
+                        <li><a href="why-join-IATP.html#parts-pooling" class="hover:text-iatp-primary transition-colors">Parts Pooling</a></li>
+                        <li><a href="why-join-IATP.html#line-maintenance" class="hover:text-iatp-primary transition-colors">Line Maintenance</a></li>
+                        <li><a href="why-join-IATP.html#aircraft-recovery" class="hover:text-iatp-primary transition-colors">Aircraft Recovery</a></li>
+                        <li><a href="why-join-IATP.html#equipment-pooling" class="hover:text-iatp-primary transition-colors">Equipment Pooling</a></li>
                     </ul>
                 </div>
 
@@ -1403,9 +1457,9 @@
                     <h4 class="font-bold text-lg mb-6">Company</h4>
                     <ul class="space-y-3 text-gray-400">
                         <li><a href="about.html" class="hover:text-iatp-primary transition-colors">About Us</a></li>
-                        <li><a href="index.html" class="hover:text-iatp-primary transition-colors">Events</a></li>
-                        <li><a href="#" class="hover:text-iatp-primary transition-colors">Membership</a></li>
-                        <li><a href="#" class="hover:text-iatp-primary transition-colors">Contact</a></li>
+                        <li><a href="events.html" class="hover:text-iatp-primary transition-colors">Events</a></li>
+                        <li><a href="how-to-become-an-airline-member.html" class="hover:text-iatp-primary transition-colors">Membership</a></li>
+                        <li><a href="contact.html" class="hover:text-iatp-primary transition-colors">Contact</a></li>
                     </ul>
                 </div>
 
@@ -1434,6 +1488,82 @@
 
     <!-- External JavaScript -->
     <script src="js/main.js"></script>
+
+    <!-- Member Search and Filter Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('memberSearch');
+            const letterFilters = document.querySelectorAll('.letter-filter');
+            const membersGrid = document.getElementById('membersGrid');
+            const memberCards = membersGrid.querySelectorAll('.bg-white.rounded-xl');
+            const resultsCount = document.getElementById('resultsCount');
+
+            let currentFilter = 'all';
+
+            // Add data-name attribute to each card based on its text content
+            memberCards.forEach(card => {
+                const nameElement = card.querySelector('p.text-xs');
+                if (nameElement) {
+                    const name = nameElement.textContent.trim();
+                    card.setAttribute('data-name', name);
+                    card.classList.add('member-card');
+                }
+            });
+
+            // Update results counter
+            function updateResultsCount() {
+                const visibleCards = Array.from(memberCards).filter(card =>
+                    card.style.display !== 'none'
+                );
+                const count = visibleCards.length;
+                resultsCount.textContent = `Showing ${count} of ${memberCards.length} members`;
+            }
+
+            // Filter function
+            function filterMembers() {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                let visibleCount = 0;
+
+                memberCards.forEach(card => {
+                    const name = card.getAttribute('data-name').toLowerCase();
+                    const matchesSearch = name.includes(searchTerm);
+                    const matchesLetter = currentFilter === 'all' || name.startsWith(currentFilter.toLowerCase());
+
+                    if (matchesSearch && matchesLetter) {
+                        card.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                updateResultsCount();
+            }
+
+            // Search input handler
+            searchInput.addEventListener('input', filterMembers);
+
+            // Letter filter handlers
+            letterFilters.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Update active state
+                    letterFilters.forEach(btn => {
+                        btn.classList.remove('bg-iatp-primary', 'text-white');
+                        btn.classList.add('bg-gray-200', 'text-gray-700');
+                    });
+                    this.classList.remove('bg-gray-200', 'text-gray-700');
+                    this.classList.add('bg-iatp-primary', 'text-white');
+
+                    // Update filter
+                    currentFilter = this.getAttribute('data-letter');
+                    filterMembers();
+                });
+            });
+
+            // Initial count
+            updateResultsCount();
+        });
+    </script>
 
 </body>
 </html>
