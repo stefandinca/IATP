@@ -1,0 +1,27 @@
+<div id="collapse-list" class="list-group">
+						<a href="https://www.iatp.com/home/IATP-Press-Release-October-2025.pdf" target="_blank" class="list-group-item pressRelease">IATP Press Release October 2025</a>
+						<a href="https://www.iatp.com/home/IATP-Press-Release-March-2025.pdf" target="_blank" class="list-group-item pressRelease">IATP Press Release March 2025</a>
+                        <a href="https://www.iatp.com/home/IATP-Press-Release-October-2024.pdf" target="_blank" class="list-group-item pressRelease">IATP Press Release October 2024</a>
+                        <a href="https://www.iatp.com/home/IATP-Press-Release-130th-IATP-Conference.pdf" target="_blank" class="list-group-item pressRelease" style="display: block;">IATP Press Release - 130<sup>th</sup> IATP Conference</a>
+                        <a href="https://www.iatp.com/home/IATP-Press-Release-March-2024.pdf" target="_blank" class="list-group-item pressRelease" style="display: block;">IATP Press Release March 2024</a>
+                        <a href="https://www.iatp.com/home/IATP-Press-Release-October-2023.pdf" target="_blank" class="list-group-item pressRelease" style="display: block;">IATP Press Release October 2023</a>
+                        <a href="https://www.iatp.com/home/IATP-Press-Release-March-2023.pdf" target="_blank" class="list-group-item pressRelease" style="display: block;">IATP Press Release March 2023</a>
+                        <a href="https://www.iatp.com/home/IATP-Press-Release-October-2022.pdf" target="_blank" class="list-group-item pressRelease" style="display: block;">IATP Press Release October 2022</a>
+                        <a href="https://www.iatp.com/home/IATP-Press-Release-September-2022.pdf" target="_blank" class="list-group-item pressRelease" style="display: block;">IATP Press Release September 2022</a>
+                        <a href="https://www.iatp.com/home/IATP-Press-Release-March-2022.pdf" target="_blank" class="list-group-item pressRelease" style="display: block;">IATP Press Release March 2022</a>
+                        <a href="https://www.iatp.com/home/IATP-Press-Release-October-2021.pdf" target="_blank" class="list-group-item pressRelease" style="display: block;">IATP Press Release October 2021</a>
+                        <a href="https://www.iatp.com/home/IATP-Press-Release-March-2021.pdf" target="_blank" class="list-group-item pressRelease" style="display: block;">IATP Press Release March 2021 </a>
+                        <a href="https://www.iatp.com/home/IATP-Press-Release-October-2020.pdf" target="_blank" class="list-group-item pressRelease" style="display: block;">IATP Press Release October 2020 </a>
+                        <a href="https://www.iatp.com/home/IATP-Press-Release-March-2020.pdf" target="_blank" class="list-group-item pressRelease" style="display: block;">IATP Press Release March 2020 </a>
+                        <a href="https://www.iatp.com/home/IATP-Press-Release-October-2019.pdf" target="_blank" class="list-group-item pressRelease" style="display: block;">IATP Press Release October 2019 </a>
+                        <a href="https://www.iatp.com/home/IATP-Press-Release-March-2019.pdf" target="_blank" class="list-group-item pressRelease" style="display: block;">IATP Press Release March 2019</a>
+                        <a href="https://www.iatp.com/home/IATP-Press-Release-October-2018.pdf" target="_blank" class="list-group-item pressRelease" style="display: block;">IATP Press Release October 2018</a>
+                        <a href="https://www.iatp.com/home/IATP-Press-Release-March-2018.pdf" target="_blank" class="list-group-item pressRelease" style="display: block;">IATP Press Release March 2018</a>
+                        <a href="https://www.iatp.com/home/IATP-Press-Release-November-2017.pdf" target="_blank" class="list-group-item pressRelease" style="display: block;">IATP Press Release November 2017</a>
+                        <a href="https://www.iatp.com/home/IATP-Press-Release-April-2017.pdf" target="_blank" class="list-group-item pressRelease" style="display: block;">IATP Press Release April 2017</a>
+                        <a href="https://www.iatp.com/home/IATP-Press-Release-November-2016.pdf" target="_blank" class="list-group-item pressRelease" style="display: block;">IATP Press Release November 2016</a>
+                        <a href="https://www.iatp.com/home/IATP-Press-Release-April-2016.pdf" target="_blank" class="list-group-item pressRelease" style="display: block;">IATP Press Release April 2016</a>
+                        <a href="https://www.iatp.com/home/IATP-Press-Release-October-2015.pdf" target="_blank" class="list-group-item pressRelease" style="display: block;">IATP Press Release October 2015</a>
+                        <a href="https://www.iatp.com/home/IATP-Press-Release-April-2015.pdf" target="_blank" class="list-group-item pressRelease" style="display: block;">IATP Press Release April 2015</a>
+                        <a href="https://www.iatp.com/home/IATP-Press-Release-October-2014.pdf" target="_blank" class="list-group-item pressRelease" style="display: block;">IATP Press Release October 2014</a>
+                    </div>
