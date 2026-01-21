@@ -386,6 +386,8 @@ const HeroCarousel = {
     init() {
         this.slides = document.querySelectorAll('.hero-slide');
         this.dots = document.querySelectorAll('.carousel-dot');
+        this.prevBtn = document.querySelector('.carousel-prev');
+        this.nextBtn = document.querySelector('.carousel-next');
         this.currentSlide = 0;
         this.autoPlayInterval = null;
         this.autoPlayDelay = 5000; // 5 seconds
@@ -400,12 +402,46 @@ const HeroCarousel = {
             });
         });
 
+        // Set up arrow click handlers
+        if (this.prevBtn) {
+            this.prevBtn.addEventListener('click', () => {
+                this.prevSlide();
+                this.resetAutoPlay();
+            });
+        }
+
+        if (this.nextBtn) {
+            this.nextBtn.addEventListener('click', () => {
+                this.nextSlide();
+                this.resetAutoPlay();
+            });
+        }
+
         // Pause auto-play on hover
         const heroSection = document.querySelector('.hero-carousel');
         if (heroSection) {
             heroSection.addEventListener('mouseenter', () => this.pauseAutoPlay());
             heroSection.addEventListener('mouseleave', () => this.startAutoPlay());
         }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            const heroSection = document.querySelector('.hero-carousel');
+            if (!heroSection) return;
+
+            const rect = heroSection.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+            if (isVisible) {
+                if (e.key === 'ArrowLeft') {
+                    this.prevSlide();
+                    this.resetAutoPlay();
+                } else if (e.key === 'ArrowRight') {
+                    this.nextSlide();
+                    this.resetAutoPlay();
+                }
+            }
+        });
 
         // Start auto-play
         this.startAutoPlay();
@@ -414,19 +450,24 @@ const HeroCarousel = {
     goToSlide(index) {
         // Hide current slide
         this.slides[this.currentSlide].classList.remove('active');
-        this.dots[this.currentSlide].classList.remove('active', 'bg-white/80');
-        this.dots[this.currentSlide].classList.add('bg-white/40');
+        this.dots[this.currentSlide].classList.remove('active', 'bg-white', 'shadow-lg', 'shadow-white/50');
+        this.dots[this.currentSlide].classList.add('bg-white/50');
 
         // Show new slide
         this.currentSlide = index;
         this.slides[this.currentSlide].classList.add('active');
-        this.dots[this.currentSlide].classList.add('active', 'bg-white/80');
-        this.dots[this.currentSlide].classList.remove('bg-white/40');
+        this.dots[this.currentSlide].classList.add('active', 'bg-white', 'shadow-lg', 'shadow-white/50');
+        this.dots[this.currentSlide].classList.remove('bg-white/50');
     },
 
     nextSlide() {
         const nextIndex = (this.currentSlide + 1) % this.slides.length;
         this.goToSlide(nextIndex);
+    },
+
+    prevSlide() {
+        const prevIndex = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+        this.goToSlide(prevIndex);
     },
 
     startAutoPlay() {
