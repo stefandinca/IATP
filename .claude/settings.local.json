@@ -6,7 +6,12 @@
       "Bash(for file in about.html associate-member.html events.html how-to-become-an-airline-member.html index.html news.html pionairs.html why-join-IATP.html)",
       "Bash(do sed -i 's|<a href=\"\"#\"\" class=\"\"text-gray-600 hover:text-iatp-primary transition-colors font-medium\"\">Contact</a>|<a href=\"\"contact.html\"\" class=\"\"text-gray-600 hover:text-iatp-primary transition-colors font-medium\"\">Contact</a>|g' \"$file\")",
       "Bash(done)",
-      "Bash(wc:*)"
+      "Bash(wc:*)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"C:/_WORK/___IATP/IATP/download-unsplash.ps1\")",
+      "WebFetch(domain:unsplash.com)",
+      "Bash(curl:*)",
+      "Bash(find:*)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"C:/_WORK/___IATP/IATP/fix-downloads.ps1\")"
     ]
   }
 }

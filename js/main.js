@@ -386,8 +386,8 @@ const HeroCarousel = {
     init() {
         this.slides = document.querySelectorAll('.hero-slide');
         this.dots = document.querySelectorAll('.carousel-dot');
-        this.prevBtn = document.querySelector('.carousel-prev');
-        this.nextBtn = document.querySelector('.carousel-next');
+        this.prevBtns = document.querySelectorAll('.carousel-prev');
+        this.nextBtns = document.querySelectorAll('.carousel-next');
         this.currentSlide = 0;
         this.autoPlayInterval = null;
         this.autoPlayDelay = 5000; // 5 seconds
@@ -402,20 +402,20 @@ const HeroCarousel = {
             });
         });
 
-        // Set up arrow click handlers
-        if (this.prevBtn) {
-            this.prevBtn.addEventListener('click', () => {
+        // Set up arrow click handlers (for all prev/next buttons)
+        this.prevBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
                 this.prevSlide();
                 this.resetAutoPlay();
             });
-        }
+        });
 
-        if (this.nextBtn) {
-            this.nextBtn.addEventListener('click', () => {
+        this.nextBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
                 this.nextSlide();
                 this.resetAutoPlay();
             });
-        }
+        });
 
         // Pause auto-play on hover
         const heroSection = document.querySelector('.hero-carousel');
